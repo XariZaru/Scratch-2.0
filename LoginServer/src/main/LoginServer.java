@@ -10,17 +10,15 @@ import net.Server;
 import net.coders.MaplePacketDecoder;
 import net.coders.MaplePacketEncoder;
 import net.connector.MasterServerConnector;
-import systems.ClientHandshakeSystem;
-import systems.LoginSystemHandler;
-import systems.ServerListRequestSystemHandler;
-import systems.ServerListResponseSystemHandler;
+import systems.*;
 
 public class LoginServer extends Server {
 
     public static final LoginServer instance = new LoginServer(ScratchConstants.LOGIN_SERVER_PORT);
     public static final WorldManager manager = new WorldManager(
             EntityCreationSystem.class, ClientHandshakeSystem.class, LoginSystemHandler.class,
-            ServerListRequestSystemHandler.class, ServerListResponseSystemHandler.class);
+            ServerListRequestSystemHandler.class, ServerListResponseSystemHandler.class,
+            ServerStatusRequestSystemHandler.class, ServerStatusResponseSystemHandler.class);
 
     public LoginServer(int port) {
         super(port,

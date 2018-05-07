@@ -6,13 +6,12 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.LoginServer;
-import net.components.AESOFB;
-import net.components.Pipeline;
 import net.opcodes.RecvOpcode;
 import net.packets.InboundPacket;
 import systems.ClientHandshakeSystem;
 import systems.LoginSystemHandler;
 import systems.ServerListRequestSystemHandler;
+import systems.ServerStatusRequestSystemHandler;
 
 @ChannelHandler.Sharable
 public class ClientHandler extends ChannelInboundHandlerAdapter {		
@@ -105,7 +104,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 		handlers[RecvOpcode.LOGIN_PASSWORD.getValue()] = world.getSystem(LoginSystemHandler.class);
 		handlers[RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
 		handlers[RecvOpcode.SERVERLIST_REREQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
-//		handlers[RecvOpcode.SERVERSTATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestHandler.class);
+		handlers[RecvOpcode.SERVERSTATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestSystemHandler.class);
 //		handlers[RecvOpcode.CHARLIST_REQUEST.getValue()] = world.getSystem(CharListRequestHandler.class);
 //		handlers[RecvOpcode.CHECK_CHAR_NAME.getValue()] = world.getSystem(CheckCharNameHandler.class);
 //		handlers[RecvOpcode.CREATE_CHAR.getValue()] = world.getSystem(CreateCharHandler.class);

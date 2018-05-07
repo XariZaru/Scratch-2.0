@@ -10,6 +10,7 @@ import net.coders.PacketEncoder;
 import systems.GameServerAssignmentSystem;
 import systems.HandshakeSystem;
 import systems.ServerInfoRequestSystemHandler;
+import systems.ServerStatusRequestSystemHandler;
 
 
 public class MasterServer extends Server {
@@ -17,7 +18,7 @@ public class MasterServer extends Server {
     public static final MasterServer instance = new MasterServer(ScratchConstants.MASTER_SERVER_PORT);
     public static final WorldManager manager = new WorldManager(
             EntityCreationSystem.class, HandshakeSystem.class, GameServerAssignmentSystem.class,
-            ServerInfoRequestSystemHandler.class);
+            ServerInfoRequestSystemHandler.class, ServerStatusRequestSystemHandler.class);
 
     public MasterServer(int port) {
         super(port, null, PacketDecoder.class, MasterServerHandler.class, PacketEncoder.class);

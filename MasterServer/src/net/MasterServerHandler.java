@@ -9,6 +9,7 @@ import net.opcodes.MasterServerOpcode;
 import net.packets.InboundPacket;
 import systems.HandshakeSystem;
 import systems.ServerInfoRequestSystemHandler;
+import systems.ServerStatusRequestSystemHandler;
 
 public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 
@@ -18,7 +19,7 @@ public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 		WorldManager world = MasterServer.manager;
 		handlers[MasterServerOpcode.HANDSHAKE.getValue()] = world.getSystem(HandshakeSystem.class);
 		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(ServerInfoRequestSystemHandler.class);
-//		handlers[MasterServerOpcode.GAME_SERVER_LIST_RESPONSE.getValue()] = world.getSystem(GameServerListResponseHandler.class);
+		handlers[MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestSystemHandler.class);
 //		handlers[MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(MasterServerStatusRequestHandler.class);
 //		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ConnectClientToServer.class);
 	}

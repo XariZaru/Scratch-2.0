@@ -113,4 +113,11 @@ public class MaplePacketCreator {
         return mplew;
     }
 
+    public static OutboundPacket getServerStatus(int status) {
+        final OutboundPacket mplew = new OutboundPacket();
+        mplew.writeShort(SendOpcode.SERVERSTATUS.getValue());
+        mplew.writeShort(status);
+        return mplew;
+    }
+
 }
