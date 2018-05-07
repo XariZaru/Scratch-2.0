@@ -18,7 +18,8 @@ public class LoginServer extends Server {
     public static final WorldManager manager = new WorldManager(
             EntityCreationSystem.class, ClientHandshakeSystem.class, LoginSystemHandler.class,
             ServerListRequestSystemHandler.class, ServerListResponseSystemHandler.class,
-            ServerStatusRequestSystemHandler.class, ServerStatusResponseSystemHandler.class);
+            ServerStatusRequestSystemHandler.class, ServerStatusResponseSystemHandler.class,
+            CharListRequestSystemHandler.class, CreateCharSystemHandler.class, CheckCharNameSystemHandler.class);
 
     public LoginServer(int port) {
         super(port,

@@ -1,6 +1,7 @@
 package systems;
 
 import com.artemis.ComponentMapper;
+import ecs.EntityCreationSystem;
 import net.MaplePacketCreator;
 import requests.LoginRequest;
 import database.DatabaseConnection;
@@ -20,7 +21,9 @@ import java.sql.SQLException;
 
 public class LoginSystemHandler extends PacketHandler {
 
+    ComponentMapper<Client> clients;
     ComponentMapper<LoginRequest> requests;
+    EntityCreationSystem ecs;
 
     public LoginSystemHandler() {
         super(LoginRequest.class);
@@ -59,7 +62,7 @@ public class LoginSystemHandler extends PacketHandler {
                 Result result = attempt(rs, pwd);
                 if (result != Result.SUCCESS) return result;
 
-                Client client = new Client();
+                Client client = clients.create(ch.attr(Key.ENTITY).get());
                 client.accountId = rs.getInt("id");
                 client.accountName = rs.getString("name");
                 client.gender = rs.getInt("gender");

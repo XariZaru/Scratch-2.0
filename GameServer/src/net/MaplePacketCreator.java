@@ -1,5 +1,12 @@
 package net;
 
+import components.DatabaseId;
+import components.Location;
+import components.Name;
+import components.character.CharacterJob;
+import components.character.CharacterLook;
+import components.character.CharacterStat;
+import components.item.Inventory;
 import constants.ScratchConstants;
 import net.components.Client;
 import net.opcodes.SendOpcode;
@@ -118,6 +125,150 @@ public class MaplePacketCreator {
         mplew.writeShort(SendOpcode.SERVERSTATUS.getValue());
         mplew.writeShort(status);
         return mplew;
+    }
+
+    public static void addCharEntry(final OutboundPacket mplew
+            , CharacterJob job, CharacterLook look, Client client, Name name, CharacterStat stat
+            , Location location, DatabaseId dbId, boolean viewall, boolean aprilFools) {
+
+//        if (aprilFools) {
+//            addCharStatsAprilFools(mplew, location, job, stat, name, look);
+//            mplew.write(look.gender);
+//            mplew.write(look.skinColor.getId()); // skin color
+//            mplew.writeInt(20000); // face
+//            mplew.write(0);
+//            mplew.writeInt(30030); // hair
+//            mplew.write(0xFF);
+//            mplew.write(0xFF);
+//            for (int x = 0; x < 4; x++) mplew.writeInt(0);
+////            mplew.skip(16);
+//            if (!viewall) {
+//                mplew.write(0);
+//            }
+//            mplew.write(0);
+//            return;
+//        }
+
+        addCharStats(mplew, name, look, stat, job, client, location, dbId);
+        addCharLook(mplew, look, false);
+        addCharEquips(mplew, null);
+        if (!viewall) {
+            mplew.write(0);
+        }
+
+        mplew.write(0);
+        return;
+//        if (chr.isGM()) {
+//            mplew.write(0);
+//            return;
+//        }
+//
+//        mplew.write(1); // world rank enabled (next 4 ints are not sent if disabled) Short??
+//        mplew.writeInt(1);
+//        mplew.writeInt(1);
+//        mplew.writeInt(1);
+//        mplew.writeInt(1);
+
+//        mplew.writeInt(chr.getRank()); // world rank
+//        mplew.writeInt(chr.getRankMove()); // move (negative is downwards)
+//        mplew.writeInt(chr.getJobRank()); // job rank
+//        mplew.writeInt(chr.getJobRankMove()); // move (negative is downwards)
+    }
+
+    private static void addCharEquips(final OutboundPacket mplew, Inventory equipped) {
+//        Collection<Item> ii = MapleItemInformationProvider.getInstance().canWearEquipment(chr, equip.list());
+//        Map<Short, Integer> myEquip = new LinkedHashMap<>();
+//        Map<Short, Integer> maskedEquip = new LinkedHashMap<>();
+//        for (Item item : ii) {
+//            short pos = (byte) (item.getPosition() * -1);
+//            if (pos < 100 && myEquip.get(pos) == null) {
+//                myEquip.put(pos, item.getItemId());
+//            } else if (pos > 100 && pos != 111) { // don't ask. o.o
+//                pos -= 100;
+//                if (myEquip.get(pos) != null) {
+//                    maskedEquip.put(pos, myEquip.get(pos));
+//                }
+//                myEquip.put(pos, item.getItemId());
+//            } else if (myEquip.get(pos) != null) {
+//                maskedEquip.put(pos, item.getItemId());
+//            }
+//        }
+//        for (Entry<Short, Integer> entry : myEquip.entrySet()) {
+//            mplew.write(entry.getKey());
+//            mplew.writeInt(entry.getValue());
+//        }
+        mplew.write(0xFF);
+//        for (Entry<Short, Integer> entry : maskedEquip.entrySet()) {
+//            mplew.write(entry.getKey());
+//            mplew.writeInt(entry.getValue());
+//        }
+        mplew.write(0xFF);
+//        Item cWeapon = equip.getItem((short) -111);
+//        mplew.writeInt(cWeapon != null ? cWeapon.getItemId() : 0);
+        mplew.writeInt(0);
+        for (int i = 0; i < 3; i++) {
+//            if (chr.getPet(i) != null) {
+//                mplew.writeInt(chr.getPet(i).getItemId());
+//            } else {
+            mplew.writeInt(0);
+//            }
+        }
+    }
+
+    public static void addCharLook(final OutboundPacket mplew, CharacterLook look, boolean mega) {
+        mplew.write(look.gender);
+        mplew.write(look.skin.getId()); // skin color
+        mplew.writeInt(look.face); // face
+        mplew.write(mega ? 0 : 1);
+        mplew.writeInt(look.hair); // hair
+    }
+
+    public static void addCharStats(final OutboundPacket mplew
+            , Name name, CharacterLook look, CharacterStat stat, CharacterJob job
+            , Client client, Location location, DatabaseId dbId) {
+        mplew.writeInt(dbId.dbId); // character id
+        mplew.writeAsciiString(tools.StringUtil.getRightPaddedStr(name.name, '\0', 13));
+        mplew.write(look.gender); // gender (0 = male, 1 = female)
+        mplew.write(look.skin.getId()); // skin color
+        mplew.writeInt(look.face); // face
+        mplew.writeInt(look.hair);// hair
+        for (int i = 0; i < 3; i++) {
+            // TODO: write in pets
+//            if (chr.getPet(i) != null) {//Checked GMS.. and your pets stay when going into the cash shop.
+//                mplew.writeLong(chr.getPet(i).getUniqueId());
+//            } else {
+            mplew.writeLong(0);
+//            }
+        }
+        mplew.write(stat.level); // level
+        mplew.writeShort(job.type.getId()); // job
+        mplew.writeShort(stat.str);// str
+        mplew.writeShort(stat.dex); // dex
+        mplew.writeShort(stat.intel); // int
+        mplew.writeShort(stat.luk); // luk
+        mplew.writeShort(stat.hp); // hp (?)
+        mplew.writeShort(stat.maxHp); // maxhp
+        mplew.writeShort(stat.mp); // mp (?)
+        mplew.writeShort(stat.maxMp); // maxmp
+        mplew.writeShort(stat.remainingAp); // remaining ap
+//        if (GameConstants.hasSPTable(job.job)) {
+//            mplew.write(chr.getRemainingSpSize());
+//            for (int i = 0; i < chr.getRemainingSps().length; i++) {
+//                if (chr.getRemainingSpBySkill(i) > 0) {
+//                    mplew.write(i + 1);
+//                    mplew.write(chr.getRemainingSpBySkill(i));
+//                }
+//            }
+//        } else {
+        // TODO: SP table belongs to Evan if you ever want to write it in
+        mplew.writeShort(job.getRemainingSp()); // remaining sp
+//        }
+        mplew.writeInt(stat.exp); // current exp
+        mplew.writeShort(stat.fame); // fame
+        mplew.writeInt(stat.gachaExp); //Gacha Exp
+        mplew.writeInt(location.mapId); // current map id
+        mplew.write(location.portal); // spawnpoint
+        mplew.writeInt(0);// playtime in seconds?
     }
 
 }
