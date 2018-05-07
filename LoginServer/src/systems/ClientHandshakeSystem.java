@@ -12,33 +12,38 @@ import net.components.Pipeline;
 public class ClientHandshakeSystem extends BaseSystem {
 
     EntityCreationSystem ecs;
+    ComponentMapper<Pipeline> pipes;
+    ComponentMapper<AESOFB> aesofbs;
 
     @Override
     protected void processSystem() {
 
     }
 
-    public AESOFB create(Channel channel) {
-        return create(channel, false);
+    public void create(Channel channel) {
+        create(channel, false);
     }
 
     /**
      * Creates an associated Client for the channel through the ECS
-     * @param channel Channel connection
+     * @param ch Channel connection
      * @param handshake True if incoming connection is a handshake. If so, send getHello packet containing ivSend and ivRecv.
      * Otherwise, create regular client without sending.
      * @return Returns the entity ID associated with the client requests created
      */
-    public AESOFB create(Channel channel, boolean handshake) {
-        AESOFB aesofb = new AESOFB();
-        Pipeline pipe = new Pipeline();
-        pipe.channel = channel;
+    public void create(Channel ch, boolean handshake) {
+        int e = ecs.create();
+        AESOFB aesofb = aesofbs.create(e);
+        Pipeline pipe = pipes.create(e);
 
-        if (handshake) {
-            channel.attr(Key.AESOFB).set(aesofb);
-            channel.attr(Key.PIPELINE).set(pipe);
-        }
+        ch.attr(Key.AESOFB).set(aesofb);
+        ch.attr(Key.PIPELINE).set(pipe);
+        pipe.channel = ch;
 
-        return aesofb;
+        if (handshake)
+            ch.writeAndFlush(MaplePacketCreator.handshake(aesofb.ivSend, aesofb.ivRecv));
+
+        ch.attr(Key.ENTITY).set(e);
+
     }
 }

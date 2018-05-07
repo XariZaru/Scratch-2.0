@@ -1,19 +1,23 @@
 package net;
 
+import com.artemis.World;
+import ecs.WorldManager;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import main.LoginServer;
 import net.opcodes.MasterServerOpcode;
 import net.packets.InboundPacket;
+import systems.ServerListResponseSystemHandler;
 
 public class LoginServerHandler extends ChannelInboundHandlerAdapter {
 
 	PacketHandler[] handlers = new PacketHandler[net.opcodes.MasterServerOpcode.values().length];
 	
 	public LoginServerHandler() {		
-//		World world = LoginServerLauncher.manager.world;
+		WorldManager world = LoginServer.manager;
 //		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(MasterServerListRequestHandler.class);
-//		handlers[MasterServerOpcode.GAME_SERVER_LIST_RESPONSE.getValue()] = world.getSystem(ServerListResponseHandler.class);
+		handlers[MasterServerOpcode.GAME_SERVER_LIST_RESPONSE.getValue()] = world.getSystem(ServerListResponseSystemHandler.class);
 //		handlers[MasterServerOpcode.GAME_SERVER_STATUS_RESPONSE.getValue()] = world.getSystem(ServerStatusResponseHandler.class);
 //		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ConnectClientToServerResponseHandler.class);
 	}

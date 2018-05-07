@@ -82,4 +82,35 @@ public class MaplePacketCreator {
         return mplew;
     }
 
+    /**
+     * Gets a packet saying that the server list is over.
+     *
+     * @return The end of server list packet.
+     */
+    public static OutboundPacket getEndOfServerList() {
+        final OutboundPacket mplew = new OutboundPacket(3);
+        mplew.writeShort(SendOpcode.SERVERLIST.getValue());
+        mplew.write(0xFF);
+        return mplew;
+    }
+
+    public static OutboundPacket selectWorld(int world) {
+        final OutboundPacket mplew = new OutboundPacket();
+        mplew.writeShort(SendOpcode.LAST_CONNECTED_WORLD.getValue());
+        mplew.writeInt(world);//According to GMS, it should be the world that contains the most characters (most active)
+        return mplew;
+    }
+
+    public static OutboundPacket sendRecommended() {
+        final OutboundPacket mplew = new OutboundPacket();
+        mplew.writeShort(SendOpcode.RECOMMENDED_WORLD_MESSAGE.getValue());
+        mplew.write(0);//size
+//        for (Iterator<Pair<Integer, String>> it = worlds.iterator(); it.hasNext();) {
+//            Pair<Integer, String> world = it.next();
+//            mplew.writeInt(world.getLeft());
+//            mplew.writeMapleAsciiString(world.getRight());
+//        }
+        return mplew;
+    }
+
 }

@@ -8,6 +8,7 @@ import main.MasterServer;
 import net.opcodes.MasterServerOpcode;
 import net.packets.InboundPacket;
 import systems.HandshakeSystem;
+import systems.ServerInfoRequestSystemHandler;
 
 public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 
@@ -16,7 +17,7 @@ public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 	public MasterServerHandler() {
 		WorldManager world = MasterServer.manager;
 		handlers[MasterServerOpcode.HANDSHAKE.getValue()] = world.getSystem(HandshakeSystem.class);
-//		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(MasterServerListRequestHandler.class);
+		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(ServerInfoRequestSystemHandler.class);
 //		handlers[MasterServerOpcode.GAME_SERVER_LIST_RESPONSE.getValue()] = world.getSystem(GameServerListResponseHandler.class);
 //		handlers[MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(MasterServerStatusRequestHandler.class);
 //		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ConnectClientToServer.class);
@@ -25,13 +26,15 @@ public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) {		
-		System.out.println("Connection to Master on " + ctx.channel().remoteAddress() + " for channel " + ctx.channel());
+//		System.out.println("Connection to Master on " + ctx.channel().remoteAddress() + " for channel " + ctx.channel());
 	}
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) {
 		Channel channel = ctx.channel();
-//
+		int e = channel.attr(Key.ENTITY).get();
+		System.out.println(channel.attr(Key.TYPE).get() + " " + e + " disconnected from master.");
+		MasterServer.manager.delete(e);
 //		Integer e = channel.attr(Key.ENTITY).get();
 //
 //		if (e != null) {

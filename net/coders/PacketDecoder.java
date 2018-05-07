@@ -11,7 +11,7 @@ public class PacketDecoder extends ByteToMessageDecoder {
 
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {			
-		System.out.println("Decoding incoming packet between servers.");
+//		System.out.println("Decoding incoming packet between servers.");
 		byte[] buf = new byte[in.readableBytes()];
 		in.readBytes(buf);
 		InboundPacket packet = new InboundPacket(buf);

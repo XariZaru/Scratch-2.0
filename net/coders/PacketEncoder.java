@@ -10,7 +10,7 @@ public class PacketEncoder extends MessageToByteEncoder<OutboundPacket> {
 	@Override
 	protected void encode(ChannelHandlerContext ctx, OutboundPacket msg, ByteBuf out) throws Exception {
 		byte[] send = msg.getBytes();	
-		System.out.println("Encoding");
+//		System.out.println("Encoding");
 		out.writeBytes(send);		
 	}
 

@@ -7,10 +7,12 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.LoginServer;
 import net.components.AESOFB;
+import net.components.Pipeline;
 import net.opcodes.RecvOpcode;
 import net.packets.InboundPacket;
 import systems.ClientHandshakeSystem;
 import systems.LoginSystemHandler;
+import systems.ServerListRequestSystemHandler;
 
 @ChannelHandler.Sharable
 public class ClientHandler extends ChannelInboundHandlerAdapter {		
@@ -21,10 +23,8 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		
 		Channel ch = ctx.channel();
-		AESOFB aesofb = LoginServer.manager.getSystem(ClientHandshakeSystem.class).create(ch, true);
-		ch.writeAndFlush(MaplePacketCreator.handshake(aesofb.ivSend, aesofb.ivRecv));
+		LoginServer.manager.getSystem(ClientHandshakeSystem.class).create(ch, true);
 
-		ch.attr(Key.ENTITY).set(LoginServer.manager.create());
 		System.out.println(String.format("Client connected from {%s}", ch.remoteAddress()));
 
 		// TODO: check if master server connection is up otherwise close
@@ -103,8 +103,8 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 	public ClientHandler() {
 		WorldManager world = LoginServer.manager;
 		handlers[RecvOpcode.LOGIN_PASSWORD.getValue()] = world.getSystem(LoginSystemHandler.class);
-//		handlers[RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestHandler.class);
-//		handlers[RecvOpcode.SERVERLIST_REREQUEST.getValue()] = world.getSystem(ServerListRequestHandler.class);
+		handlers[RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
+		handlers[RecvOpcode.SERVERLIST_REREQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
 //		handlers[RecvOpcode.SERVERSTATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestHandler.class);
 //		handlers[RecvOpcode.CHARLIST_REQUEST.getValue()] = world.getSystem(CharListRequestHandler.class);
 //		handlers[RecvOpcode.CHECK_CHAR_NAME.getValue()] = world.getSystem(CheckCharNameHandler.class);
