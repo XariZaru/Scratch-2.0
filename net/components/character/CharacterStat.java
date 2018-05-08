@@ -1,6 +1,7 @@
 package net.components.character;
 
 import com.artemis.Component;
+import net.packets.OutboundPacket;
 
 public class CharacterStat extends Component {
 	public byte level = 1;
@@ -8,6 +9,35 @@ public class CharacterStat extends Component {
 	public short mp = 5, hp = 50, maxHp = 50, maxMp = 5, fame;
 	public short remainingAp;	
 	public int exp, gachaExp;
+	
+	public void encode(OutboundPacket mplew, CharacterJob job) {
+		mplew.write(level); // level
+		mplew.writeShort(job.type.getId()); // job
+		mplew.writeShort(str);// str
+		mplew.writeShort(dex); // dex
+		mplew.writeShort(intel); // int
+		mplew.writeShort(luk); // luk
+		mplew.writeShort(hp); // hp (?)
+		mplew.writeShort(maxHp); // maxhp
+		mplew.writeShort(mp); // mp (?)
+		mplew.writeShort(maxMp); // maxmp
+		mplew.writeShort(remainingAp); // remaining ap
+        //        if (GameConstants.hasSPTable(job.job)) {
+//            mplew.write(chr.getRemainingSpSize());
+//            for (int i = 0; i < chr.getRemainingSps().length; i++) {
+//                if (chr.getRemainingSpBySkill(i) > 0) {
+//                    mplew.write(i + 1);
+//                    mplew.write(chr.getRemainingSpBySkill(i));
+//                }
+//            }
+//        } else {
+        // TODO: SP table belongs to Evan if you ever want to write it in
+        mplew.writeShort(job.getRemainingSp()); // remaining sp
+//        }
+        mplew.writeInt(exp); // current exp
+        mplew.writeShort(fame); // fame
+        mplew.writeInt(gachaExp); //Gacha Exp
+	}
 	
 	public enum Type {
 
@@ -42,9 +72,9 @@ public class CharacterStat extends Component {
 	    }
 
 	    public static Type getByValue(int value) {
-	        for (Type stat : Type.values()) {
-	            if (stat.getValue() == value) {
-	                return stat;
+	        for (Type statType : Type.values()) {
+	            if (statType.getValue() == value) {
+	                return statType;
 	            }
 	        }
 	        return null;
