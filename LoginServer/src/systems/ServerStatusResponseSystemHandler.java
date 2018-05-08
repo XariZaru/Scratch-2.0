@@ -2,7 +2,7 @@ package systems;
 
 import com.artemis.ComponentMapper;
 import io.netty.channel.Channel;
-import net.MaplePacketCreator;
+import net.packets.MaplePacketCreator;
 import net.PacketHandler;
 import net.components.Pipeline;
 import net.packets.InboundPacket;

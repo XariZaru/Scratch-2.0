@@ -46,6 +46,14 @@ public class WorldInformation extends Component {
 		}
 	}
 
+	public OutboundPacket encodeConnectionInformation(byte channel) {
+		OutboundPacket packet = new OutboundPacket();
+		Channel ch = getChannel(channel);
+		packet.writeShort(MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue());
+		packet.writeMapleAsciiString(ch.remoteAddress().toString());
+		return packet;
+	}
+
 	public OutboundPacket encodeStatus(int e) {
 		int status = populationStatus();
 		OutboundPacket packet = new OutboundPacket();
@@ -73,6 +81,7 @@ public class WorldInformation extends Component {
 		//TODO: remove channel limit cap to 20
 		if (channels.size() == 1)
 			return false;
+		ch.attr(Key.CHANNEL_NUMBER).set(channels.size());
 		return channels.add(ch);
 	}
 

@@ -1,6 +1,7 @@
 package net.packets;
 
 import net.ClientType;
+import net.components.Pipeline;
 import net.opcodes.MasterServerOpcode;
 
 public class MasterServerPacketCreator {	
@@ -37,22 +38,15 @@ public class MasterServerPacketCreator {
 		buf.writeInt(entity);
 		return buf;
 	}
-	
-	public static OutboundPacket gameServerListRequest(int entity) {
-		OutboundPacket buf = new OutboundPacket();
-		buf.writeShort(MasterServerOpcode.GAME_SERVER_LIST_REQUEST.getValue());
-		buf.writeInt(entity);
-		return buf;
-	}
 
-//	public static OutboundPacket connectClientToServer(int clientEntityId, Pipeline pipe, int dbId) {
-//        OutboundPacket buf = new OutboundPacket();
-//        buf.writeShort(MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue());
-//        buf.writeInt(dbId);
-//        buf.writeInt(clientEntityId);
-//        buf.writeByte(pipe.world);
-//        buf.writeByte(pipe.server);
-//        return buf;
-//	}
+	public static OutboundPacket connectClientToServer(int clientEntityId, Pipeline pipe, int dbId) {
+        OutboundPacket buf = new OutboundPacket();
+        buf.writeShort(MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue());
+        buf.writeInt(dbId);
+        buf.writeInt(clientEntityId);
+        buf.writeByte(pipe.world);
+        buf.writeByte(pipe.server);
+        return buf;
+	}
 
 }

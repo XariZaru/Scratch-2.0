@@ -16,7 +16,8 @@ public class MaplePacketDecoder extends ByteToMessageDecoder{
 
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception{
-		Channel ch = ctx.channel();
+        System.out.println("Decodin.");
+	    Channel ch = ctx.channel();
 		final int entity = ch.attr(Key.ENTITY).get();
 		MapleAESOFB recv = ch.attr(Key.AESOFB).get().recvCypher;
 		Pipeline pipe = ch.attr(Key.PIPELINE).get();

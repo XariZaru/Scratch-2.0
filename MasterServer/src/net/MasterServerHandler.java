@@ -2,28 +2,29 @@ package net;
 
 import ecs.WorldManager;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.MasterServer;
 import net.opcodes.MasterServerOpcode;
 import net.packets.InboundPacket;
+import systems.ClientConnectToServerSystem;
 import systems.HandshakeSystem;
 import systems.ServerInfoRequestSystemHandler;
 import systems.ServerStatusRequestSystemHandler;
 
+@ChannelHandler.Sharable
 public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 
 	PacketHandler[] handlers = new PacketHandler[net.opcodes.MasterServerOpcode.values().length];
-	
-	public MasterServerHandler() {
+
+	public void initialize() {
 		WorldManager world = MasterServer.manager;
 		handlers[MasterServerOpcode.HANDSHAKE.getValue()] = world.getSystem(HandshakeSystem.class);
 		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(ServerInfoRequestSystemHandler.class);
 		handlers[MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestSystemHandler.class);
-//		handlers[MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(MasterServerStatusRequestHandler.class);
-//		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ConnectClientToServer.class);
+		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ClientConnectToServerSystem.class);
 	}
-
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) {		

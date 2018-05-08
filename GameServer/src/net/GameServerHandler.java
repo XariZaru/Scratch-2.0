@@ -3,15 +3,18 @@ package net;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import main.GameServersLauncher;
 import net.opcodes.MasterServerOpcode;
-import net.packets.InboundPacket;
+import systems.ServerIdentifier;
 
 public class GameServerHandler extends ChannelInboundHandlerAdapter {
 
-	PacketHandler[] handlers = new PacketHandler[MasterServerOpcode.values().length]; 	
-	
-	public GameServerHandler() {
+	PacketHandler[] handlers = new PacketHandler[MasterServerOpcode.values().length];
+	private int index;
+
+	public GameServerHandler(int index) {
 //		handlers[MasterServerOpcode.HANDSHAKE.getValue()] = new MasterServerClientCreationHandler();
+		this.index = index;
 	}
 
 	
@@ -34,25 +37,8 @@ public class GameServerHandler extends ChannelInboundHandlerAdapter {
 	
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) {
-		InboundPacket buf = (InboundPacket) msg;
-		short opcode = buf.readShort();
-		System.out.println("Received packet with opcode " + MasterServerOpcode.getOpcode(opcode));
-		PacketHandler handler = getHandler(opcode);
-		if (handler != null) {
-			handler.receive(ctx.channel(), buf, null);
-		} else {
-			System.out.println("Unhandled packetId " + opcode);
-		}
-		/*Client c = ctx.attr(Client.CLIENT_KEY).get();
-		ByteBuf buffer = (ByteBuf) msg;
-		if (buffer.readableBytes() < 1) {
-			return;
-		}
-		short code = buffer.readShort();
-		ReceivePacketHandler handler = processor.getHandler(code);
-		if (handler != null && handler.isLoggedIn(c)) {
-			handler.handlePacket(c, buffer);
-		} */
+		GameServersLauncher.gameServers.get(index)
+				.manager.world.getSystem(ServerIdentifier.class).channel = ctx.channel().attr(Key.CHANNEL_NUMBER).get();
 	}
 	
 	public PacketHandler getHandler(short opcode) {

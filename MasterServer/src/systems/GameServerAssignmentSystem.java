@@ -56,6 +56,10 @@ public class GameServerAssignmentSystem extends BaseEntitySystem {
         return buf;
     }
 
+    public OutboundPacket encodeConnectInformation(byte world, byte channel) {
+        return getWorld(world).encodeConnectionInformation(channel);
+    }
+
     public WorldInformation getWorld(byte num) {
         return wiMapper.get(subscription.getEntities().get(num));
     }

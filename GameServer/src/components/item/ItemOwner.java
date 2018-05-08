@@ -1,5 +1,7 @@
 package components.item;
 
-public class ItemOwner {
+import com.artemis.Component;
+
+public class ItemOwner extends Component {
 	public String owner;
 }

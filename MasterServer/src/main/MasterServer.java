@@ -7,21 +7,22 @@ import net.MasterServerHandler;
 import net.Server;
 import net.coders.PacketDecoder;
 import net.coders.PacketEncoder;
-import systems.GameServerAssignmentSystem;
-import systems.HandshakeSystem;
-import systems.ServerInfoRequestSystemHandler;
-import systems.ServerStatusRequestSystemHandler;
+import systems.*;
 
 
 public class MasterServer extends Server {
 
-    public static final MasterServer instance = new MasterServer(ScratchConstants.MASTER_SERVER_PORT);
+    public static final MasterServer instance = new MasterServer(ScratchConstants.MASTER_SERVER_PORT, new MasterServerHandler());
     public static final WorldManager manager = new WorldManager(
             EntityCreationSystem.class, HandshakeSystem.class, GameServerAssignmentSystem.class,
-            ServerInfoRequestSystemHandler.class, ServerStatusRequestSystemHandler.class);
+            ServerInfoRequestSystemHandler.class, ServerStatusRequestSystemHandler.class,
+            ClientConnectToServerSystem.class);
+    private MasterServerHandler handler;
 
-    public MasterServer(int port) {
-        super(port, null, PacketDecoder.class, MasterServerHandler.class, PacketEncoder.class);
+    public MasterServer(int port, MasterServerHandler handler) {
+        super(ScratchConstants.MASTER_SERVER_IP, port, null,
+                handler, PacketDecoder.class, PacketEncoder.class);
+        this.handler = handler;
     }
 
     public static void main(String[] args) {
@@ -30,6 +31,8 @@ public class MasterServer extends Server {
         WorldManagerThread.start();
 
         while (!manager.started());
+
+        instance.handler.initialize();
 
         for (byte x = 0; x < ScratchConstants.NUM_WORLDS; x++)
             manager.world.getSystem(GameServerAssignmentSystem.class).create(x, 2, "Welcome!");

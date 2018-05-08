@@ -14,17 +14,20 @@ import systems.*;
 
 public class LoginServer extends Server {
 
-    public static final LoginServer instance = new LoginServer(ScratchConstants.LOGIN_SERVER_PORT);
+    public static final LoginServer instance = new LoginServer(ScratchConstants.LOGIN_SERVER_PORT, new ClientHandler());
     public static final WorldManager manager = new WorldManager(
             EntityCreationSystem.class, ClientHandshakeSystem.class, LoginSystemHandler.class,
             ServerListRequestSystemHandler.class, ServerListResponseSystemHandler.class,
             ServerStatusRequestSystemHandler.class, ServerStatusResponseSystemHandler.class,
-            CharListRequestSystemHandler.class, CreateCharSystemHandler.class, CheckCharNameSystemHandler.class);
+            CharListRequestSystemHandler.class, CreateCharSystemHandler.class, CheckCharNameSystemHandler.class,
+            CharSelectSystemHandler.class, ClientConnectToServerResponseSystem.class);
+    private ClientHandler handler;
 
-    public LoginServer(int port) {
-        super(port,
+    public LoginServer(int port, ClientHandler handler) {
+        super(ScratchConstants.LOGIN_SERVER_IP, port,
             new MasterServerConnector(ClientType.LOGIN, new LoginServerTrafficHandler()),
-            MaplePacketDecoder.class, ClientHandler.class, MaplePacketEncoder.class);
+            handler, MaplePacketDecoder.class, MaplePacketEncoder.class);
+        this.handler = handler;
     }
 
     public void writeToMaster(Object msg) {
@@ -40,6 +43,8 @@ public class LoginServer extends Server {
 
         Thread LoginThread = new Thread(instance);
         LoginThread.start();
+
+        instance.handler.initialize();
     }
 
 }

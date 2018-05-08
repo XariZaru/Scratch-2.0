@@ -20,17 +20,22 @@ import java.util.Map;
 public class Server implements Runnable {
 
     private int port;
+    private ChannelHandler serverHandler;
     private Class<? extends ChannelHandler>[] handlers;
-    ServerBootstrap b;
+    public ServerBootstrap b;
     EventLoopGroup bossGroup, workerGroup;
     public final ChannelGroup channels =
             new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
     public final Connector master;
+    private String address;
 
     @SafeVarargs
-    public Server(int port, Connector connector, Class<? extends ChannelHandler>... handlers) {
+    public Server(String address, int port, Connector connector, ChannelHandler serverHandler,
+                  Class<? extends ChannelHandler>... handlers) {
         this.port = port;
+        this.address = address;
         this.master = connector;
+        this.serverHandler = serverHandler;
         this.handlers = handlers;
 
         if (master != null) {
@@ -70,7 +75,7 @@ public class Server implements Runnable {
         bossGroup   = new NioEventLoopGroup();
         workerGroup = new NioEventLoopGroup();
         try {
-            System.out.println("net.Server listening on port " + port);
+            System.out.println(String.format("Server listening on %s:%d ", address, port));
             b = new ServerBootstrap();
             b.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
@@ -81,11 +86,10 @@ public class Server implements Runnable {
 
                             updateConnection(ch);
 
-                            ChannelHandler[] ret = new ChannelHandler[handlers.length];
-                            for (int x = 0; x < handlers.length; x++) {
-                                Class<? extends ChannelHandler> handlerClass = handlers[x];
-                                ret[x] = handlerClass.newInstance();
-                            }
+                            ChannelHandler[] ret = new ChannelHandler[3];
+                            ret[0] = handlers[0].newInstance();
+                            ret[1] = serverHandler;
+                            ret[2] = handlers[1].newInstance();
 
                             ch.pipeline().addLast(ret);
 

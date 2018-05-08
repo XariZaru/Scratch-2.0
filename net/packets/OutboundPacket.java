@@ -1,9 +1,9 @@
 package net.packets;
 
-import java.nio.charset.Charset;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+
+import java.nio.charset.Charset;
 
 public class OutboundPacket {
 
@@ -25,6 +25,10 @@ public class OutboundPacket {
     public void writeMapleAsciiString(String s) {
         writeShort((short) s.length());
         writeAsciiString(s);
+    }
+
+    public void writeBool(boolean value) {
+        write(value ? 1 : 0);
     }
 
     public void writeAsciiString(String s) {

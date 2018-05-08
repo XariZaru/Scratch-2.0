@@ -7,6 +7,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.LoginServer;
 import net.opcodes.MasterServerOpcode;
 import net.packets.InboundPacket;
+import systems.ClientConnectToServerResponseSystem;
 import systems.ServerListResponseSystemHandler;
 import systems.ServerStatusResponseSystemHandler;
 
@@ -19,7 +20,7 @@ public class LoginServerHandler extends ChannelInboundHandlerAdapter {
 //		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(MasterServerListRequestHandler.class);
 		handlers[MasterServerOpcode.GAME_SERVER_LIST_RESPONSE.getValue()] = world.getSystem(ServerListResponseSystemHandler.class);
 		handlers[MasterServerOpcode.GAME_SERVER_STATUS_RESPONSE.getValue()] = world.getSystem(ServerStatusResponseSystemHandler.class);
-//		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ConnectClientToServerResponseHandler.class);
+		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ClientConnectToServerResponseSystem.class);
 	}
 
 	

@@ -4,20 +4,31 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import main.GameServer;
+import main.GameServersLauncher;
 import net.opcodes.RecvOpcode;
 import net.packets.InboundPacket;
+import systems.ClientHandshakeSystem;
+import systems.PlayerLoggedInSystemHandler;
 
 @ChannelHandler.Sharable
 public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
 	PacketHandler[] handlers = new PacketHandler[RecvOpcode.values().length];
 
+	private GameServer server;
+	private final int index;
+
+	public GameClientHandler(int index) {
+	    this.index = index;
+    }
+
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
 		Channel ch = ctx.channel();
-//		AESOFB aesofb = GameServer.manager.getSystem(ClientHandshakeSystem.class).create(ch, true);
-//		ch.writeAndFlush(MaplePacketCreator.handshake(aesofb.ivSend, aesofb.ivRecv));
+
+		server.manager.getSystem(ClientHandshakeSystem.class).create(ch, true);
 
 //		ch.attr(Key.ENTITY).set(LoginServer.manager.create());
 		System.out.println(String.format("Client connected from {%s}", ch.remoteAddress()));
@@ -57,9 +68,9 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) {
 		Channel channel = ctx.channel();
-
+		System.out.println("Client disconnecting on " + channel.remoteAddress());
 		// Should never be null because all clients are assigned an entity id upon connection
-		int entityId = channel.attr(Key.ENTITY).get();
+//		int entityId = channel.attr(Key.ENTITY).get();
 //		LoginServer.manager.delete(entityId);
 
 //		Integer e = channel.attr(Key.ENTITY).get();
@@ -95,16 +106,11 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 		cause.printStackTrace();
 	}
 
-	public GameClientHandler() {
-//		WorldManager world = LoginServer.manager;
-//		handlers[RecvOpcode.LOGIN_PASSWORD.getValue()] = world.getSystem(LoginSystemHandler.class);
-//		handlers[RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestHandler.class);
-//		handlers[RecvOpcode.SERVERLIST_REREQUEST.getValue()] = world.getSystem(ServerListRequestHandler.class);
-//		handlers[RecvOpcode.SERVERSTATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestHandler.class);
-//		handlers[RecvOpcode.CHARLIST_REQUEST.getValue()] = world.getSystem(CharListRequestHandler.class);
-//		handlers[RecvOpcode.CHECK_CHAR_NAME.getValue()] = world.getSystem(CheckCharNameHandler.class);
-//		handlers[RecvOpcode.CREATE_CHAR.getValue()] = world.getSystem(CreateCharHandler.class);
-//		handlers[RecvOpcode.CHAR_SELECT.getValue()] = world.getSystem(CharSelectedHandler.class);
-	}
+	public void initialize() {
+
+	    this.server = GameServersLauncher.gameServers.get(index);
+	    handlers[RecvOpcode.PLAYER_LOGGEDIN.getValue()] = server.manager.getSystem(PlayerLoggedInSystemHandler.class);
+
+    }
 	
 }

@@ -21,18 +21,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package net.coders;
 
-import ecs.WorldManager;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
-import io.netty.util.Attribute;
 import net.Key;
 import net.components.AESOFB;
 import net.encryption.MapleAESOFB;
 import net.encryption.MapleCustomEncryption;
 import net.packets.OutboundPacket;
 
+@ChannelHandler.Sharable
 public class MaplePacketEncoder extends MessageToByteEncoder<OutboundPacket> {
 
 	@Override

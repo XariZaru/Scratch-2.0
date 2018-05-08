@@ -11,7 +11,8 @@ public final class ScratchConstants {
     public static final int MASTER_SERVER_CONNECTION_MAXIMUM = 50;
     public static final int MASTER_SERVER_PORT = 8483;
     public static final String MASTER_SERVER_IP = "127.0.0.1";
-    public static final String LOGIN_SERVER_IP = "127.0.0.1";
+    public static final String LOGIN_SERVER_IP  = "127.0.0.1";
+    public static final String GAME_SERVER_IP   = "127.0.0.1";
     public static final int LOGIN_SERVER_PORT = 8484;
     public static final short VERSION = 83;
     public static final String PATCH = "1";

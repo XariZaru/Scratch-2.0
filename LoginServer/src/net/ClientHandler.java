@@ -21,7 +21,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 		Channel ch = ctx.channel();
 		LoginServer.manager.getSystem(ClientHandshakeSystem.class).create(ch, true);
 
-		System.out.println(String.format("Client connected from {%s}", ch.remoteAddress()));
+		System.out.println(String.format("Client connected from %s", ch.remoteAddress()));
 
 		// TODO: check if master server connection is up otherwise close
 //		// Closes connection with opening MapleClient if Login Server has no connected to the master server yet.
@@ -57,7 +57,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) {
+
 		Channel channel = ctx.channel();
+		System.out.println(String.format("Client disconnecting from %s", channel.remoteAddress()));
 
 		// Should never be null because all clients are assigned an entity id upon connection
 		int entityId = channel.attr(Key.ENTITY).get();
@@ -95,8 +97,8 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
 		cause.printStackTrace();
 	}
-	
-	public ClientHandler() {
+
+	public void initialize() {
 		WorldManager world = LoginServer.manager;
 		handlers[RecvOpcode.LOGIN_PASSWORD.getValue()] = world.getSystem(LoginSystemHandler.class);
 		handlers[RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
@@ -105,7 +107,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 		handlers[RecvOpcode.CHARLIST_REQUEST.getValue()] = world.getSystem(CharListRequestSystemHandler.class);
 		handlers[RecvOpcode.CHECK_CHAR_NAME.getValue()] = world.getSystem(CheckCharNameSystemHandler.class);
 		handlers[RecvOpcode.CREATE_CHAR.getValue()] = world.getSystem(CreateCharSystemHandler.class);
-//		handlers[RecvOpcode.CHAR_SELECT.getValue()] = world.getSystem(CharSelectedHandler.class);
+		handlers[RecvOpcode.CHAR_SELECT.getValue()] = world.getSystem(CharSelectSystemHandler.class);
 	}
 	
 }

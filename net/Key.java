@@ -17,4 +17,5 @@ public class Key {
     public static final AttributeKey<AESOFB> AESOFB = AttributeKey.valueOf("AESOFB");
     public static final AttributeKey<Pipeline> PIPELINE = AttributeKey.valueOf("PIPELINE");
     public static final AttributeKey<Client> CLIENT = AttributeKey.valueOf("CLIENT");
+    public static final AttributeKey<Integer> CHANNEL_NUMBER = AttributeKey.valueOf("CHANNEL_NUMBER");
 }

@@ -12,9 +12,9 @@ public class WorldManager implements Runnable {
         BaseSystem[] systems = new BaseSystem[classes.length];
         for (int x = 0; x < systems.length; x++)
             try {
-                System.out.println(classes[x]);
+//                System.out.println(classes[x]);
                 systems[x] = classes[x].newInstance();
-                System.out.println(systems[x]);
+//                System.out.println(systems[x]);
             } catch (InstantiationException | IllegalAccessException e) {
                 System.out.println("Failed to create systems for ECS World Manager.");
             } catch (Exception e) {

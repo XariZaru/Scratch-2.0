@@ -2,7 +2,7 @@ package systems;
 
 import com.artemis.ComponentMapper;
 import ecs.EntityCreationSystem;
-import net.MaplePacketCreator;
+import net.packets.MaplePacketCreator;
 import requests.LoginRequest;
 import database.DatabaseConnection;
 import io.netty.channel.Channel;
