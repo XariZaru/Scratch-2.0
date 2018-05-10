@@ -7,6 +7,10 @@ public class WorldManager implements Runnable {
     public final World world;
     private boolean started = false;
 
+    /**
+     * Remember to wrap this class in a thread and call start to access the run method.
+     * @param classes BaseSystem classes to be processed
+     */
     @SafeVarargs
     public WorldManager(Class<? extends BaseSystem>... classes) {
         BaseSystem[] systems = new BaseSystem[classes.length];
@@ -18,7 +22,7 @@ public class WorldManager implements Runnable {
             } catch (InstantiationException | IllegalAccessException e) {
                 System.out.println("Failed to create systems for ECS World Manager.");
             } catch (Exception e) {
-                System.out.println("Failed!");
+                e.printStackTrace();
             }
 
         config = new WorldConfigurationBuilder().with(
@@ -97,8 +101,8 @@ public class WorldManager implements Runnable {
             // to this and then factor in the current time to give
             // us our final value to wait for
             // remember this is in ms, whereas our lastLoopTime etc. vars are in ns.
-            try{
-                Thread.sleep( (lastLoopTime-System.nanoTime() + OPTIMAL_TIME)/1000000 );
+            try {
+                Thread.sleep((lastLoopTime - System.nanoTime() + OPTIMAL_TIME) / 1000000);
             } catch (IllegalArgumentException e) {
                 // Do nothing if negative because we want the game loop to not sleep and catch up
             } catch (Exception e) {

@@ -10,8 +10,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import net.Key;
 import net.packets.MasterServerPacketCreator;
-import src.net.App;
-import src.net.ClientType;
+import net.App;
+import net.ClientType;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;

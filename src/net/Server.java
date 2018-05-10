@@ -1,4 +1,4 @@
-package src.net;
+package net;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
@@ -46,14 +46,14 @@ public class Server implements Runnable {
 
     }
 
-    public void writeForType(OutboundPacket msg, src.net.ClientType type) {
+    public void writeForType(OutboundPacket msg, net.ClientType type) {
         channels.stream().filter(ch -> ch.attr(Key.TYPE).get() == type).forEach(ch ->
         {
             ch.writeAndFlush(msg);
         });
     }
 
-    public ArrayList<Channel> getChannelsOfType(src.net.ClientType type) {
+    public ArrayList<Channel> getChannelsOfType(net.ClientType type) {
         ArrayList<Channel> ret = new ArrayList<Channel>();
         channels.stream().filter(ch -> ch.attr(Key.TYPE).get() == type).forEach(ch ->
         {

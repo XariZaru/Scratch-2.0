@@ -1,4 +1,4 @@
-package src.net;
+package net;
 
 public enum ClientType {
 

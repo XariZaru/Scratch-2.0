@@ -76,7 +76,7 @@ public class ListWZFile {
         if (listWz != null) {
             ListWZFile listwz;
             try {
-                listwz = new ListWZFile(MapleDataProviderFactory.fileInWZPath("List.src.wz"));
+                listwz = new ListWZFile(MapleDataProviderFactory.fileInWZPath("List.wz"));
                 modernImgs = new HashSet<>(listwz.getEntries());
             } catch (FileNotFoundException e) {
             }

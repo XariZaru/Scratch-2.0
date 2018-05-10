@@ -1,4 +1,4 @@
-package src.net.opcodes;
+package net.opcodes;
 
 public enum MasterServerOpcode {
 	

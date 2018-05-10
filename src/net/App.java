@@ -1,4 +1,4 @@
-package src.net;
+package net;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

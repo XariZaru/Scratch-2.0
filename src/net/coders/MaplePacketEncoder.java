@@ -30,7 +30,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import net.Key;
 import net.encryption.MapleAESOFB;
 import net.packets.OutboundPacket;
-import src.net.encryption.MapleCustomEncryption;
+import net.encryption.MapleCustomEncryption;
 
 @ChannelHandler.Sharable
 public class MaplePacketEncoder extends MessageToByteEncoder<OutboundPacket> {

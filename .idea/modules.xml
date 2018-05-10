@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/LoginServer/LoginServer.iml" filepath="$PROJECT_DIR$/LoginServer/LoginServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/MasterServer/MasterServer.iml" filepath="$PROJECT_DIR$/MasterServer/MasterServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scratch 2.0.iml" filepath="$PROJECT_DIR$/Scratch 2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestCases.iml" filepath="$PROJECT_DIR$/TestCases.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,7 @@
 package database;
 
 import com.zaxxer.hikari.HikariDataSource;
-import src.constants.ScratchConstants;
+import constants.ScratchConstants;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -19,9 +19,9 @@ public class DatabaseConnection {
         source.addDataSourceProperty("password", ScratchConstants.DB_PASS);
         source.setAutoCommit(false);
         
-//    	source.setUrl(src.net.constants.ScratchConstants.DB_URL);
-//    	source.setUser(src.net.constants.ScratchConstants.DB_USER);
-//    	source.setPassword(src.net.constants.ScratchConstants.DB_PASS);
+//    	source.setUrl(net.constants.ScratchConstants.DB_URL);
+//    	source.setUser(net.constants.ScratchConstants.DB_USER);
+//    	source.setPassword(net.constants.ScratchConstants.DB_PASS);
     }
       
 

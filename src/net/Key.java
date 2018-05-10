@@ -4,7 +4,7 @@ import components.AESOFB;
 import components.Client;
 import components.Pipeline;
 import io.netty.util.AttributeKey;
-import src.net.ClientType;
+import net.ClientType;
 
 public class Key {
 

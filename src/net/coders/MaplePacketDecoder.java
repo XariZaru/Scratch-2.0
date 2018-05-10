@@ -36,7 +36,7 @@ public class MaplePacketDecoder extends ByteToMessageDecoder{
             in.readBytes(decryptedPacket);
             pipe.nextPacketSize = -1;
             recv.crypt(decryptedPacket);
-            src.net.encryption.MapleCustomEncryption.decryptData(decryptedPacket);
+            net.encryption.MapleCustomEncryption.decryptData(decryptedPacket);
             out.add(new InboundPacket(decryptedPacket));
             return;
         }

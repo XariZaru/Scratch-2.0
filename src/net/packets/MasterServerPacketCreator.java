@@ -1,8 +1,8 @@
 package net.packets;
 
 import components.Pipeline;
-import src.net.ClientType;
-import src.net.opcodes.MasterServerOpcode;
+import net.ClientType;
+import net.opcodes.MasterServerOpcode;
 
 public class MasterServerPacketCreator {	
 	

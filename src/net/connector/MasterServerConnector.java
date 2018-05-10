@@ -2,9 +2,9 @@ package net.connector;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
-import src.constants.ScratchConstants;
-import src.net.ClientType;
-import src.net.Server;
+import constants.ScratchConstants;
+import net.ClientType;
+import net.Server;
 
 public class MasterServerConnector extends net.connector.Connector {
 

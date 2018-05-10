@@ -1,7 +1,7 @@
 package components.character;
 
 import com.artemis.Component;
-import src.constants.GameConstants;
+import constants.GameConstants;
 
 public class CharacterJob extends Component {
 

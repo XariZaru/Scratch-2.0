@@ -3,8 +3,8 @@ package net.packets;
 import components.Client;
 import components.Location;
 import components.character.CharacterStat;
-import src.constants.ScratchConstants;
-import src.net.opcodes.SendOpcode;
+import constants.ScratchConstants;
+import net.opcodes.SendOpcode;
 import tools.StringUtil;
 
 import java.net.InetAddress;

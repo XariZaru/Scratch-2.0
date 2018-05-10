@@ -60,7 +60,7 @@ public class FileStoredPngMapleCanvas implements MapleCanvas {
         if (image == null) {
             try {
                 image = ImageIO.read(file);
-                // replace the dimensions loaded from the src.wz by the REAL dimensions from the image - should be equal tho
+                // replace the dimensions loaded from the wz by the REAL dimensions from the image - should be equal tho
                 width = image.getWidth();
                 height = image.getHeight();
             } catch (IOException e) {

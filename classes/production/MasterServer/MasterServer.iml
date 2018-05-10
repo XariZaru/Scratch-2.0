@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Scratch 2.0" />
+    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.23.Final" level="project" />
   </component>
 </module>

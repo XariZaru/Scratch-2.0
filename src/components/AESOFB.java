@@ -2,7 +2,7 @@ package components;
 
 import com.artemis.Component;
 import net.encryption.MapleAESOFB;
-import src.constants.ScratchConstants;
+import constants.ScratchConstants;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
