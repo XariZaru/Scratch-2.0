@@ -14,4 +14,9 @@
       <module name="Scratch 2.0" target="8" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="GameServer" options="--add-modules=java.xml.bind" />
+    </option>
+  </component>
 </project>

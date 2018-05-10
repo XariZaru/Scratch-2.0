@@ -1,18 +1,16 @@
 package systems;
 
 import com.artemis.ComponentMapper;
+import components.Client;
 import ecs.EntityCreationSystem;
-import net.packets.MaplePacketCreator;
-import requests.LoginRequest;
-import database.DatabaseConnection;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
-import net.components.Client;
-import net.encryption.BCrypt;
 import net.packets.InboundPacket;
+import net.packets.MaplePacketCreator;
 import net.packets.OutboundPacket;
 import net.packets.PacketTask;
+import requests.LoginRequest;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -55,7 +53,7 @@ public class LoginSystemHandler extends PacketHandler {
 
     public Result attempt(Channel ch, String login, String pwd) {
 
-        try (Connection c = DatabaseConnection.getConnection();
+        try (Connection c = src.database.DatabaseConnection.getConnection();
              PreparedStatement ps = c.prepareStatement("SELECT * FROM accounts WHERE name = ?")) {
             ps.setString(1, login);
             try (ResultSet rs = ps.executeQuery()) {
@@ -82,7 +80,7 @@ public class LoginSystemHandler extends PacketHandler {
 
     private Result attempt(ResultSet rs, String pwd) throws SQLException {
         if (!rs.next()) return Result.NOT_REGISTERED;
-        if (!BCrypt.checkpw(pwd, rs.getString("password")))
+        if (!src.net.encryption.BCrypt.checkpw(pwd, rs.getString("password")))
             return Result.INCORRECT_PASSWORD;
         return Result.SUCCESS;
     }

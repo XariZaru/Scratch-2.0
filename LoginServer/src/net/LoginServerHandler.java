@@ -4,16 +4,12 @@ import ecs.WorldManager;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import main.LoginServer;
-import net.opcodes.MasterServerOpcode;
 import net.packets.InboundPacket;
-import systems.ClientConnectToServerResponseSystem;
-import systems.ServerListResponseSystemHandler;
-import systems.ServerStatusResponseSystemHandler;
+import src.net.opcodes.MasterServerOpcode;
 
 public class LoginServerHandler extends ChannelInboundHandlerAdapter {
 
-	PacketHandler[] handlers = new PacketHandler[net.opcodes.MasterServerOpcode.values().length];
+	PacketHandler[] handlers = new PacketHandler[MasterServerOpcode.values().length];
 	
 	public LoginServerHandler() {		
 		WorldManager world = LoginServer.manager;

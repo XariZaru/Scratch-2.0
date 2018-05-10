@@ -1,6 +1,5 @@
 package systems;
 
-import com.artemis.Component;
 import io.netty.channel.Channel;
 import main.LoginServer;
 import net.Key;

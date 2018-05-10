@@ -1,4 +1,4 @@
-package net;
+package MasterServer.src.net;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

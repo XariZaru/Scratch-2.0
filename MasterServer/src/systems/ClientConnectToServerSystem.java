@@ -1,4 +1,4 @@
-package systems;
+package MasterServer.src.systems;
 
 import io.netty.channel.Channel;
 import net.PacketHandler;

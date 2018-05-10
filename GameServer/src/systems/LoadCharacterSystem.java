@@ -2,16 +2,16 @@ package systems;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
+import components.Client;
+import components.DatabaseId;
+import components.Location;
+import components.Name;
+import components.character.CharacterJob;
+import components.character.CharacterLook;
+import components.character.CharacterStat;
 import database.DatabaseConnection;
 import io.netty.channel.Channel;
 import net.Key;
-import net.components.Client;
-import net.components.DatabaseId;
-import net.components.Location;
-import net.components.Name;
-import net.components.character.CharacterJob;
-import net.components.character.CharacterLook;
-import net.components.character.CharacterStat;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

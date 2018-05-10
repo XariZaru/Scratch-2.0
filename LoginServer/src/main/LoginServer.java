@@ -1,14 +1,15 @@
 package main;
 
-import constants.ScratchConstants;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
 import net.ClientHandler;
-import net.ClientType;
 import net.LoginServerTrafficHandler;
-import net.Server;
 import net.coders.MaplePacketDecoder;
 import net.coders.MaplePacketEncoder;
+import net.systems.ClientHandshakeSystem;
+import src.constants.ScratchConstants;
+import src.net.ClientType;
+import src.net.Server;
 import net.connector.MasterServerConnector;
 import systems.*;
 

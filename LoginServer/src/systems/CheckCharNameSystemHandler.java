@@ -1,6 +1,6 @@
 package systems;
 
-import database.DatabaseConnection;
+import src.database.DatabaseConnection;
 import io.netty.channel.Channel;
 import net.PacketHandler;
 import net.opcodes.SendOpcode;

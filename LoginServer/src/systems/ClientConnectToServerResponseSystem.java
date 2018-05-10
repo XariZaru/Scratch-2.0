@@ -2,10 +2,9 @@ package systems;
 
 import com.artemis.ComponentMapper;
 import io.netty.channel.Channel;
-import net.packets.MaplePacketCreator;
 import net.PacketHandler;
-import net.components.Pipeline;
 import net.packets.InboundPacket;
+import net.packets.MaplePacketCreator;
 import net.packets.OutboundPacket;
 
 import java.net.InetAddress;
@@ -13,7 +12,7 @@ import java.net.UnknownHostException;
 
 public class ClientConnectToServerResponseSystem extends PacketHandler {
 
-    private ComponentMapper<Pipeline> pipes;
+    private ComponentMapper<components.Pipeline> pipes;
 
     @Override
     public void receive(Channel channel, InboundPacket packet, OutboundPacket outBound) {
@@ -21,7 +20,7 @@ public class ClientConnectToServerResponseSystem extends PacketHandler {
         int dbId = packet.readInt();
         int clientEntityId = packet.readInt();
 
-        Pipeline pipe = pipes.get(clientEntityId);
+        components.Pipeline pipe = pipes.get(clientEntityId);
         byte world = packet.readByte();
         byte server = packet.readByte();
         String[] addressAndPort = address.split(":"); // /127.0.0.1:6650

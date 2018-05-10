@@ -6,15 +6,14 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.GameServer;
 import main.GameServersLauncher;
-import net.opcodes.RecvOpcode;
 import net.packets.InboundPacket;
-import systems.ClientHandshakeSystem;
+import net.systems.ClientHandshakeSystem;
 import systems.PlayerLoggedInSystemHandler;
 
 @ChannelHandler.Sharable
 public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
-	PacketHandler[] handlers = new PacketHandler[RecvOpcode.values().length];
+	PacketHandler[] handlers = new PacketHandler[src.net.opcodes.RecvOpcode.values().length];
 
 	private GameServer server;
 	private final int index;
@@ -51,7 +50,7 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
 		InboundPacket buffer = (InboundPacket) packet;
 		short packetId = buffer.readShort();
-		System.out.println("Handling opcode for " + RecvOpcode.getOpcode(packetId));
+		System.out.println("Handling opcode for " + src.net.opcodes.RecvOpcode.getOpcode(packetId));
 		PacketHandler handler = getHandler(packetId);
 
 		if (handler != null) {
@@ -62,7 +61,7 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 			}
 		}
 
-		System.out.println("Processing packet id " + RecvOpcode.getOpcode(packetId) + " with ID " + packetId + " with handler " + handler);
+		System.out.println("Processing packet id " + src.net.opcodes.RecvOpcode.getOpcode(packetId) + " with ID " + packetId + " with handler " + handler);
 	}
 
 	@Override
@@ -109,7 +108,7 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 	public void initialize() {
 
 	    this.server = GameServersLauncher.gameServers.get(index);
-	    handlers[RecvOpcode.PLAYER_LOGGEDIN.getValue()] = server.manager.getSystem(PlayerLoggedInSystemHandler.class);
+	    handlers[src.net.opcodes.RecvOpcode.PLAYER_LOGGEDIN.getValue()] = server.manager.getSystem(PlayerLoggedInSystemHandler.class);
 
     }
 	

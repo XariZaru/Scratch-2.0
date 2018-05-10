@@ -4,7 +4,7 @@ import com.artemis.ComponentMapper;
 import io.netty.channel.Channel;
 import net.packets.MaplePacketCreator;
 import net.PacketHandler;
-import net.components.Pipeline;
+import src.net.components.Pipeline;
 import net.opcodes.SendOpcode;
 import net.packets.InboundPacket;
 import net.packets.OutboundPacket;

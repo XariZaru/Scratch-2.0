@@ -1,18 +1,18 @@
 package systems;
 
 import com.artemis.ComponentMapper;
-import net.components.DatabaseId;
-import net.components.Location;
-import net.components.Name;
-import net.components.character.CharacterJob;
-import net.components.character.CharacterLook;
-import net.components.character.CharacterStat;
-import database.DatabaseConnection;
+import src.net.components.DatabaseId;
+import src.net.components.Location;
+import src.net.components.Name;
+import src.net.components.character.CharacterJob;
+import src.net.components.character.CharacterLook;
+import src.net.CharacterStat;
+import src.database.DatabaseConnection;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
-import net.components.Client;
-import net.components.Pipeline;
+import src.net.components.Client;
+import src.net.components.Pipeline;
 import net.opcodes.SendOpcode;
 import net.packets.InboundPacket;
 import net.packets.OutboundPacket;
@@ -29,7 +29,7 @@ public class CreateCharSystemHandler extends PacketHandler {
 
     private ComponentMapper<CreateCharRequest> requests;
 
-    // TODO: Look at consequences of setting auto commit true always. Might have issues when only char is inserted but not equips
+    // TODO: Look at consequences of setting auto commit true always. Might have issues when only char is inserted but not equipStats
 
     private static Set<Integer> IDs = new HashSet<>(Arrays.asList(
             1302000, 1312004, 1322005, 1442079,// weapons
@@ -83,7 +83,7 @@ public class CreateCharSystemHandler extends PacketHandler {
             look.hairColor = packet.readInt();
             look.skin = CharacterLook.SkinColor.getById(packet.readInt());
 
-            // Process incoming default equips. Can be packet edited, so check for legal items. Disconnect if packet editing.
+            // Process incoming default equipStats. Can be packet edited, so check for legal items. Disconnect if packet editing.
 
             List<Pair<Integer, Integer>>[] equipped = new ArrayList[] {new ArrayList(), new ArrayList()};
             Pair<Integer, Integer> items[] =  new Pair[] {

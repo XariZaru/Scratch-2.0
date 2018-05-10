@@ -1,8 +1,8 @@
-package systems;
+package MasterServer.src.systems;
 
 import com.artemis.ComponentMapper;
-import requests.ServerListRequest;
-import ecs.EntityCreationSystem;
+import MasterServer.src.requests.ServerListRequest;
+import src.ecs.EntityCreationSystem;
 import io.netty.channel.Channel;
 import net.PacketHandler;
 import net.packets.InboundPacket;

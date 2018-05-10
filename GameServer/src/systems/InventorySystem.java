@@ -1,9 +1,25 @@
 package systems;
 
 import com.artemis.BaseSystem;
+import com.artemis.ComponentMapper;
+import components.Expiration;
+import components.item.*;
 import net.packets.OutboundPacket;
 
 public class InventorySystem extends BaseSystem {
+
+    ComponentMapper<CashItem> cashItems;        ComponentMapper<ItemOwner> itemOwners;
+    ComponentMapper<Item> items;                ComponentMapper<ItemLevel> itemLevels;
+    ComponentMapper<Equip> equips;              ComponentMapper<ItemFlag> flags;
+    ComponentMapper<Pet> pets;                  ComponentMapper<CharacterInventory> charInventories;
+    ComponentMapper<Ring> rings;                ComponentMapper<Inventory> inventories;
+    ComponentMapper<Expiration> expirations;
+
+    public void save(int playerEntityId) {
+        CharacterInventory characterInventory = charInventories.get(playerEntityId);
+        for (int inventoryEntityId : characterInventory.inventories) {
+        }
+    }
 
     public static void addInventoryInfo(final OutboundPacket mplew, int entityId) {
 //        MapleInventory iv = chr.getInventory(MapleInventoryType.EQUIPPED);

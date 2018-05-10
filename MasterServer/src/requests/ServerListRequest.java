@@ -1,4 +1,4 @@
-package requests;
+package MasterServer.src.requests;
 
 import com.artemis.Component;
 import io.netty.channel.Channel;

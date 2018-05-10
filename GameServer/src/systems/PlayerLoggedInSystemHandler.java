@@ -1,11 +1,10 @@
 package systems;
 
 import com.artemis.ComponentMapper;
+import components.Client;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
-import net.components.Client;
-import net.opcodes.SendOpcode;
 import net.packets.InboundPacket;
 import net.packets.MaplePacketCreator;
 import net.packets.OutboundPacket;
@@ -183,7 +182,7 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
 //        player.setRates();
 //        player.setLoginTime();
 //
-//        if (GameConstants.hasSPTable(player.getJob()) && player.getJob().getId() != 2001) {
+//        if (src.net.constants.GameConstants.hasSPTable(player.getJob()) && player.getJob().getId() != 2001) {
 //            player.createDragon();
 //        }
 //
@@ -240,7 +239,7 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
 //
 //            for (int x = 1142014; x < 1142032; x++) {
 //                if (player.haveItem(x, true) && DonorKing.getInstance().getRanking(player.getId(), DonorKing.getInstance().getLocationOfMedal(x)) != 0) {
-//                    player.dropMessage("Because you are no longer the Donor King, you've lost the " + MapleItemInformationProvider.getInstance().getName(x) + ".");
+//                    player.dropMessage("Because you are no longer the Donor King, you've lost the " + ItemLibrarySystem.getInstance().getName(x) + ".");
 //                    if (player.haveItem(x, false))
 //                        MapleInventoryManipulator.removeById(player.getClient(), MapleInventoryType.EQUIP, x, 1, true, false);
 //                    if (player.haveItem(x, true))
@@ -270,7 +269,7 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
      */
     public OutboundPacket getCharInfo(int entityId) {
         final OutboundPacket mplew = new OutboundPacket();
-        mplew.writeShort(SendOpcode.SET_FIELD.getValue());
+        mplew.writeShort(src.net.opcodes.SendOpcode.SET_FIELD.getValue());
         mplew.writeInt(si.channel);
         mplew.write(1);
         mplew.write(1);

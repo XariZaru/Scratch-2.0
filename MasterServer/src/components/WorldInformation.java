@@ -1,7 +1,7 @@
-package components;
+package MasterServer.src.components;
 
 import com.artemis.Component;
-import constants.ScratchConstants;
+import src.net.constants.ScratchConstants;
 import io.netty.channel.Channel;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;

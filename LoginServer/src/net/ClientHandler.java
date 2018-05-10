@@ -1,19 +1,20 @@
 package net;
 
+import MasterServer.src.systems.ServerStatusRequestSystemHandler;
 import ecs.WorldManager;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.LoginServer;
-import net.opcodes.RecvOpcode;
 import net.packets.InboundPacket;
+import net.systems.ClientHandshakeSystem;
 import systems.*;
 
 @ChannelHandler.Sharable
 public class ClientHandler extends ChannelInboundHandlerAdapter {		
 	
-	PacketHandler[] handlers = new PacketHandler[RecvOpcode.values().length];
+	PacketHandler[] handlers = new PacketHandler[src.net.opcodes.RecvOpcode.values().length];
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -41,7 +42,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 		
 		InboundPacket buffer = (InboundPacket) packet;
 		short packetId = buffer.readShort();
-		System.out.println("Handling opcode for " + RecvOpcode.getOpcode(packetId));
+		System.out.println("Handling opcode for " + src.net.opcodes.RecvOpcode.getOpcode(packetId));
 		PacketHandler handler = getHandler(packetId);
 
 		if (handler != null) {
@@ -52,7 +53,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 			}
 		}
 
-		System.out.println("Processing packet id " + RecvOpcode.getOpcode(packetId) + " with ID " + packetId + " with handler " + handler);
+		System.out.println("Processing packet id " + src.net.opcodes.RecvOpcode.getOpcode(packetId) + " with ID " + packetId + " with handler " + handler);
 	}
 	
 	@Override
@@ -100,14 +101,14 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 
 	public void initialize() {
 		WorldManager world = LoginServer.manager;
-		handlers[RecvOpcode.LOGIN_PASSWORD.getValue()] = world.getSystem(LoginSystemHandler.class);
-		handlers[RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
-		handlers[RecvOpcode.SERVERLIST_REREQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
-		handlers[RecvOpcode.SERVERSTATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestSystemHandler.class);
-		handlers[RecvOpcode.CHARLIST_REQUEST.getValue()] = world.getSystem(CharListRequestSystemHandler.class);
-		handlers[RecvOpcode.CHECK_CHAR_NAME.getValue()] = world.getSystem(CheckCharNameSystemHandler.class);
-		handlers[RecvOpcode.CREATE_CHAR.getValue()] = world.getSystem(CreateCharSystemHandler.class);
-		handlers[RecvOpcode.CHAR_SELECT.getValue()] = world.getSystem(CharSelectSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.LOGIN_PASSWORD.getValue()] = world.getSystem(LoginSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.SERVERLIST_REQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.SERVERLIST_REREQUEST.getValue()] = world.getSystem(ServerListRequestSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.SERVERSTATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.CHARLIST_REQUEST.getValue()] = world.getSystem(CharListRequestSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.CHECK_CHAR_NAME.getValue()] = world.getSystem(CheckCharNameSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.CREATE_CHAR.getValue()] = world.getSystem(CreateCharSystemHandler.class);
+		handlers[src.net.opcodes.RecvOpcode.CHAR_SELECT.getValue()] = world.getSystem(CharSelectSystemHandler.class);
 	}
 	
 }

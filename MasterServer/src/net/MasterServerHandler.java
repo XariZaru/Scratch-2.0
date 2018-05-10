@@ -1,33 +1,29 @@
-package net;
+package src.net;
 
 import ecs.WorldManager;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import main.MasterServer;
-import net.opcodes.MasterServerOpcode;
+import net.Key;
+import net.PacketHandler;
 import net.packets.InboundPacket;
-import systems.ClientConnectToServerSystem;
-import systems.HandshakeSystem;
-import systems.ServerInfoRequestSystemHandler;
-import systems.ServerStatusRequestSystemHandler;
 
 @ChannelHandler.Sharable
 public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 
-	PacketHandler[] handlers = new PacketHandler[net.opcodes.MasterServerOpcode.values().length];
+	PacketHandler[] handlers = new PacketHandler[src.net.opcodes.MasterServerOpcode.values().length];
 
 	public void initialize() {
-		WorldManager world = MasterServer.manager;
-		handlers[MasterServerOpcode.HANDSHAKE.getValue()] = world.getSystem(HandshakeSystem.class);
-		handlers[MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(ServerInfoRequestSystemHandler.class);
-		handlers[MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(ServerStatusRequestSystemHandler.class);
-		handlers[MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(ClientConnectToServerSystem.class);
+		WorldManager world = MasterServer.src.main.MasterServer.src.main.MasterServer.manager;
+		handlers[src.net.opcodes.MasterServerOpcode.HANDSHAKE.getValue()] = world.getSystem(MasterServer.src.systems.HandshakeSystem.class);
+		handlers[src.net.opcodes.MasterServerOpcode.SERVER_LIST_REQUEST.getValue()] = world.getSystem(MasterServer.src.systems.ServerInfoRequestSystemHandler.class);
+		handlers[src.net.opcodes.MasterServerOpcode.GAME_SERVER_STATUS_REQUEST.getValue()] = world.getSystem(MasterServer.src.systems.ServerStatusRequestSystemHandler.class);
+		handlers[src.net.opcodes.MasterServerOpcode.CONNECT_CLIENT_TO_SERVER.getValue()] = world.getSystem(MasterServer.src.systems.ClientConnectToServerSystem.class);
 	}
 	
 	@Override
-	public void channelActive(ChannelHandlerContext ctx) {		
+	public void channelActive(ChannelHandlerContext ctx) {
 //		System.out.println("Connection to Master on " + ctx.channel().remoteAddress() + " for channel " + ctx.channel());
 	}
 	
@@ -36,7 +32,7 @@ public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 		Channel channel = ctx.channel();
 		int e = channel.attr(Key.ENTITY).get();
 		System.out.println(channel.attr(Key.TYPE).get() + " " + e + " disconnected from master.");
-		MasterServer.manager.delete(e);
+		MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.src.main.MasterServer.manager.delete(e);
 //		Integer e = channel.attr(Key.ENTITY).get();
 //
 //		if (e != null) {
@@ -49,7 +45,7 @@ public class MasterServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelRead(ChannelHandlerContext ctx, Object msg) {
 		InboundPacket buf = (InboundPacket) msg;
 		short opcode = buf.readShort();
-		System.out.println("Received packet with opcode " + MasterServerOpcode.getOpcode(opcode));
+		System.out.println("Received packet with opcode " + src.net.opcodes.MasterServerOpcode.getOpcode(opcode));
 		PacketHandler handler = getHandler(opcode);
 		if (handler != null) {
 			handler.receive(ctx.channel(), buf, null);

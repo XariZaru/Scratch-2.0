@@ -2,47 +2,251 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c104d0-a0b1-4b64-9355-b3ee562cff51" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/GameServer/src/systems/ItemSaveSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginServer/src/systems/CharSelectSystemHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasterServer/src/systems/ClientConnectToServerSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_digester3_with_deps_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/components/item/library/EquipStat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/components/item/library/EquipStatRequirement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleCanvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataDirectoryEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataFileEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataProviderFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/MapleDataTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/FileStoredPngMapleCanvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/ImgMapleSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/ListWZFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/MapleDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/PNGMapleCanvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZDirectoryEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZFileEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZIMGEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZIMGFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/WZTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/XMLDomMapleData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider/wz/XMLWZFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/ByteArrayByteStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/ByteInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/GenericLittleEndianAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/GenericSeekableLittleEndianAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/InputStreamByteStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/LittleEndianAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/RandomAccessByteStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/SeekableInputStreamBytestream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/input/SeekableLittleEndianAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/output/BAOSByteOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/output/ByteOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/output/GenericLittleEndianWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/output/LittleEndianWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tools/data/output/MaplePacketLittleEndianWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/components/item/CharacterInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/components/item/CharacterInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/components/item/Equip.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/components/item/Equip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/main/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/GameServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/GameServersLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/GameServersLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/net/GameClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/net/GameClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/net/MaplePacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/net/MaplePacketCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/net/GameServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/net/GameServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/net/GameServerTrafficHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/net/GameServerTrafficHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/CharacterInfoEncodingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/CharacterInfoEncodingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/CooldownSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/CooldownSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/InventorySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/InventorySystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/ItemInfoEncodingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/ItemInfoEncodingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/ItemInfoSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/ItemSaveSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/LoadCharacterSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/LoadCharacterSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/MonsterBookSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/MonsterBookSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/PlayerLoggedInSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/PlayerLoggedInSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/QuestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/QuestSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/RingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/RingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/ServerIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/ServerIdentifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/SkillSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/SkillSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/systems/TeleportRockSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/systems/TeleportRockSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/LoginServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoginServer/src/main/LoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/main/LoginServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoginServer/src/net/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/net/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/CharListRequestSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/CharListRequestSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/CharSelectSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/CharSelectSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/CheckCharNameSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/CheckCharNameSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/CreateCharSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/CreateCharSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/LoginSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/LoginSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/ServerListRequestSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/ServerListRequestSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/ServerListResponseSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/ServerListResponseSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/ServerStatusRequestSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/ServerStatusRequestSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/src/systems/ServerStatusResponseSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/src/systems/ServerStatusResponseSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/MasterServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/MasterServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MasterServer/src/components/WorldInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/components/WorldInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MasterServer/src/main/MasterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/main/MasterServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/src/net/MasterServerTrafficHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/net/MasterServerTrafficHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/src/requests/ServerListRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/requests/ServerListRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/src/systems/ClientConnectToServerSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/systems/ClientConnectToServerSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MasterServer/src/systems/GameServerAssignmentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/systems/GameServerAssignmentSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/src/systems/HandshakeSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/systems/HandshakeSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/src/systems/ServerInfoRequestSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/systems/ServerInfoRequestSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/src/systems/ServerStatusRequestSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/src/systems/ServerStatusRequestSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/components/item/CharacterInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/components/item/CharacterInventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/components/item/Equip.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/components/item/Equip.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/GameServer/main/GameServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/main/GameServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/main/GameServersLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/main/GameServersLauncher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/GameServer/net/GameClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/net/GameClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/net/MaplePacketCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/net/MaplePacketCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/main/LoginServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/main/LoginServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/net/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/net/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/net/LoginServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/net/LoginServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharListRequestSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharListRequestSystemHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CreateCharSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/CreateCharSystemHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/components/WorldInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/MasterServer/components/WorldInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/main/MasterServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/MasterServer/main/MasterServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/net/MasterServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/MasterServer/net/MasterServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/GameServerAssignmentSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/MasterServer/systems/GameServerAssignmentSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/ScratchConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/constants/ScratchConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/net/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/coders/MaplePacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/net/coders/MaplePacketDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/packets/MasterServerPacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/net/packets/MasterServerPacketCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/ScratchConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/ScratchConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/net/GameServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/net/GameServerHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/CharacterInfoEncodingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/CharacterInfoEncodingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/InventorySystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/InventorySystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/ItemInfoEncodingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/ItemInfoEncodingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/ItemInfoSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/ItemSaveSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/LoadCharacterSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/LoadCharacterSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerLoggedInSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerLoggedInSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/main/LoginServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/net/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/net/LoginServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/net/LoginServerTrafficHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/requests/CreateCharRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/requests/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharListRequestSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharSelectSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CheckCharNameSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ClientConnectToServerResponseSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CreateCharSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler$Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerListRequestSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerListResponseSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerStatusRequestSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerStatusResponseSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/components/WorldInformation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/main/MasterServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/net/MasterServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/net/MasterServerTrafficHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/requests/ServerListRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/ClientConnectToServerSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/GameServerAssignmentSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/HandshakeSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/ServerInfoRequestSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/ServerStatusRequestSystemHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/GameConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/GameConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/ScratchConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ScratchConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecs/EntityCreationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/EntityCreationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecs/WorldManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/WorldManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/ClientType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/ClientType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/HexTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/HexTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/PacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/PacketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/coders/MaplePacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/coders/MaplePacketDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/coders/MaplePacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/coders/MaplePacketEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/coders/PacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/coders/PacketDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/coders/PacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/coders/PacketEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/AESOFB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AESOFB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/DatabaseId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DatabaseId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/character/CharacterJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character/CharacterJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/character/CharacterLook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character/CharacterLook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/components/character/CharacterStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character/CharacterStat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/connector/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/connector/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/connector/MasterServerConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/connector/MasterServerConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/encryption/BCrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/encryption/BCrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/encryption/MapleAESOFB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/encryption/MapleAESOFB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/encryption/MapleCustomEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/encryption/MapleCustomEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/opcodes/MasterServerOpcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/opcodes/MasterServerOpcode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/opcodes/RecvOpcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/opcodes/RecvOpcode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/opcodes/SendOpcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/opcodes/SendOpcode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/packets/InboundPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/InboundPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/packets/MaplePacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/packets/MasterServerPacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/MasterServerPacketCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/packets/OutboundPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/OutboundPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/packets/PacketTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/PacketTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systems/ClientHandshakeSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/systems/ClientHandshakeSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MasterServer/MasterServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MasterServer/MasterServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/GameConstants$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/GameConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/ScratchConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ecs/WorldManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ecs/WorldManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/ClientType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/Key.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/Key.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/Server.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketEncoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/AESOFB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/DatabaseId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/Money.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/Name.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/Pipeline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterJob$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterJob$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterLook$SkinColor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterLook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterStat$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/components/character/CharacterStat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/connector/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/connector/Connector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/connector/MasterServerConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/connector/MasterServerConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/encryption/BCrypt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/encryption/MapleCustomEncryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/opcodes/MasterServerOpcode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/opcodes/RecvOpcode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/opcodes/SendOpcode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/packets/MaplePacketCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/packets/MaplePacketCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/packets/MasterServerPacketCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/packets/MasterServerPacketCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/systems/ClientHandshakeSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/LoginServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/MasterServer/MasterServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/MasterServer/MasterServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/LoginServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/MasterServer/MasterServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/MasterServer/MasterServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/GameServer/GameServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/LoginServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/MasterServer/MasterServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/MasterServer/MasterServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/IntToIntegerArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/IntToIntegerArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Randomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/Randomizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/StringUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,29 +261,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MaplePacketDecoder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/net/coders/MaplePacketDecoder.java">
+      <file leaf-file-name="GameServerHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/net/GameServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameClientHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/src/net/GameClientHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +273,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameServersLauncher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/src/main/GameServersLauncher.java">
+      <file leaf-file-name="ItemLibrarySystem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="455">
+              <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2094#2161#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ecs/WorldManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterInfoEncodingSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/systems/CharacterInfoEncodingSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,11 +307,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/net/Server.java">
+      <file leaf-file-name="Pet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/Pet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
+            <state relative-caret-position="252">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,20 +319,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoginServer/src/net/ClientHandler.java">
+      <file leaf-file-name="ItemCreationSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/systems/ItemCreationSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientConnectToServerResponseSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="297">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,23 +331,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScratchConstants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/constants/ScratchConstants.java">
+      <file leaf-file-name="LoadCharacterSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/systems/LoadCharacterSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="87">
+              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaplePacketCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/src/net/MaplePacketCreator.java">
+      <file leaf-file-name="MapleData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/provider/MapleData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2970">
-              <caret line="210" selection-start-line="210" selection-end-line="210" />
+            <state relative-caret-position="15">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasterServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasterServer/src/main/MasterServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addCharLook#0;class#MaplePacketCreator#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoginServer/src/main/LoginServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,10 +392,50 @@
       <find>port</find>
       <find>itemId</find>
       <find>slea</find>
+      <find>listening</find>
+      <find>jcesecurity</find>
+      <find>stat.</find>
+      <find>load</find>
+      <find>read</find>
+      <find>bs.</find>
+      <find>main</find>
+      <find>MapleWeapon</find>
+      <find>src.components</find>
+      <find>src.net.packets.</find>
+      <find>src.net.P</find>
+      <find>components.character.CharacterStat</find>
+      <find>src.net.encryption.MapleAESOFB</find>
+      <find>src.net.connector</find>
+      <find>src.net.coders</find>
+      <find>import src.net.HexTool</find>
+      <find>src.ecs.</find>
+      <find>src.provider.</find>
+      <find>src.provider</find>
+      <find>src.net.</find>
+      <find>src.net</find>
+      <find>components.</find>
+      <find>.src.wz</find>
+      <find>/src/wz</find>
     </findStrings>
     <replaceStrings>
       <replace>inBound</replace>
+      <replace>Weapon</replace>
+      <replace>components</replace>
+      <replace>P</replace>
+      <replace>CharacterStat</replace>
+      <replace>MapleAESOFB</replace>
+      <replace>net.connector</replace>
+      <replace>net.coders</replace>
+      <replace>net</replace>
+      <replace>import net.Hextool</replace>
+      <replace />
+      <replace>provider</replace>
+      <replace>/src/wz</replace>
+      <replace>`</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/GameServer/src/src/net</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,58 +443,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/ServerListSystemHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/systems/MasterHandshakeSystem.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/systems/HandshakeSystem.java" />
-        <option value="$PROJECT_DIR$/net/coders/PacketDecoder.java" />
-        <option value="$PROJECT_DIR$/net/coders/PacketEncoder.java" />
-        <option value="$PROJECT_DIR$/net/PacketHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/components/ServerListRequest.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/ServerListRequestSystemHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/systems/ServerInfoRequestSystemHandler.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/ServerListResponseSystemHandler.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/ClientHandshakeSystem.java" />
+        <option value="$PROJECT_DIR$/src/net/packets/MasterServerPacketCreator.java" />
         <option value="$PROJECT_DIR$/LoginServer/src/systems/ServerStatusRequestSystemHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/systems/ServerStatusRequestSystemHandler.java" />
+        <option value="$PROJECT_DIR$/src/net/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/components/Location.java" />
+        <option value="$PROJECT_DIR$/src/components/character/CharacterStat.java" />
+        <option value="$PROJECT_DIR$/src/net/Server.java" />
+        <option value="$PROJECT_DIR$/src/net/LoginServerTrafficHandler.java" />
+        <option value="$PROJECT_DIR$/src/net/coders/MaplePacketDecoder.java" />
+        <option value="$PROJECT_DIR$/src/components/AESOFB.java" />
+        <option value="$PROJECT_DIR$/src/net/coders/MaplePacketEncoder.java" />
+        <option value="$PROJECT_DIR$/src/net/connector/MasterServerConnector.java" />
+        <option value="$PROJECT_DIR$/src/net/connector/Connector.java" />
+        <option value="$PROJECT_DIR$/src/main/LoginServer.java" />
+        <option value="$PROJECT_DIR$/src/components/Pipeline.java" />
+        <option value="$PROJECT_DIR$/src/net/coders/PacketDecoder.java" />
+        <option value="$PROJECT_DIR$/src/net/coders/PacketEncoder.java" />
+        <option value="$PROJECT_DIR$/src/net/GameClientHandler.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/GameClientHandler.java" />
+        <option value="$PROJECT_DIR$/LoginServer/src/systems/ClientHandshakeSystem.java" />
         <option value="$PROJECT_DIR$/LoginServer/src/systems/ServerStatusResponseSystemHandler.java" />
-        <option value="$PROJECT_DIR$/constants/GameConstants.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/CharacterJob.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/constants/GameConstants.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/CharacterLook.java" />
-        <option value="$PROJECT_DIR$/net/Key.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/DatabaseId.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/CharacterStat.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/Location.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/ItemRequest.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/requests/CharListRequest.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/LoginSystemHandler.java" />
-        <option value="$PROJECT_DIR$/tools/IntToIntegerArray.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/CheckCharNameSystemHandler.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/components/character/CharacterStat.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/requests/CreateCharRequest.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/systems/ItemCreationSystem.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/CharListRequestSystemHandler.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/systems/ItemSaveSystem.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/CreateCharSystemHandler.java" />
-        <option value="$PROJECT_DIR$/net/packets/MasterServerPacketCreator.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/CharSelectSystemHandler.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/net/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/main/MasterServer.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/systems/ClientConnectToServerSystem.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/components/WorldInformation.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/systems/GameServerAssignmentSystem.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/net/MaplePacketCreator.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/main/LoginServer.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/GameServersLauncher.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/GameServer.java" />
+        <option value="$PROJECT_DIR$/src/net/systems/ClientHandshakeSystem.java" />
+        <option value="$PROJECT_DIR$/src/net/MasterServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/net/MasterServerTrafficHandler.java" />
+        <option value="$PROJECT_DIR$/MasterServer/src/net/MasterServerTrafficHandler.java" />
+        <option value="$PROJECT_DIR$/src/net/LoginServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/net/GameServerHandler.java" />
         <option value="$PROJECT_DIR$/GameServer/src/net/GameClientHandler.java" />
-        <option value="$PROJECT_DIR$/net/coders/MaplePacketDecoder.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java" />
-        <option value="$PROJECT_DIR$/constants/ScratchConstants.java" />
-        <option value="$PROJECT_DIR$/net/Server.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/GameServer.java" />
+        <option value="$PROJECT_DIR$/src/net/HexTool.java" />
+        <option value="$PROJECT_DIR$/src/tools/data/output/MaplePacketLittleEndianWriter.java" />
+        <option value="$PROJECT_DIR$/src/net/encryption/MapleAESOFB.java" />
+        <option value="$PROJECT_DIR$/src/tools/data/input/ByteArrayByteStream.java" />
+        <option value="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" />
+        <option value="$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java" />
+        <option value="$PROJECT_DIR$/MasterServer/src/main/MasterServer.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/net/GameServerHandler.java" />
+        <option value="$PROJECT_DIR$/LoginServer/src/provider/MapleData.java" />
+        <option value="$PROJECT_DIR$/LoginServer/src/main/LoginServer.java" />
+        <option value="$PROJECT_DIR$/src/provider/MapleDataDirectoryEntry.java" />
+        <option value="$PROJECT_DIR$/src/provider/MapleDataProvider.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/components/item/library/EquipStat.java" />
+        <option value="$PROJECT_DIR$/src/provider/MapleDataProviderFactory.java" />
+        <option value="$PROJECT_DIR$/src/provider/wz/WZFile.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/src/systems/ItemLibrarySystem.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/src/systems/CharacterInfoEncodingSystem.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/components/item/Pet.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/src/systems/ItemCreationSystem.java" />
+        <option value="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/src/systems/LoadCharacterSystem.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/systems/PlayerLoggedInSystemHandler.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
@@ -247,9 +516,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,21 +528,6 @@
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="ecs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="GameServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -282,20 +535,6 @@
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="GameServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
@@ -325,109 +564,51 @@
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="systems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="systems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="server&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/Server.java&#10;scratchcon&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;clientcon&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/ClientConnectToServerResponseSystem.java&#10;gameserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServer.java&#10;scratchc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;scratc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;connect&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/ClientConnectToServerResponseSystem.java&#10;gameclient&#9;PSI&#9;JAVA://net.GameClientHandler&#10;gameserversla&#9;RUN_CONFIGURATION&#9;GameServersLauncher&#10;gameserverslau&#9;PSI&#9;JAVA://main.GameServersLauncher&#10;loginserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/main/LoginServer.java&#10;clientconn&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/ClientConnectToServerResponseSystem.java&#10;clienthandler&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/ClientHandler.java&#10;loginserverh&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/LoginServerHandler.java&#10;maplepacket&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/MaplePacketCreator.java&#10;scratch&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;loginserverhand&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/LoginServerHandler.java&#10;masterserverpacketc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MasterServerPacketCreator.java&#10;masterserverha&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/MasterServer/src/net/MasterServerHandler.java&#10;master&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/MasterServer/src/main/MasterServer.java&#10;masterserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MasterServerPacketCreator.java&#10;clienthan&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/ClientHandler.java&#10;masterserverp&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MasterServerPacketCreator.java&#10;charli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/CharListRequestSystemHandler.java&#10;masterserverconn&#9;PSI&#9;JAVA://net.connector.MasterServerConnector&#10;sc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;scr&#9;null&#9;null&#10;charinve&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/item/CharacterInventory.java&#10;location&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/Location.java&#10;createchar&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/CreateCharSystemHandler.java&#10;clienth&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/ClientHandler.java&#10;maplepacketc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/MaplePacketCreator.java&#10;loginsy&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/LoginSystemHandler.java&#10;loginsystemh&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/LoginSystemHandler.java&#10;charlistr&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/CharListRequestSystemHandler.java&#10;key&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/Key.java&#10;masterserverhand&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/MasterServer/src/net/MasterServerHandler.java&#10;maplepacketcre&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/MaplePacketCreator.java&#10;maplepacketen&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/coders/MaplePacketEncoder.java&#10;gameserv&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/MasterServer/src/systems/GameServerAssignmentSystem.java&#10;lo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/main/LoginServer.java&#10;games&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/MasterServer/src/systems/GameServerAssignmentSystem.java&#10;clientha&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/ClientHandler.java&#10;loginserverhan&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/LoginServerHandler.java&#10;loginserverhandler&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/net/LoginServerHandler.java&#10;maplepacketdeco&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/coders/MaplePacketDecoder.java&#10;outbound&#9;PSI&#9;JAVA://net.packets.OutboundPacket&#10;inbound&#9;PSI&#9;JAVA://net.packets.InboundPacket&#10;serverinfo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/MasterServer/src/systems/ServerInfoRequestSystemHandler.java&#10;packeth&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/PacketHandler.java" />
+    <property name="SearchEverywhereHistoryKey" value="mapledata&#9;PSI&#9;JAVA://src.provider.MapleData&#10;loginserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/main/LoginServer.java&#10;omaewa&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/omaewa&#10;packethandl&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/PacketHandler.java&#10;pipeline&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/Pipeline.java&#10;loginse&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/main/LoginServer.java&#10;gameserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServer.java&#10;outboundp&#9;PSI&#9;JAVA://src.net.packets.OutboundPacket&#10;packethandler&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/PacketHandler.java&#10;clienthandler&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/ClientHandler.java&#10;location&#9;PSI&#9;JAVA://src.components.Location&#10;scratc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/constants/ScratchConstants.java&#10;equipstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/item/library/EquipStat.java&#10;equip&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/item/Equip.java&#10;mapleitem&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/MapleItemInformationProvider.java&#10;server&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServer.java&#10;inbound&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/InboundPacket.java&#10;inboundpac&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/InboundPacket.java&#10;inboun&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/InboundPacket.java&#10;outbou&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/OutboundPacket.java&#10;outbound&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/OutboundPacket.java&#10;inboundp&#9;PSI&#9;JAVA://net.packets.InboundPacket&#10;scratch&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;scratchc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;loadchar&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/LoadCharacterSystem.java&#10;CharacterStat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/components/character/CharacterStat.java&#10;maplepacket&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MaplePacketCreator.java&#10;playerlo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/PlayerLoggedInSystemHandler.java&#10;worldm&#9;PSI&#9;JAVA://ecs.WorldManager&#10;gamecli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/GameClientHandler.java&#10;playerlog&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/PlayerLoggedInSystemHandler.java&#10;maplepacke&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MaplePacketCreator.java&#10;Item&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/item/Item.java&#10;pet&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/item/Pet.java&#10;encoding&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/ItemInfoEncodingSystem.java&#10;maplep&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MaplePacketCreator.java&#10;expi&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/Expiration.java&#10;expir&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/Expiration.java&#10;iteminfo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/ItemInfoEncodingSystem.java&#10;gameclienth&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/GameClientHandler.java&#10;characterjob&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/components/character/CharacterJob.java&#10;characterstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/components/character/CharacterStat.java&#10;connector&#9;PSI&#9;JAVA://net.connector.Connector&#10;charlis&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/systems/CharListRequestSystemHandler.java&#10;client&#9;PSI&#9;JAVA://net.components.Client&#10;maplepacketcrea&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MaplePacketCreator.java&#10;gameserv&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServer.java&#10;gameserverslau&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServersLauncher.java&#10;gameserversla&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServersLauncher.java&#10;gameserverhandl&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/GameServerHandler.java" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/LoginServer/src/systems" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.4183908" />
+    <property name="project.structure.side.proportion" value="0.23603794" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MasterServer" />
+      <recent name="$PROJECT_DIR$/LoginServer" />
+      <recent name="$PROJECT_DIR$/LoginServer/src" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="src" />
+      <recent name="systems" />
       <recent name="LoginServer.main.main" />
       <recent name="LoginServer.main" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tools" />
-      <recent name="$PROJECT_DIR$/GameServer/src/components" />
-      <recent name="$PROJECT_DIR$/net" />
-      <recent name="$PROJECT_DIR$/net/components" />
-      <recent name="$PROJECT_DIR$/net/connector" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="systems" />
+      <recent name="" />
       <recent name="constants" />
       <recent name="components" />
       <recent name="net" />
-      <recent name="net.components" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/LoginServer/src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/GameServer/src/components" />
+      <recent name="$PROJECT_DIR$/net" />
+      <recent name="$PROJECT_DIR$/net/components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -442,14 +623,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Scratch">
+  <component name="RunManager" selected="Application.ItemLibrarySystem">
     <configuration name="GameServersLauncher" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.GameServersLauncher" />
       <module name="GameServer" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="net.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ItemInfoEncodingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="systems.ItemInfoEncodingSystem" />
+      <module name="GameServer" />
+      <option name="PROGRAM_PARAMETERS" value="--add-modules java.xml.ws.annotation" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.systems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ItemLibrarySystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="systems.ItemLibrarySystem" />
+      <module name="GameServer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.systems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -460,7 +664,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -471,7 +675,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -533,11 +737,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.LoginServer" />
       <item itemvalue="Application.MasterServer" />
+      <item itemvalue="Application.LoginServer" />
       <item itemvalue="Application.GameServersLauncher" />
       <item itemvalue="Compound.Scratch" />
+      <item itemvalue="Application.ItemInfoEncodingSystem" />
+      <item itemvalue="Application.ItemLibrarySystem" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ItemLibrarySystem" />
+        <item itemvalue="Application.ItemInfoEncodingSystem" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -566,31 +778,32 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49930555" weight="0.3207547" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.4985694" weight="0.32" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49785408" weight="0.32848486" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50214595" side_tool="true" weight="0.3278302" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50214595" side_tool="true" weight="0.32848486" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49785408" weight="0.32484847" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49642345" visible="true" weight="0.32363635" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.2278788" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49928468" weight="0.32969698" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17310444" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3490701" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49444443" weight="0.33818182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49785408" weight="0.40848485" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.39757577" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="9" sideWeight="0.49928468" weight="0.32969698" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49444443" weight="0.33818182" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49791667" weight="0.32900944" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -600,19 +813,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GameServer/src/net/GameClientHandler.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java</url>
+          <line>338</line>
           <properties />
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java</url>
-          <line>29</line>
+          <url>file://$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java</url>
+          <line>115</line>
           <properties />
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="46" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -630,347 +843,162 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/components/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/character/CharacterStat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1202">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/coders/MaplePacketDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/GameServersLauncher.java">
+    <entry file="file://$PROJECT_DIR$/src/components/AESOFB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/net/coders/MaplePacketEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/connector/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoginServer/src/net/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constants/ScratchConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/net/MaplePacketCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addCharLook#0;class#MaplePacketCreator#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="289">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/constants/GameConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/components/Pipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/coders/PacketDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/coders/PacketEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/ServerStatusResponseSystemHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/ServerStatusRequestSystemHandler.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/systems/ClientHandshakeSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/Key.java">
+    <entry file="file://$PROJECT_DIR$/src/net/connector/MasterServerConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/ClientConnectToServerSystem.java" />
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/GameServerAssignmentSystem.java" />
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/HandshakeSystem.java" />
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/ServerInfoRequestSystemHandler.java" />
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/ServerStatusRequestSystemHandler.java" />
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/net/MasterServerTrafficHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/net/PacketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/net/GameServerTrafficHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/ItemOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/GiftedBy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/Equip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/DisappearOnLogout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/CashItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/character/CharacterLook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/requests/CharListRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/LoginSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="64" column="72" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/DatabaseId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/CheckCharNameSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/character/CharacterJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/character/CharacterStat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/requests/CreateCharRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/components/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/CharacterInventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/connector/MasterServerConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/connector/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/ItemCreationSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/ItemSaveSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/CreateCharSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/CharListRequestSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="231" column="36" lean-forward="true" selection-start-line="231" selection-start-column="36" selection-end-line="231" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/src/main/MasterServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="95" lean-forward="true" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/CharSelectSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/packets/MasterServerPacketCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/src/components/WorldInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/GameServerAssignmentSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/src/systems/ClientConnectToServerSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/main/LoginServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/net/MaplePacketCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addCharLook#0;class#MaplePacketCreator#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/net/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/net/GameClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/GameServersLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="405">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -979,54 +1007,229 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/GameServer.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/IntToIntegerArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/HexTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/data/output/MaplePacketLittleEndianWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/encryption/MapleAESOFB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/data/input/ByteArrayByteStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasterServer/src/main/MasterServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/provider/MapleData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/src/main/LoginServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/src/net/LoginServerTrafficHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/provider/MapleDataDirectoryEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/provider/MapleDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/library/EquipStat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/provider/wz/WZFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/provider/MapleDataProviderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#1720#1721#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/CharacterInfoEncodingSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/coders/MaplePacketDecoder.java">
+    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/Pet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/ItemCreationSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/PlayerLoggedInSystemHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/LoadCharacterSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/net/GameServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/net/LoginServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/src/systems/ClientConnectToServerResponseSystem.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/WorldManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/constants/ScratchConstants.java">
+    <entry file="file://$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
+        <state relative-caret-position="455">
+          <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2094#2161#0" />
           </folding>
         </state>
       </provider>
@@ -1083,11 +1286,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Scratch 2.0</last-edited>
+          <last-edited>MasterServer</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.4183908" />
+                <option value="0.097751714" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

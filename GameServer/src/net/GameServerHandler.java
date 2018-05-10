@@ -4,7 +4,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.GameServersLauncher;
-import net.opcodes.MasterServerOpcode;
+import src.net.opcodes.MasterServerOpcode;
 import systems.ServerIdentifier;
 
 public class GameServerHandler extends ChannelInboundHandlerAdapter {

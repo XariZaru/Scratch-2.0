@@ -17,6 +17,16 @@ public class ItemInfoEncodingSystem extends BaseSystem {
     ComponentMapper<Ring> rings;
     ComponentMapper<Expiration> expirations;
 
+    public static void main(String[] args) {
+        try {
+            ItemInfo itemInfo = new ItemInfo();
+            ItemInfo itemInfo1 = new ItemInfo();
+            System.out.println(itemInfo + " " +itemInfo1);
+        } catch (Exception e) {
+            e.printStackTrace();;
+        }
+    }
+
     public void addItemInfo(final OutboundPacket mplew, int itemEntityId, short pos, boolean zeroPosition) {
         CashItem cashItem = cashItems.get(itemEntityId);        ItemOwner itemOwner = itemOwners.get(itemEntityId);
         Item item = items.get(itemEntityId);                    ItemLevel itemLevel = itemLevels.get(itemEntityId);
@@ -24,7 +34,7 @@ public class ItemInfoEncodingSystem extends BaseSystem {
         Pet pet = pets.get(itemEntityId);
         Ring ring = rings.get(itemEntityId);
         Expiration expiration = expirations.get(itemEntityId);
-//        MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
+//        ItemLibrarySystem ii = ItemLibrarySystem.getInstance();
 //        boolean isCash = ii.isCash(item.getItemId());
 //        boolean isPet = item.getPetId() > -1;
 //        boolean isRing = false;
@@ -78,4 +88,9 @@ public class ItemInfoEncodingSystem extends BaseSystem {
     protected void processSystem() {
 
     }
+
+    public static class ItemInfo {
+
+    }
+
 }

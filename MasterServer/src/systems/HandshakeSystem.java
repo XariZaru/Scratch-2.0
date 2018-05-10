@@ -1,6 +1,6 @@
-package systems;
+package MasterServer.src.systems;
 
-import ecs.EntityCreationSystem;
+import src.ecs.EntityCreationSystem;
 import io.netty.channel.Channel;
 import net.ClientType;
 import net.Key;

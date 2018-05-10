@@ -1,11 +1,11 @@
 package systems;
 
 import com.artemis.ComponentMapper;
+import components.Pipeline;
 import io.netty.channel.Channel;
-import net.packets.MaplePacketCreator;
 import net.PacketHandler;
-import net.components.Pipeline;
 import net.packets.InboundPacket;
+import net.packets.MaplePacketCreator;
 import net.packets.OutboundPacket;
 
 public class ServerStatusResponseSystemHandler extends PacketHandler {
