@@ -33,10 +33,10 @@ public class LoadCharacterSystem extends BaseSystem {
 
     }
 
-    public void loadCharacter(int dbId, Channel ch) {
+    public void retrieve(int dbId, Channel ch) {
         final int entityId = ch.attr(Key.ENTITY).get();
         try (Connection con = DatabaseConnection.getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM characters WHERE id = ? LIMIT 1")) {
+             PreparedStatement ps = con.prepareStatement("SELECT * FROM characters LEFT JOIN inventories ON characters.id = inventories.characterId WHERE id = ? LIMIT 1")) {
             ps.setInt(1, dbId);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
@@ -78,6 +78,9 @@ public class LoadCharacterSystem extends BaseSystem {
         stat.mp = rs.getShort("mp");
         stat.maxHp = rs.getShort("maxHp");
         stat.maxMp = rs.getShort("maxMp");
+
+        stat.slotLimits = new byte[] {15, rs.getByte("equipSize"), rs.getByte("useSize"), rs.getByte("setupSize"),
+                                      rs.getByte("etcSize"), rs.getByte("cashSize")};
 
         DatabaseId dbId = dbIds.create(entityId);
         dbId.dbId = rs.getInt("id");

@@ -30,7 +30,7 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
     public void receive(Channel channel, InboundPacket inBound, OutboundPacket outBound) {
         final int dbId = inBound.readInt();
         final int entityId = channel.attr(Key.ENTITY).get();
-        loadCharacterSystem.loadCharacter(dbId, channel);
+        loadCharacterSystem.retrieve(dbId, channel);
 
         channel.writeAndFlush(getCharInfo(entityId));
 //        final Server server = Server.getInstance();

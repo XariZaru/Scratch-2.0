@@ -3,6 +3,9 @@ package components.item;
 import com.artemis.Component;
 import net.packets.OutboundPacket;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Equip extends Component {
 	public short str, dex, luk, intel;
 	public short hp, mp;
@@ -36,6 +39,28 @@ public class Equip extends Component {
 		mplew.writeInt(itemLevel.exp  * 100000); // TODO: why is this multiplied by an int??
 		mplew.writeInt(vicious);
 	}
+
+	public static void generate(ResultSet rs, Equip equip) throws SQLException {
+        equip.acc = rs.getShort("acc");
+        equip.avoid = rs.getShort("avoid");
+        equip.hands = rs.getShort("hands");
+        equip.speed = rs.getShort("speed");
+        equip.jump = rs.getShort("jump");
+        equip.vicious = rs.getShort("vicious");
+        equip.matk = rs.getShort("mAtk");
+        equip.watk = rs.getShort("wAtk");
+        equip.wdef = rs.getShort("wDef");
+        equip.mdef = rs.getShort("mDef");
+        equip.hp = rs.getShort("hp");
+        equip.mp = rs.getShort("mp");
+        equip.str = rs.getShort("str");
+        equip.dex = rs.getShort("dex");
+        equip.intel = rs.getShort("int");
+        equip.luk = rs.getShort("luk");
+        equip.successfulUpgrades = rs.getByte("successfulUpgrades");
+        equip.upgradeSlots = rs.getByte("slots");
+        equip.position = rs.getByte("equipPos");
+    }
 
 	public static boolean isEquip(int itemId) {
 	    return itemId / 1000000 == 1;

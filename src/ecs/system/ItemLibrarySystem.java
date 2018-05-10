@@ -398,7 +398,7 @@ public class ItemLibrarySystem extends BaseSystem {
         }
     }
 
-    private boolean exists(int itemId) {
+    public boolean exists(int itemId) {
         return items.containsKey(itemId);
     }
 
@@ -419,6 +419,13 @@ public class ItemLibrarySystem extends BaseSystem {
         return entityId;
     }
 
+    /**
+     * Grabs associated component to the item. If item does not exist, return null.
+     * @param property Component class type to grab
+     * @param itemId ItemId
+     * @param <T> Object of type Component
+     * @return Returns Component of passed class property
+     */
     private <T extends Component> T getProperty(Class<? extends  Component> property, int itemId) {
         if (!exists(itemId))
             return null;
@@ -426,8 +433,12 @@ public class ItemLibrarySystem extends BaseSystem {
         return (T) world.getMapper(property).get(entityId);
     }
 
+    /**
+     * Generates EquipStat and EquipRequirement for given Item if it is an equip
+     * @param itemId
+     */
     public void generateEquip(int itemId) {
-        if (itemId / 1000000 != 1) return;
+        if (!Equip.isEquip(itemId)) return;
 
         int entityId = entity(itemId);
         if (equipStats.get(entityId) != null) return;

@@ -9,6 +9,7 @@ public class CharacterStat extends Component {
 	public short mp = 5, hp = 50, maxHp = 50, maxMp = 5, fame;
 	public short remainingAp;	
 	public int exp, gachaExp;
+	public byte[] slotLimits;
 	
 	public void encode(OutboundPacket mplew, components.character.CharacterJob job) {
 		mplew.write(level); // level
