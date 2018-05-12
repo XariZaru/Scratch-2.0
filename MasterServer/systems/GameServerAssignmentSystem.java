@@ -5,7 +5,7 @@ import com.artemis.Aspect;
 import com.artemis.BaseEntitySystem;
 import com.artemis.ComponentMapper;
 import com.artemis.utils.IntBag;
-import components.WorldInformation;
+import ecs.components.WorldInformation;
 import ecs.EntityCreationSystem;
 import io.netty.channel.Channel;
 import net.Key;

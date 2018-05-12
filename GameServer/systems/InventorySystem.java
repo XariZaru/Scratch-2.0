@@ -2,12 +2,13 @@ package systems;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
-import components.DatabaseId;
-import components.character.CharacterStat;
-import components.item.*;
+import ecs.components.DatabaseId;
+import ecs.components.character.CharacterStat;
+import ecs.components.item.*;
 import database.DatabaseConnection;
 import ecs.EntityCreationSystem;
-import main.GameServersLauncher;
+import ecs.system.ItemCreationSystem;
+import ecs.system.ItemInfoEncodingSystem;
 import net.packets.OutboundPacket;
 
 import java.sql.Connection;
@@ -25,6 +26,8 @@ public class InventorySystem extends BaseSystem {
     ComponentMapper<Expiration> expirations;    ComponentMapper<DatabaseId> dbIds;
     ComponentMapper<CharacterStat> stats;
     EntityCreationSystem ecs;
+    ItemInfoEncodingSystem itemInfoEncodingSystem;
+    ItemCreationSystem itemCreationSystem;
 
     public void save(int playerEntityId) {
         CharacterInventory characterInventory = charInventories.get(playerEntityId);
@@ -46,8 +49,8 @@ public class InventorySystem extends BaseSystem {
 
         DatabaseId dbId = dbIds.get(playerEntityId);
         StringBuilder b = new StringBuilder();
-        b.append("SELECT * FROM `items` i1 left join equips on i1.id = equips.itemKey where i1.chrid = ? and i1.insertTime = ")
-                .append("SELECT max(insertTime) FROM items i2 WHERE i2.chrid = ?)");
+        b.append("SELECT * FROM `items` i1 left join equips on i1.id = equips.itemKey where i1.chrid = ? and i1.insertTime =")
+        .append("(SELECT max(insertTime) FROM items i2 WHERE i2.chrid = ?)");
         try (Connection con = DatabaseConnection.getConnection();
              PreparedStatement ps = con.prepareStatement(b.toString())) {
             ps.setInt(1, dbId.dbId);
@@ -60,26 +63,52 @@ public class InventorySystem extends BaseSystem {
         }
     }
 
-    private void generate(ResultSet rs, CharacterInventory inv) throws SQLException {
+    private void generate(ResultSet rs, CharacterInventory characterInventory) throws SQLException {
         if (rs.next()) {
-            int itemId = rs.getInt("itemid");
-            if (GameServersLauncher.librarySystem.exists(itemId)) {
-                int itemEntityId = ecs.create();
-                if (Equip.isEquip(itemId)) {
-                    Equip equip = equips.create(itemEntityId);
-                    Equip.generate(rs, equip);
+            int itemEntityId = itemCreationSystem.generate(rs);
+            if (itemEntityId != -1) {
+                int itemId = rs.getInt("itemid");
+                Equip equip = equips.get(itemEntityId);
+                byte inventory;
+                if (equip != null) {
+                    inventory = (byte) (equip.position != -1 ? 0 : 1);
+                } else {
+                    inventory = Item.getInventoryType(itemId).getType();
                 }
-                Item item = items.create(itemEntityId);
-                Item.generate(rs, item);
-                byte pos = rs.getByte("pos");
-                byte type = rs.getByte("type");
-                long expiration = rs.getLong("expiration"); // TODO: do expirations, owner name, etc.
+                Inventory inv = inventories.get(characterInventory.inventories[inventory]);
+                int slot = inv.getFreeSlot();
+                inv.itemEntityIDs[slot] = itemEntityId;
+                inv.itemIds[slot] = itemId;
             }
-            generate(rs, inv);
+            generate(rs, characterInventory);
         }
     }
 
-    public static void addInventoryInfo(final OutboundPacket mplew, int entityId) {
+    public void expandInventory(int playerEntityId, CharacterInventory.Type type, byte delta) {
+        if (delta < 0) return;
+
+        CharacterInventory characterInventory = charInventories.get(playerEntityId);
+        Inventory inventory = inventories.get(characterInventory.inventories[type.getType()]);
+
+        byte newSize = (byte) (inventory.itemEntityIDs.length + delta);
+        // New expanded size must be larger than before
+        if (newSize < inventory.itemEntityIDs.length) return;
+
+        Integer[] newEntityArray = new Integer[newSize];
+        Integer[] newItemIdArray = new Integer[newSize];
+
+        inventory.lock.writeLock().lock();
+
+        try {
+            System.arraycopy(inventory.itemEntityIDs, 0, newEntityArray, 0, inventory.itemEntityIDs.length);
+            System.arraycopy(inventory.itemIds, 0, newItemIdArray, 0, inventory.itemIds.length);
+        } finally {
+            inventory.lock.writeLock().unlock();
+        }
+
+    }
+
+    public void addInventoryInfo(final OutboundPacket mplew, int entityId) {
 //        MapleInventory iv = chr.getInventory(MapleInventoryType.EQUIPPED);
 //        Collection<Item> equippedC = iv.list();
 //        List<Item> equipped = new ArrayList<>(equippedC.size());
@@ -92,10 +121,15 @@ public class InventorySystem extends BaseSystem {
 //            }
 //        }
 //        Collections.sort(equipped);
-//        for (Item item : equipped) {
-//            addItemInfo(mplew, item);
-//        }
-        mplew.writeShort(0); // start of equip cash
+        CharacterInventory characterInventory = charInventories.get(entityId);
+        int[] inventoryIds = characterInventory.inventories;
+        Inventory equipped = inventories.get(inventoryIds[CharacterInventory.Type.EQUIPPED.getType()]);
+        for (short slot = 0; slot < equipped.itemEntityIDs.length; slot++) {
+            Integer itemEntityId = equipped.itemEntityIDs[slot];
+            if (itemEntityId != null)
+                itemInfoEncodingSystem.addItemInfo(mplew, itemEntityId, slot, false);
+        }
+        mplew.writeShort(0); // start of equip cash TODO: equip cash
 //        for (Item item : equippedCash) {
 //            addItemInfo(mplew, item);
 //        }

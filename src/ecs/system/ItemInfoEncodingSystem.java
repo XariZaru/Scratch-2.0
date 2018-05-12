@@ -2,7 +2,7 @@ package ecs.system;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
-import components.item.*;
+import ecs.components.item.*;
 import net.packets.OutboundPacket;
 
 import static net.packets.MaplePacketCreator.getTime;
@@ -32,8 +32,8 @@ public class ItemInfoEncodingSystem extends BaseSystem {
 //            isRing = equip.getRingId() > -1;
 //        }
         if (!zeroPosition) {
-            if (equip != null) {
-                mplew.writeShort(pos);
+            if (equip != null && equip.position != -1) {
+                mplew.writeShort(equip.position);
             } else {
                 mplew.write(pos);
             }

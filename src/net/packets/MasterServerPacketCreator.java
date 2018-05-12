@@ -1,6 +1,6 @@
 package net.packets;
 
-import components.Pipeline;
+import ecs.components.Pipeline;
 import net.ClientType;
 import net.opcodes.MasterServerOpcode;
 

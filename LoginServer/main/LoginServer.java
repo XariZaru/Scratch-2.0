@@ -2,6 +2,8 @@ package main;
 
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.system.ItemCreationSystem;
+import ecs.system.ItemLibrarySystem;
 import net.ClientHandler;
 import net.LoginServerTrafficHandler;
 import net.coders.MaplePacketDecoder;
@@ -22,6 +24,7 @@ public class LoginServer extends Server {
             ServerStatusRequestSystemHandler.class, ServerStatusResponseSystemHandler.class,
             CharListRequestSystemHandler.class, CreateCharSystemHandler.class, CheckCharNameSystemHandler.class,
             CharSelectSystemHandler.class, ClientConnectToServerResponseSystem.class);
+    public static final WorldManager itemLibraryManager = new WorldManager(EntityCreationSystem.class, ItemLibrarySystem.class);
     private ClientHandler handler;
 
     public LoginServer(int port, ClientHandler handler) {
@@ -41,6 +44,9 @@ public class LoginServer extends Server {
         WorldManagerThread.start();
 
         while (!manager.started());
+
+        itemLibraryManager.getSystem(ItemLibrarySystem.class).generate();
+        manager.getSystem(ItemCreationSystem.class).libraryWorldManager = itemLibraryManager;
 
         Thread LoginThread = new Thread(instance);
         LoginThread.start();

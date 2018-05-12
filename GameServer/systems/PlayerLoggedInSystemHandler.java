@@ -1,7 +1,7 @@
 package systems;
 
 import com.artemis.ComponentMapper;
-import components.Client;
+import ecs.components.Client;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
@@ -11,7 +11,6 @@ import net.packets.OutboundPacket;
 import tools.Randomizer;
 
 import static systems.CooldownSystem.addCooldownInfo;
-import static systems.InventorySystem.addInventoryInfo;
 import static systems.MonsterBookSystem.addMonsterBookInfo;
 import static systems.QuestSystem.addCompletedQuestInfo;
 import static systems.QuestSystem.addQuestInfo;
@@ -21,7 +20,7 @@ import static systems.TeleportRockSystem.addTeleportInfo;
 
 public class PlayerLoggedInSystemHandler extends PacketHandler {
 
-    LoadCharacterSystem loadCharacterSystem;
+    LoadCharacterSystem loadCharacterSystem;    InventorySystem inventorySystem;
     CharacterInfoEncodingSystem encodingSystem;
     ComponentMapper<Client> clients;
     private ServerIdentifier si;
@@ -30,7 +29,13 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
     public void receive(Channel channel, InboundPacket inBound, OutboundPacket outBound) {
         final int dbId = inBound.readInt();
         final int entityId = channel.attr(Key.ENTITY).get();
-        loadCharacterSystem.retrieve(dbId, channel);
+
+        if (!loadCharacterSystem.retrieve(dbId, entityId))
+            return;
+
+        Client client = clients.create(entityId);
+        channel.attr(Key.CLIENT).set(client);
+        inventorySystem.retrieve(dbId);
 
         channel.writeAndFlush(getCharInfo(entityId));
 //        final Server server = Server.getInstance();
@@ -308,7 +313,7 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
             mplew.writeLong(MaplePacketCreator.getTime(-2)); // this is actually two decodes
         }
         if ((mask & 4) == 4) {
-            addInventoryInfo(mplew, entityId);
+            inventorySystem.addInventoryInfo(mplew, entityId);
         }
         if ((mask & 0x100) == 0x100) {
             addSkillInfo(mplew, entityId);

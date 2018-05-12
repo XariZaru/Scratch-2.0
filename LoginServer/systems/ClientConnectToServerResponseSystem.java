@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
 
 public class ClientConnectToServerResponseSystem extends PacketHandler {
 
-    private ComponentMapper<components.Pipeline> pipes;
+    private ComponentMapper<ecs.components.Pipeline> pipes;
 
     @Override
     public void receive(Channel channel, InboundPacket packet, OutboundPacket outBound) {
@@ -20,7 +20,7 @@ public class ClientConnectToServerResponseSystem extends PacketHandler {
         int dbId = packet.readInt();
         int clientEntityId = packet.readInt();
 
-        components.Pipeline pipe = pipes.get(clientEntityId);
+        ecs.components.Pipeline pipe = pipes.get(clientEntityId);
         byte world = packet.readByte();
         byte server = packet.readByte();
         String[] addressAndPort = address.split(":"); // /127.0.0.1:6650

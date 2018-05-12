@@ -2,14 +2,107 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c104d0-a0b1-4b64-9355-b3ee562cff51" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_dozer_dozer_5_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCases/PlayerLoggedInCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ecs/components/item/Expiration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ecs/system/ItemCreationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/main/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/main/GameServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/main/GameServersLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/main/GameServersLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/systems/CharacterInfoEncodingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/CharacterInfoEncodingSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/systems/InventorySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/InventorySystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/systems/ItemCreationSystem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/systems/LoadCharacterSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/LoadCharacterSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/character/CharacterStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character/CharacterStat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item/Equip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item/Equip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/main/LoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/main/LoginServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/systems/CharListRequestSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/CharListRequestSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/systems/ClientConnectToServerResponseSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/ClientConnectToServerResponseSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/systems/CreateCharSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/CreateCharSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/systems/LoginSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/LoginSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/systems/ServerListResponseSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/ServerListResponseSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginServer/systems/ServerStatusResponseSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/ServerStatusResponseSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/components/WorldInformation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasterServer/systems/GameServerAssignmentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/MasterServer/systems/GameServerAssignmentSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/ItemLoadCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/ItemLoadCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/main/GameServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/main/GameServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/main/GameServersLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/main/GameServersLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/CharacterInfoEncodingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/CharacterInfoEncodingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/InventorySystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/InventorySystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/ItemCreationSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/LoadCharacterSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/LoadCharacterSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerLoggedInSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerLoggedInSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/main/LoginServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/main/LoginServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharListRequestSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharListRequestSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharSelectSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/CharSelectSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ClientConnectToServerResponseSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/ClientConnectToServerResponseSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/CreateCharSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/CreateCharSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerListResponseSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerListResponseSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerStatusResponseSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/ServerStatusResponseSystemHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/components/WorldInformation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/MasterServer/systems/GameServerAssignmentSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/MasterServer/systems/GameServerAssignmentSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/TestCases/ItemLoadCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/TestCases/ItemLoadCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AESOFB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DatabaseId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Money.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Name.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pipeline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/character/CharacterJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/character/CharacterLook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/character/CharacterStat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/BonusExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/CashItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/CharacterInventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/DisappearOnLogout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Equip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Expiration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/GiftedBy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/components/item/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/components/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/ItemFlag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/ItemLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/ItemOwner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Ring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/library/EquipStat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/library/EquipStatRequirement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/library/ItemStat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/library/SlotMax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/requests/CharListRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/GameConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/GameConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ecs/WorldManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/WorldManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ecs/system/ItemInfoEncodingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/system/ItemInfoEncodingSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/coders/MaplePacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/coders/MaplePacketDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/coders/MaplePacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/coders/MaplePacketEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/packets/MasterServerPacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/MasterServerPacketCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/systems/ClientHandshakeSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/systems/ClientHandshakeSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Scratch 2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Scratch 2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ecs/WorldManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ecs/WorldManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/Key.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/Key.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/coders/MaplePacketEncoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/packets/MaplePacketCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/packets/MaplePacketCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/packets/MasterServerPacketCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/packets/MasterServerPacketCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +117,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameServersLauncher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/main/GameServersLauncher.java">
+      <file leaf-file-name="CreateCharSystemHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoginServer/systems/CreateCharSystemHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="585">
+              <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipStaticProperties.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ecs/components/library/EquipStaticProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,53 +144,95 @@
       <file leaf-file-name="ItemLoadCase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestCases/ItemLoadCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemInfoEncodingSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemInfoEncodingSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-              <folding>
-                <element signature="e#1549#1614#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InventorySystem.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameServer/systems/InventorySystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+            <state relative-caret-position="222">
+              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Equip.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/item/Equip.java">
+        <entry file="file://$PROJECT_DIR$/src/ecs/components/item/Equip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+            <state relative-caret-position="-814">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2542#2543#0" expanded="true" />
+                <element signature="e#2562#2563#0" expanded="true" />
+                <element signature="e#4379#4380#0" expanded="true" />
+                <element signature="e#4412#4413#0" expanded="true" />
+                <element signature="e#4592#4593#0" expanded="true" />
+                <element signature="e#4625#4626#0" expanded="true" />
+                <element signature="e#6586#6587#0" expanded="true" />
+                <element signature="e#6618#6619#0" expanded="true" />
+                <element signature="e#7088#7089#0" expanded="true" />
+                <element signature="e#7148#7149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemLibrarySystem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="580" column="41" selection-start-line="580" selection-start-column="41" selection-end-line="580" selection-end-column="41" />
+              <folding>
+                <element signature="docComment;class#ItemLibrarySystem#0" />
+                <element signature="e#2591#2658#0" />
+                <element signature="e#6489#6557#0" />
+                <element signature="e#6560#7636#0" />
+                <element signature="e#7642#7695#0" />
+                <element signature="e#7701#8590#0" />
+                <element signature="e#7732#7790#0" />
+                <element signature="e#8596#8651#0" />
+                <element signature="e#11181#11254#0" />
+                <element signature="e#11260#11316#0" />
+                <element signature="e#12204#12666#0" />
+                <element signature="e#12229#12289#0" />
+                <element signature="e#12667#12669#0" />
+                <element signature="e#14657#15537#0" />
+                <element signature="e#15287#15356#0" />
+                <element signature="e#15543#15776#0" />
+                <element signature="e#15716#17340#0" />
+                <element signature="e#16848#17014#0" />
+                <element signature="e#17552#17553#0" expanded="true" />
+                <element signature="e#17600#17601#0" expanded="true" />
+                <element signature="e#17109#17420#0" />
+                <element signature="e#17109#17692#0" />
+                <element signature="e#17698#17974#0" />
+                <element signature="e#17698#18300#0" />
+                <element signature="e#18310#18440#0" />
+                <element signature="e#18307#18462#0" />
+                <element signature="e#18468#18593#0" />
+                <element signature="e#18468#21718#0" />
+                <element signature="e#18927#18983#0" />
+                <element signature="e#19516#19703#0" />
+                <element signature="e#21724#21871#0" />
+                <element signature="e#21877#22009#0" />
+                <element signature="e#22015#22153#0" />
+                <element signature="e#23478#23479#0" expanded="true" />
+                <element signature="e#23533#23534#0" expanded="true" />
+                <element signature="e#23581#23582#0" expanded="true" />
+                <element signature="e#23648#23649#0" expanded="true" />
+                <element signature="e#22370#23194#0" />
+                <element signature="e#23196#23255#0" />
+                <element signature="e#23804#26665#0" />
+                <element signature="e#26667#26715#0" />
+                <element signature="e#26929#28333#0" />
+                <element signature="e#28335#28344#0" />
+                <element signature="e#93002#93159#0" />
+                <element signature="e#93165#93689#0" />
+                <element signature="e#93296#93462#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ItemCreationSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/systems/ItemCreationSystem.java">
+        <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemCreationSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="370">
+              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,35 +240,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerLoggedInSystemHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java">
+      <file leaf-file-name="LoginServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoginServer/main/LoginServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="480">
+              <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadCharacterSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameServer/systems/LoadCharacterSystem.java">
+      <file leaf-file-name="GameServersLauncher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/main/GameServersLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="81" column="38" lean-forward="true" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="30" column="96" selection-start-line="30" selection-start-column="96" selection-end-line="30" selection-end-column="96" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Location.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Location.java">
+      <file leaf-file-name="InventorySystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/systems/InventorySystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="1140">
+              <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -134,22 +278,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>listening</find>
-      <find>jcesecurity</find>
-      <find>stat.</find>
-      <find>load</find>
-      <find>read</find>
-      <find>bs.</find>
-      <find>main</find>
-      <find>MapleWeapon</find>
-      <find>src.components</find>
-      <find>src.net.packets.</find>
-      <find>src.net.P</find>
-      <find>components.character.CharacterStat</find>
       <find>src.net.encryption.MapleAESOFB</find>
       <find>src.net.connector</find>
       <find>src.net.coders</find>
-      <find>import src.net.HexTool</find>
+      <find />
       <find>src.ecs.</find>
       <find>src.provider.</find>
       <find>src.provider</find>
@@ -164,6 +296,18 @@
       <find>src.</find>
       <find>characterinve</find>
       <find>exists</find>
+      <find>sort</find>
+      <find>iteminfo</find>
+      <find>itemLevel</find>
+      <find>addInve</find>
+      <find>protected</find>
+      <find>equip.</find>
+      <find>setProperties</find>
+      <find>equipCheck</find>
+      <find>populate</find>
+      <find>cash</find>
+      <find>worldmanage</find>
+      <find>watk</find>
     </findStrings>
     <replaceStrings>
       <replace>inBound</replace>
@@ -175,14 +319,15 @@
       <replace>net.connector</replace>
       <replace>net.coders</replace>
       <replace>net</replace>
-      <replace>import net.Hextool</replace>
+      <replace />
       <replace>provider</replace>
       <replace>/src/wz</replace>
       <replace>`</replace>
-      <replace />
+      <replace>private</replace>
+      <replace>equipStat.</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/GameServer/src/src/net</dir>
+      <dir />
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -191,14 +336,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tools/data/input/ByteArrayByteStream.java" />
-        <option value="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/net/MasterServerHandler.java" />
-        <option value="$PROJECT_DIR$/MasterServer/src/main/MasterServer.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/net/GameServerHandler.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/provider/MapleData.java" />
-        <option value="$PROJECT_DIR$/LoginServer/src/main/LoginServer.java" />
-        <option value="$PROJECT_DIR$/src/provider/MapleDataDirectoryEntry.java" />
         <option value="$PROJECT_DIR$/src/provider/MapleDataProvider.java" />
         <option value="$PROJECT_DIR$/GameServer/src/components/item/library/EquipStat.java" />
         <option value="$PROJECT_DIR$/src/provider/wz/WZFile.java" />
@@ -212,7 +349,6 @@
         <option value="$PROJECT_DIR$/GameServer/src/systems/ItemLibrarySystem.java" />
         <option value="$PROJECT_DIR$/src/components/library/EquipStatRequirement.java" />
         <option value="$PROJECT_DIR$/src/components/library/EquipStat.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/cases/src/ItemLoadCase.java" />
         <option value="$PROJECT_DIR$/MasterServer/main/MasterServer.java" />
         <option value="$PROJECT_DIR$/MasterServer/systems/HandshakeSystem.java" />
@@ -225,23 +361,32 @@
         <option value="$PROJECT_DIR$/LoginServer/net/LoginServerHandler.java" />
         <option value="$PROJECT_DIR$/LoginServer/systems/CharListRequestSystemHandler.java" />
         <option value="$PROJECT_DIR$/src/provider/MapleDataProviderFactory.java" />
-        <option value="$PROJECT_DIR$/src/ecs/WorldManager.java" />
         <option value="$PROJECT_DIR$/GameServer/components/item/Equip.java" />
         <option value="$PROJECT_DIR$/src/components/item/Pet.java" />
         <option value="$PROJECT_DIR$/src/components/library/ItemStat.java" />
-        <option value="$PROJECT_DIR$/src/ecs/system/ItemInfoEncodingSystem.java" />
         <option value="$PROJECT_DIR$/src/components/library/SlotMax.java" />
-        <option value="$PROJECT_DIR$/TestCases/ItemLoadCase.java" />
-        <option value="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" />
         <option value="$PROJECT_DIR$/src/components/item/CharacterInventory.java" />
         <option value="$PROJECT_DIR$/src/components/character/CharacterStat.java" />
-        <option value="$PROJECT_DIR$/GameServer/main/GameServersLauncher.java" />
-        <option value="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" />
+        <option value="$PROJECT_DIR$/src/components/item/Expiration.java" />
         <option value="$PROJECT_DIR$/src/components/item/Item.java" />
-        <option value="$PROJECT_DIR$/GameServer/systems/ItemCreationSystem.java" />
+        <option value="$PROJECT_DIR$/src/ecs/system/ItemInfoEncodingSystem.java" />
         <option value="$PROJECT_DIR$/GameServer/systems/LoadCharacterSystem.java" />
+        <option value="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" />
+        <option value="$PROJECT_DIR$/TestCases/PlayerLoggedInCase.java" />
         <option value="$PROJECT_DIR$/src/components/item/Equip.java" />
+        <option value="$PROJECT_DIR$/src/ecs/WorldManager.java" />
         <option value="$PROJECT_DIR$/GameServer/systems/InventorySystem.java" />
+        <option value="$PROJECT_DIR$/src/components/item/Inventory.java" />
+        <option value="$PROJECT_DIR$/GameServer/systems/ItemCreationSystem.java" />
+        <option value="$PROJECT_DIR$/LoginServer/main/LoginServer.java" />
+        <option value="$PROJECT_DIR$/GameServer/main/GameServersLauncher.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/ecs/components/library/EquipStat.java" />
+        <option value="$PROJECT_DIR$/src/ecs/components/library/EquipStaticProperties.java" />
+        <option value="$PROJECT_DIR$/src/ecs/system/ItemCreationSystem.java" />
+        <option value="$PROJECT_DIR$/src/ecs/components/item/Equip.java" />
+        <option value="$PROJECT_DIR$/TestCases/ItemLoadCase.java" />
+        <option value="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" />
       </list>
     </option>
   </component>
@@ -264,7 +409,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,99 +426,65 @@
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="GameServer" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
               <item name="systems" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterServer" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ecs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ecs" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ecs" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ecs" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ecs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ecs" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
               <item name="TestCases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratch 2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="wz" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="equip&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Equip.java&#10;loadc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/LoadCharacterSystem.java&#10;characterin&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CharacterInventory.java&#10;ItemSystem&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/ItemCreationSystem.java&#10;Item&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Item.java&#10;Equip&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Equip.java&#10;itemlib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;gameserversl&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServersLauncher.java&#10;characterinv&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CharacterInventory.java&#10;characterstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/character/CharacterStat.java&#10;charac&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CharacterInventory.java&#10;inventory&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Inventory.java&#10;playerlo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/PlayerLoggedInSystemHandler.java&#10;load&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/LoadCharacterSystem.java&#10;gameserversla&#9;PSI&#9;JAVA://main.GameServersLauncher&#10;gameserver&#9;RUN_CONFIGURATION&#9;GameServersLauncher&#10;pair&#9;PSI&#9;JAVA://tools.Pair&#10;case&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/TestCases/ItemLoadCase.java&#10;entitycreation&#9;PSI&#9;JAVA://ecs.EntityCreationSystem&#10;cases&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/cases&#10;itemli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;worldman&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/WorldManager.java&#10;mapledata&#9;PSI&#9;JAVA://src.provider.MapleData&#10;loginserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/main/LoginServer.java&#10;omaewa&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/omaewa&#10;packethandl&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/PacketHandler.java&#10;pipeline&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/Pipeline.java&#10;loginse&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/src/main/LoginServer.java&#10;outboundp&#9;PSI&#9;JAVA://src.net.packets.OutboundPacket&#10;packethandler&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/PacketHandler.java&#10;clienthandler&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/ClientHandler.java&#10;location&#9;PSI&#9;JAVA://src.components.Location&#10;scratc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/constants/ScratchConstants.java&#10;equipstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/components/item/library/EquipStat.java&#10;mapleitem&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/MapleItemInformationProvider.java&#10;server&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/main/GameServer.java&#10;inbound&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/InboundPacket.java&#10;inboundpac&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/InboundPacket.java&#10;inboun&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/InboundPacket.java&#10;outbou&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/OutboundPacket.java&#10;outbound&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/OutboundPacket.java&#10;inboundp&#9;PSI&#9;JAVA://net.packets.InboundPacket&#10;scratch&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;scratchc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/constants/ScratchConstants.java&#10;loadchar&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/LoadCharacterSystem.java&#10;CharacterStat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/components/character/CharacterStat.java&#10;maplepacket&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/net/packets/MaplePacketCreator.java&#10;worldm&#9;PSI&#9;JAVA://ecs.WorldManager&#10;gamecli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/net/GameClientHandler.java&#10;playerlog&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/src/systems/PlayerLoggedInSystemHandler.java" />
+    <property name="SearchEverywhereHistoryKey" value="ItemLib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;itemlib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;Equip&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/item/Equip.java&#10;Item&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;itemli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;equip&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/item/Equip.java&#10;equipstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/library/EquipStat.java&#10;case&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/TestCases/ItemLoadCase.java&#10;itemlibrar&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;gameser&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServersLauncher.java&#10;loginserver&#9;PSI&#9;JAVA://main.LoginServer&#10;loginserverl&#9;null&#9;null&#10;InventorySyste&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/InventorySystem.java&#10;Inventor&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Inventory.java&#10;GameServersL&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServersLauncher.java&#10;itemcre&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/ItemCreationSystem.java&#10;worldm&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/WorldManager.java&#10;insertchar&#9;PSI&#9;JAVA://systems.CreateCharSystemHandler#insertChar&#10;playerlog&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/PlayerLoggedInSystemHandler.java&#10;playerlo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/TestCases/PlayerLoggedInCase.java&#10;selec&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/systems/CharSelectSystemHandler.java&#10;char&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/systems/CreateCharSystemHandler.java&#10;load&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/TestCases/ItemLoadCase.java&#10;insertch&#9;PSI&#9;JAVA://systems.CreateCharSystemHandler#insertChar&#10;gameserver&#9;PSI&#9;JAVA://main.GameServer&#10;Cash&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CashItem.java&#10;charselec&#9;PSI&#9;JAVA://systems.CharSelectSystemHandler&#10;charli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/systems/CharListRequestSystemHandler.java&#10;loadcha&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/LoadCharacterSystem.java&#10;maplepacket&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/packets/MaplePacketCreator.java&#10;charlist&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/systems/CharListRequestSystemHandler.java&#10;Inventory&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Inventory.java&#10;type&#9;PSI&#9;JAVA://components.item.CharacterInventory.Type&#10;gamecon&#9;PSI&#9;JAVA://constants.GameConstants&#10;create&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/LoginServer/systems/CreateCharSystemHandler.java&#10;Expir&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Expiration.java&#10;loadc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/LoadCharacterSystem.java&#10;characterin&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CharacterInventory.java&#10;ItemSystem&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/ItemCreationSystem.java&#10;gameserversl&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServersLauncher.java&#10;characterinv&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CharacterInventory.java&#10;characterstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/character/CharacterStat.java&#10;charac&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/CharacterInventory.java&#10;inventory&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/components/item/Inventory.java&#10;gameserversla&#9;PSI&#9;JAVA://main.GameServersLauncher&#10;pair&#9;PSI&#9;JAVA://tools.Pair&#10;entitycreation&#9;PSI&#9;JAVA://ecs.EntityCreationSystem&#10;cases&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/cases&#10;worldman&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/WorldManager.java&#10;mapledata&#9;PSI&#9;JAVA://src.provider.MapleData" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/LoginServer/src/systems" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -423,7 +534,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Scratch">
+  <component name="RunManager" selected="JUnit.ItemLoadCase.names">
     <configuration name="GameServersLauncher" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.GameServersLauncher" />
       <module name="GameServer" />
@@ -431,29 +542,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="net.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="ItemInfoEncodingSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ecs.system.ItemInfoEncodingSystem" />
-      <module name="GameServer" />
-      <option name="PROGRAM_PARAMETERS" value="--add-modules java.xml.ws.annotation" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.systems.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="ItemLibrarySystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ecs.system.ItemLibrarySystem" />
-      <module name="GameServer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.systems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -505,13 +593,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ItemLoadCase.slotMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ItemLoadCase.canLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestCases" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ItemLoadCase" />
-      <option name="METHOD_NAME" value="slotMax" />
+      <option name="METHOD_NAME" value="canLevel" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ItemLoadCase.names" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestCases" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ItemLoadCase" />
+      <option name="METHOD_NAME" value="names" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -530,6 +635,23 @@
       <option name="MAIN_CLASS_NAME" value="ItemLoadCase" />
       <option name="METHOD_NAME" value="stats" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="PlayerLoggedInCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestCases" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerLoggedInCase" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -592,19 +714,19 @@
       <item itemvalue="Application.LoginServer" />
       <item itemvalue="Application.GameServersLauncher" />
       <item itemvalue="Compound.Scratch" />
-      <item itemvalue="Application.ItemInfoEncodingSystem" />
-      <item itemvalue="Application.ItemLibrarySystem" />
       <item itemvalue="JUnit.ItemLoadCase" />
       <item itemvalue="JUnit.ItemLoadCase.stats" />
-      <item itemvalue="JUnit.ItemLoadCase.slotMax" />
+      <item itemvalue="JUnit.PlayerLoggedInCase" />
+      <item itemvalue="JUnit.ItemLoadCase.canLevel" />
+      <item itemvalue="JUnit.ItemLoadCase.names" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ItemLoadCase.slotMax" />
-        <item itemvalue="JUnit.ItemLoadCase" />
+        <item itemvalue="JUnit.ItemLoadCase.names" />
         <item itemvalue="JUnit.ItemLoadCase.stats" />
-        <item itemvalue="Application.ItemLibrarySystem" />
-        <item itemvalue="Application.ItemInfoEncodingSystem" />
+        <item itemvalue="JUnit.ItemLoadCase" />
+        <item itemvalue="JUnit.ItemLoadCase.canLevel" />
+        <item itemvalue="JUnit.PlayerLoggedInCase" />
       </list>
     </recent_temporary>
   </component>
@@ -622,35 +744,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ItemLoadCase - 2018.05.10 at 03h 02m 26s.xml">
-      <configuration name="ItemLoadCase" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 39m 21s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_stats - 2018.05.10 at 03h 03m 06s.xml">
-      <configuration name="ItemLoadCase.stats" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 42m 21s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_stats - 2018.05.10 at 03h 03m 56s.xml">
-      <configuration name="ItemLoadCase.stats" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 42m 56s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_stats - 2018.05.10 at 03h 17m 18s.xml">
-      <configuration name="ItemLoadCase.stats" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 53m 22s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_stats - 2018.05.10 at 03h 18m 05s.xml">
-      <configuration name="ItemLoadCase.stats" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 54m 04s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase - 2018.05.10 at 03h 18m 14s.xml">
-      <configuration name="ItemLoadCase" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 54m 38s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_slotMax - 2018.05.10 at 03h 50m 04s.xml">
-      <configuration name="ItemLoadCase.slotMax" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 54m 58s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_slotMax - 2018.05.10 at 03h 50m 56s.xml">
-      <configuration name="ItemLoadCase.slotMax" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 56m 11s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_slotMax - 2018.05.10 at 03h 51m 54s.xml">
-      <configuration name="ItemLoadCase.slotMax" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 57m 27s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ItemLoadCase_slotMax - 2018.05.10 at 03h 53m 01s.xml">
-      <configuration name="ItemLoadCase.slotMax" configurationId="JUnit" />
+    <history-entry file="ItemLoadCase_names - 2018.05.11 at 19h 59m 00s.xml">
+      <configuration name="ItemLoadCase.names" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -674,13 +796,13 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50214595" side_tool="true" weight="0.32848486" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49642345" weight="0.38181818" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49642345" visible="true" weight="0.38181818" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.2278788" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49928468" weight="0.32969698" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1881259" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49444443" visible="true" weight="0.33818182" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19027181" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49444443" weight="0.33818182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -702,19 +824,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java</url>
-          <line>269</line>
+          <url />
+          <line>271</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java</url>
-          <line>124</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="60" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -732,89 +848,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GameServer/src/components/item/library/EquipStat.java" />
-    <entry file="file://$PROJECT_DIR$/src/provider/wz/WZFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-215">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/systems/CharacterInfoEncodingSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/net/GameServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cases/TestCases/ItemLoadCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/main/MasterServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/systems/HandshakeSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/EntityCreationSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterServer/components/WorldInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/ScratchConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -826,11 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,33 +869,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/requests/CharListRequest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/systems/CreateCharSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LoginServer/systems/ServerListResponseSystemHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginServer/systems/CharListRequestSystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="195" column="56" lean-forward="true" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,10 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
-          <folding>
-            <element signature="e#2360#2361#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,82 +902,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/WorldManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/BonusExp.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/BonusExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/CashItem.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/DisappearOnLogout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/DisappearOnLogout.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/GiftedBy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/GiftedBy.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/ItemFlag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/ItemFlag.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/ItemLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/ItemLevel.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/ItemOwner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/ItemOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/Pet.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/Expiration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1005,151 +982,328 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/library/EquipStat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/library/ItemStat.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/library/ItemStat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/library/SlotMax.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/library/SlotMax.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestCases/ItemLoadCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Location.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/character/CharacterStat.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/character/CharacterStat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/main/GameServersLauncher.java">
+    <entry file="file://$PROJECT_DIR$/src/constants/GameConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/CharacterInventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="400" column="19" selection-start-line="400" selection-start-column="19" selection-end-line="400" selection-end-column="19" />
-          <folding>
-            <element signature="docComment;class#ItemLibrarySystem#0" />
-            <element signature="e#16682#16683#0" expanded="true" />
-            <element signature="e#16730#16731#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="164">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/packets/MasterServerPacketCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/systems/CharacterInfoEncodingSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemInfoEncodingSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+        <state relative-caret-position="49">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="e#1549#1614#0" />
+            <element signature="e#1224#1289#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/Item.java">
+    <entry file="file://$PROJECT_DIR$/GameServer/main/GameServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="23" selection-end-column="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/CharacterInventory.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/Expiration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+        <state relative-caret-position="150">
+          <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/systems/LoadCharacterSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="81" column="38" lean-forward="true" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+        <state relative-caret-position="142">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/systems/CharSelectSystemHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="273">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/systems/ItemCreationSystem.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/WorldManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/systems/CharListRequestSystemHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-957">
+          <caret line="147" column="23" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/Equip.java">
+    <entry file="file://$PROJECT_DIR$/TestCases/PlayerLoggedInCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        <state relative-caret-position="691">
+          <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/systems/InventorySystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+        <state relative-caret-position="1140">
+          <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/main/GameServersLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="96" selection-start-line="30" selection-start-column="96" selection-end-line="30" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/artemis/artemis-odb-2.1.0-sources.jar!/com/artemis/ComponentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="140" column="26" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/systems/CreateCharSystemHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginServer/main/LoginServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="242" column="6" selection-start-line="242" selection-start-column="6" selection-end-line="242" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/CashItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/library/EquipStaticProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemCreationSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/item/Equip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-814">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+          <folding>
+            <element signature="e#2542#2543#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#4379#4380#0" expanded="true" />
+            <element signature="e#4412#4413#0" expanded="true" />
+            <element signature="e#4592#4593#0" expanded="true" />
+            <element signature="e#4625#4626#0" expanded="true" />
+            <element signature="e#6586#6587#0" expanded="true" />
+            <element signature="e#6618#6619#0" expanded="true" />
+            <element signature="e#7088#7089#0" expanded="true" />
+            <element signature="e#7148#7149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCases/ItemLoadCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="580" column="41" selection-start-line="580" selection-start-column="41" selection-end-line="580" selection-end-column="41" />
+          <folding>
+            <element signature="docComment;class#ItemLibrarySystem#0" />
+            <element signature="e#2591#2658#0" />
+            <element signature="e#6489#6557#0" />
+            <element signature="e#6560#7636#0" />
+            <element signature="e#7642#7695#0" />
+            <element signature="e#7701#8590#0" />
+            <element signature="e#7732#7790#0" />
+            <element signature="e#8596#8651#0" />
+            <element signature="e#11181#11254#0" />
+            <element signature="e#11260#11316#0" />
+            <element signature="e#12204#12666#0" />
+            <element signature="e#12229#12289#0" />
+            <element signature="e#12667#12669#0" />
+            <element signature="e#14657#15537#0" />
+            <element signature="e#15287#15356#0" />
+            <element signature="e#15543#15776#0" />
+            <element signature="e#15716#17340#0" />
+            <element signature="e#16848#17014#0" />
+            <element signature="e#17552#17553#0" expanded="true" />
+            <element signature="e#17600#17601#0" expanded="true" />
+            <element signature="e#17109#17420#0" />
+            <element signature="e#17109#17692#0" />
+            <element signature="e#17698#17974#0" />
+            <element signature="e#17698#18300#0" />
+            <element signature="e#18310#18440#0" />
+            <element signature="e#18307#18462#0" />
+            <element signature="e#18468#18593#0" />
+            <element signature="e#18468#21718#0" />
+            <element signature="e#18927#18983#0" />
+            <element signature="e#19516#19703#0" />
+            <element signature="e#21724#21871#0" />
+            <element signature="e#21877#22009#0" />
+            <element signature="e#22015#22153#0" />
+            <element signature="e#23478#23479#0" expanded="true" />
+            <element signature="e#23533#23534#0" expanded="true" />
+            <element signature="e#23581#23582#0" expanded="true" />
+            <element signature="e#23648#23649#0" expanded="true" />
+            <element signature="e#22370#23194#0" />
+            <element signature="e#23196#23255#0" />
+            <element signature="e#23804#26665#0" />
+            <element signature="e#26667#26715#0" />
+            <element signature="e#26929#28333#0" />
+            <element signature="e#28335#28344#0" />
+            <element signature="e#93002#93159#0" />
+            <element signature="e#93165#93689#0" />
+            <element signature="e#93296#93462#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,7 +1324,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>

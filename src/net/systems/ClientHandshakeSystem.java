@@ -2,8 +2,8 @@ package net.systems;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
-import components.AESOFB;
-import components.Pipeline;
+import ecs.components.AESOFB;
+import ecs.components.Pipeline;
 import ecs.EntityCreationSystem;
 import io.netty.channel.Channel;
 import net.Key;

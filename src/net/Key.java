@@ -1,8 +1,8 @@
 package net;
 
-import components.AESOFB;
-import components.Client;
-import components.Pipeline;
+import ecs.components.AESOFB;
+import ecs.components.Client;
+import ecs.components.Pipeline;
 import io.netty.util.AttributeKey;
 import net.ClientType;
 

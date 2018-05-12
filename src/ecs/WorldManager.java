@@ -1,4 +1,5 @@
 package ecs;
+
 import com.artemis.*;
 
 public class WorldManager implements Runnable {
@@ -29,6 +30,10 @@ public class WorldManager implements Runnable {
                 systems
         ).build();
         world = new World(config);
+    }
+
+    public <T extends Component> T getComponent(Class<? extends Component> componentClass, int entityId) {
+        return (T) world.getMapper(componentClass).get(entityId);
     }
 
     public <T extends BaseSystem> T getSystem(Class<T> type) {

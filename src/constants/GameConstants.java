@@ -1,6 +1,6 @@
 package constants;
 
-import components.character.CharacterJob;
+import ecs.components.character.CharacterJob;
 
 public class GameConstants {
 

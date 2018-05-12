@@ -2,13 +2,13 @@ package systems;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
-import components.Client;
-import components.DatabaseId;
-import components.Location;
-import components.Name;
-import components.character.CharacterJob;
-import components.character.CharacterLook;
-import components.character.CharacterStat;
+import ecs.components.Client;
+import ecs.components.DatabaseId;
+import ecs.components.Location;
+import ecs.components.Name;
+import ecs.components.character.CharacterJob;
+import ecs.components.character.CharacterLook;
+import ecs.components.character.CharacterStat;
 import net.packets.MaplePacketCreator;
 import net.packets.OutboundPacket;
 

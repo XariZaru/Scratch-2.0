@@ -1,12 +1,12 @@
 package systems;
 
 import com.artemis.ComponentMapper;
-import components.*;
-import components.character.CharacterJob;
-import components.character.CharacterLook;
-import components.character.CharacterStat;
-import components.item.CharacterInventory;
-import components.requests.CharListRequest;
+import ecs.components.*;
+import ecs.components.character.CharacterJob;
+import ecs.components.character.CharacterLook;
+import ecs.components.character.CharacterStat;
+import ecs.components.item.CharacterInventory;
+import ecs.components.requests.CharListRequest;
 import database.DatabaseConnection;
 import io.netty.channel.Channel;
 import net.Key;

@@ -2,6 +2,7 @@ package main;
 
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.system.ItemCreationSystem;
 import ecs.system.ItemInfoEncodingSystem;
 import net.GameClientHandler;
 import net.GameServerTrafficHandler;

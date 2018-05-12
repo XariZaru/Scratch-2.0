@@ -24,13 +24,17 @@ package ecs.system;
 import com.artemis.BaseSystem;
 import com.artemis.Component;
 import com.artemis.ComponentMapper;
-import components.Name;
-import components.item.Equip;
-import components.library.EquipStat;
-import components.library.EquipStatRequirement;
-import components.library.SlotMax;
+import com.artemis.World;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.components.Name;
+import ecs.components.item.DisappearOnLogout;
+import ecs.components.item.Equip;
+import ecs.components.item.ItemLevel;
+import ecs.components.library.EquipStatRequirement;
+import ecs.components.library.EquipStaticProperties;
+import ecs.components.library.SlotMax;
+import org.dozer.DozerBeanMapper;
 import provider.MapleData;
 import provider.MapleDataDirectoryEntry;
 import provider.MapleDataProvider;
@@ -39,6 +43,7 @@ import provider.MapleDataTool;
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.function.Function;
 
 /**
  *
@@ -48,21 +53,22 @@ import java.util.HashMap;
 public class ItemLibrarySystem extends BaseSystem {
 
     private HashMap<Integer, Integer> items = new HashMap<>();
-    protected MapleDataProvider itemData;
-    protected MapleDataProvider equipData;
-    protected MapleDataProvider stringData;
-    protected MapleDataProvider etcData;
-    protected MapleData cashStringData;
-    protected MapleData consumeStringData;
-    protected MapleData eqpStringData;
-    protected MapleData etcStringData;
-    protected MapleData insStringData;
-    protected MapleData petStringData;
-
-    EntityCreationSystem ecs;
-    ComponentMapper<Name> names;
-    ComponentMapper<EquipStat> equipStats;
-    ComponentMapper<EquipStatRequirement> equipRequirements;    ComponentMapper<SlotMax> slotMax;
+    private HashMap<String, Integer> nameToId = new HashMap<>();
+    private MapleDataProvider itemData;
+    private MapleDataProvider equipData;
+    private MapleDataProvider stringData;
+    private MapleDataProvider etcData;
+    private MapleData cashStringData;
+    private MapleData consumeStringData;
+    private MapleData eqpStringData;
+    private MapleData etcStringData;
+    private MapleData insStringData;
+    private MapleData petStringData;
+    private DozerBeanMapper mapper = new DozerBeanMapper();
+    private EntityCreationSystem ecs;
+    private ComponentMapper<Name> names;                                private ComponentMapper<ItemLevel> itemLevels;
+    private ComponentMapper<Equip> equips;                              private ComponentMapper<EquipStaticProperties> equipStats;
+    private ComponentMapper<EquipStatRequirement> equipRequirements;    private ComponentMapper<SlotMax> slotMax;
 
 //    protected Map<Integer, Short> slotMaxCache = new HashMap<>();
 //    protected Map<Integer, String> uiDataCache = new HashMap<>();
@@ -316,7 +322,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //    }
 //
 //    public int getReqLevel(int itemId) {
-//        return getEquipStats(itemId).get("reqLevel");
+//        return getEquipStaticProperties(itemId).get("reqLevel");
 //    }
 //
 //    public int getETCMonsLvl(int itemid) {
@@ -352,15 +358,15 @@ public class ItemLibrarySystem extends BaseSystem {
         miip.generateEquip(item);
 
         int entityId = miip.entity(item);
-        EquipStat stat = miip.equipStats.get(entityId);
-        EquipStatRequirement req = miip.equipRequirements.get(entityId);
+//        EquipStaticProperties stat = miip.equipStats.get(entityId);
+//        EquipStatRequirement req = miip.equipRequirements.get(entityId);
 
 //        System.out.println("Name for 1302000 " + miip.names.get(miip.items.get(1302000)).name);
 
     }
 
     /**
-     * Method needs to be called if you wish to generate item information. Creates respective entity IDs and assigns names components
+     * Method needs to be called if you wish to generate item information. Creates respective entity IDs and assigns names ecs.components
      * along with putting entities into a HashMap assigned with ItemId to EntityId.
      */
     public void generate() {
@@ -374,19 +380,27 @@ public class ItemLibrarySystem extends BaseSystem {
             stringData.getData("Ins.img"), stringData.getData("Pet.img")
         };
 
-        stringData.getData("Eqp.img").getChildByPath("Eqp").forEach(itemFolder -> itemFolder.forEach(equipItemFolder ->
-        {
+        Function<MapleData, Void> load = data -> {
             int e = ecs.create();
             Name name = names.create(e);
-            name.name = provider.MapleDataTool.getString("name", equipItemFolder, "NO-NAME");
-            items.put(Integer.parseInt(equipItemFolder.getName()), e);
+            int id = Integer.parseInt(data.getName());
+            StringBuilder parsedName = new StringBuilder(provider.MapleDataTool.getString("name", data, "" + id));
+            if (nameToId.containsKey(parsedName.toString()))
+                parsedName.append(" ").append(id);
+
+            name.name = parsedName.toString();
+            items.put(id, e);
+            nameToId.put(name.name, id);
+            return null;
+        };
+
+        stringData.getData("Eqp.img").getChildByPath("Eqp").forEach(itemFolder -> itemFolder.forEach(equipItemFolder ->
+        {
+            load.apply(equipItemFolder);
         }));
 
         Arrays.stream(itemsData).forEach(data -> data.getChildren().forEach(itemFolder -> {
-            int e = ecs.create();
-            Name name = names.create(e);
-            name.name = provider.MapleDataTool.getString("name", itemFolder, "NO-NAME");
-            items.put(Integer.parseInt(itemFolder.getName()), e);
+            load.apply(itemFolder);
         }));
     }
 
@@ -429,23 +443,46 @@ public class ItemLibrarySystem extends BaseSystem {
     private <T extends Component> T getProperty(Class<? extends  Component> property, int itemId) {
         if (!exists(itemId))
             return null;
+        if (Equip.isEquip(itemId))
+            equipCheck(itemId);
         int entityId = entity(itemId);
         return (T) world.getMapper(property).get(entityId);
     }
 
+    public boolean isCashEquip(int itemId) {
+        EquipStaticProperties equipStaticProperties = getProperty(EquipStaticProperties.class, itemId);
+        if (equipStaticProperties == null) return false;
+        return equipStaticProperties.cash;
+    }
+
+
+    public void populateEquip(int itemId, int itemEntityId, World gameWorldManager) {
+        if (equipCheck(itemId) == -1) return;
+        Equip equip = getEquip(itemId);
+        Equip libraryEquip = gameWorldManager.getMapper(Equip.class).get(itemEntityId);
+
+        EquipStaticProperties equipStaticProperties = getEquipStaticProperties(itemId);
+        mapper.map(libraryEquip, equip);
+
+        if (equipStaticProperties.expireOnLogout)
+            gameWorldManager.getMapper(DisappearOnLogout.class).create(itemEntityId);
+        if (equipCanLevel(itemId))
+            gameWorldManager.getMapper(ItemLevel.class).create(itemEntityId);
+        // TODO: pet and ring maybe?
+    }
+
     /**
-     * Generates EquipStat and EquipRequirement for given Item if it is an equip
+     * Generates EquipStaticProperties and EquipRequirement for given Item if it is an equip
      * @param itemId
      */
-    public void generateEquip(int itemId) {
+    private void generateEquip(int itemId) {
         if (!Equip.isEquip(itemId)) return;
 
         int entityId = entity(itemId);
-        if (equipStats.get(entityId) != null) return;
+        if (equips.get(entityId) != null) return;
 
         MapleData item = getItemData(itemId);
         MapleData info;
-        final EquipStat equipStat = equipStats.create(entityId);
 
         if (item == null || (info = item.getChildByPath("info")) == null) return;
 //        incFatigue    incRMAF     incMDD        incACC
@@ -455,11 +492,14 @@ public class ItemLibrarySystem extends BaseSystem {
 //        incMMP        incSwim     incPAD        incCraft
 //        incRMAI       incHP       incM
 
+        final Equip equip = equips.create(entityId);
+        final EquipStaticProperties equipStat = equipStats.create(entityId);
+
         info.getChildren().stream()
                 .filter(data -> data.getName().startsWith("inc"))
                 .forEach(data -> {
-                    int value = provider.MapleDataTool.getInt(data.getName(), data, 0);
-                    if (value > 0) equipStat.properties.put(data.getName(), value);
+                    int value = MapleDataTool.getIntConvert(data);
+                    if (value > 0) equip.properties.put(data.getName().substring(3), (short) value);
                 });
 
         int reqJob = provider.MapleDataTool.getInt("reqJob", info, 0);
@@ -478,14 +518,17 @@ public class ItemLibrarySystem extends BaseSystem {
             equipStatRequirement.pop = reqPop;
         }
 
-        equipStat.cash = provider.MapleDataTool.getInt("cash", info, 0);
-        equipStat.upgradesPossible =  provider.MapleDataTool.getInt("upgradesPossible", info, 0);
+        int itemLevel = (info.getChildByPath("level") != null ? 1 : 0);
+        if (itemLevel == 1)
+            itemLevels.create(entityId);
+
+        equip.upgradeSlots =  (byte) provider.MapleDataTool.getInt("upgradesPossible", info, 0);
+        equip.tradeBlock = provider.MapleDataTool.getInt("tradeBlock", info, 0) == 1;
+        equipStat.cash = provider.MapleDataTool.getInt("cash", info, 0) == 1;
         equipStat.cursed =  provider.MapleDataTool.getInt("cursed", info, 0);
         equipStat.success = provider.MapleDataTool.getInt("success", info, 0);
         equipStat.fs = provider.MapleDataTool.getInt("fs", info, 0);
         equipStat.expireOnLogout = provider.MapleDataTool.getInt("expireOnLogout", info, 0) == 1;
-        equipStat.level = (info.getChildByPath("level") != null ? 1 : 0);
-        equipStat.tradeBlock = provider.MapleDataTool.getInt("tradeBlock", info, 0) == 1;
         equipStat.only = provider.MapleDataTool.getInt("only", info, 0);
         equipStat.accountSharable = provider.MapleDataTool.getInt("accountSharable", info, 0) == 1;
         equipStat.quest = provider.MapleDataTool.getInt("quest", info, 0);
@@ -497,17 +540,19 @@ public class ItemLibrarySystem extends BaseSystem {
     }
 
     public EquipStatRequirement getEquipRequirements(int itemId) {
-        int entityId = equipCheck(itemId);
-        if (entityId == -1)
-            return null;
         return getProperty(EquipStatRequirement.class, itemId);
     }
 
-    public EquipStat getEquipStats(int itemId) {
-        int entityId = equipCheck(itemId);
-        if (entityId == -1)
-            return null;
-        return getProperty(EquipStat.class, itemId);
+    public EquipStaticProperties getEquipStaticProperties(int itemId) {
+        return getProperty(EquipStaticProperties.class, itemId);
+    }
+
+    public Equip getEquip(int itemId) {
+        return getProperty(Equip.class, itemId);
+    }
+
+    public boolean equipCanLevel(int itemId) {
+        return getProperty(ItemLevel.class, itemId) != null;
     }
 
     public short getSlotMax(int itemId) {
@@ -533,6 +578,10 @@ public class ItemLibrarySystem extends BaseSystem {
         return stat.slotMax;
     }
 
+    public int getIdByName(String name) {
+        Integer id = nameToId.get(name);
+        return id == null ? -1 : id;
+    }
 //    public List<Pair<Integer, String>> getAllEtcItems() {
 //        if (!itemNameCache.isEmpty()) {
 //            return itemNameCache;
@@ -795,7 +844,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //        return ret;
 //    }
 
-//    public Map<String, Integer> getEquipStats(int itemId) {
+//    public Map<String, Integer> getEquipStaticProperties(int itemId) {
 //        if (equipStatsCache.containsKey(itemId)) {
 //            return equipStatsCache.get(itemId);
 //        }
@@ -944,8 +993,8 @@ public class ItemLibrarySystem extends BaseSystem {
 //    public Item scrollEquipWithId(Item equip, int scrollId, boolean usingWhiteScroll, boolean isGM, float multiplier) {
 //        if (equip instanceof Equip) {
 //            Equip nEquip = (Equip) equip;
-//            Map<String, Integer> properties = this.getEquipStats(scrollId);
-//            Map<String, Integer> eqstats = this.getEquipStats(equip.getItemId());
+//            Map<String, Integer> properties = this.getEquipStaticProperties(scrollId);
+//            Map<String, Integer> eqstats = this.getEquipStaticProperties(equip.getItemId());
 //            int chance = (int) Math.ceil(Math.random() * 100.0);
 //            float prop = properties.get("success") * multiplier;
 //            if (((nEquip.getUpgradeSlots() > 0 || isCleanSlate(scrollId)
@@ -1162,7 +1211,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //        else
 //        	nEquip = new Equip(equipId, (short) 0, ringId);
 //        nEquip.setQuantity((short) 1);
-//        Map<String, Integer> properties = this.getEquipStats(equipId);
+//        Map<String, Integer> properties = this.getEquipStaticProperties(equipId);
 //
 //        if (properties != null) {
 //
@@ -1783,7 +1832,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //    	if (itemId / 1000000 == 5) {
 //    		return true;
 //    	}
-//    	Integer cs = getEquipStats(itemId).get("cash");
+//    	Integer cs = getEquipStaticProperties(itemId).get("cash");
 //    	if (cs != null) {
 //    		return cs == 1;
 //    	}
@@ -1843,7 +1892,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //        }
 //        for (Item item : items) {
 //            Equip equip = (Equip) item;
-//            Map<String, Integer> equipStats = getEquipStats(equip.getItemId());
+//            Map<String, Integer> equipStats = getEquipStaticProperties(equip.getItemId());
 //            int reqLevel = equipStats.get("reqLevel");
 //            if (highfivestamp) {
 //                reqLevel -= 5;
@@ -1911,7 +1960,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //         } catch (SQLException ex) {
 //         }*/
 //
-//        Map<String, Integer> equipStats = getEquipStats(equip.getItemId());
+//        Map<String, Integer> equipStats = getEquipStaticProperties(equip.getItemId());
 //        int reqLevel = equipStats.get("reqLevel");
 //        if (highfivestamp) {
 //            reqLevel -= 5;
@@ -2152,7 +2201,7 @@ public class ItemLibrarySystem extends BaseSystem {
 //    }
 //
 //    public boolean canLevelUp(int itemId) {
-//        return getEquipStats(itemId).get("level") > 0;
+//        return getEquipStaticProperties(itemId).get("level") > 0;
 //    }
 //
 //    public int getStatLevelupProbability(int itemId, int type) {

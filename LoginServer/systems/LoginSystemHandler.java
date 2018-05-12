@@ -1,7 +1,7 @@
 package systems;
 
 import com.artemis.ComponentMapper;
-import components.Client;
+import ecs.components.Client;
 import ecs.EntityCreationSystem;
 import io.netty.channel.Channel;
 import net.Key;

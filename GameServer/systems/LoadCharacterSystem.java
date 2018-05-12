@@ -2,16 +2,14 @@ package systems;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
-import components.Client;
-import components.DatabaseId;
-import components.Location;
-import components.Name;
-import components.character.CharacterJob;
-import components.character.CharacterLook;
-import components.character.CharacterStat;
+import ecs.components.Client;
+import ecs.components.DatabaseId;
+import ecs.components.Location;
+import ecs.components.Name;
+import ecs.components.character.CharacterJob;
+import ecs.components.character.CharacterLook;
+import ecs.components.character.CharacterStat;
 import database.DatabaseConnection;
-import io.netty.channel.Channel;
-import net.Key;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,21 +31,20 @@ public class LoadCharacterSystem extends BaseSystem {
 
     }
 
-    public void retrieve(int dbId, Channel ch) {
-        final int entityId = ch.attr(Key.ENTITY).get();
+    public boolean retrieve(int dbId, final int entityId) {
         try (Connection con = DatabaseConnection.getConnection();
              PreparedStatement ps = con.prepareStatement("SELECT * FROM characters LEFT JOIN inventories ON characters.id = inventories.characterId WHERE id = ? LIMIT 1")) {
             ps.setInt(1, dbId);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    Client client = clients.create(entityId);
-                    ch.attr(Key.CLIENT).set(client);
                     generate(rs, entityId);
+                    return true;
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
     private void generate(ResultSet rs, int entityId) throws SQLException {
@@ -79,7 +76,7 @@ public class LoadCharacterSystem extends BaseSystem {
         stat.maxHp = rs.getShort("maxHp");
         stat.maxMp = rs.getShort("maxMp");
 
-        stat.slotLimits = new byte[] {15, rs.getByte("equipSize"), rs.getByte("useSize"), rs.getByte("setupSize"),
+        stat.slotLimits = new byte[] {24, rs.getByte("equipSize"), rs.getByte("useSize"), rs.getByte("setupSize"),
                                       rs.getByte("etcSize"), rs.getByte("cashSize")};
 
         DatabaseId dbId = dbIds.create(entityId);

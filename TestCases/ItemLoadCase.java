@@ -1,7 +1,10 @@
-import components.library.EquipStatRequirement;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.components.item.Equip;
+import ecs.components.library.EquipStatRequirement;
+import ecs.components.library.EquipStaticProperties;
 import ecs.system.ItemLibrarySystem;
+import org.dozer.DozerBeanMapper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,6 +38,9 @@ public class ItemLoadCase {
     public void names() {
         assertEquals(library.getName(1302000), "Sword");
         assertEquals(library.getName(1312038), "Reverse Bardiche");
+
+        assertEquals(library.getIdByName("Sword"), 1302000);
+        assertEquals(library.getIdByName("Reverse Bardiche"), 1312038);
     }
 
     @Test
@@ -48,11 +54,39 @@ public class ItemLoadCase {
     }
 
     @Test
-    public void stats() {
-        assertNotNull(library.getEquipStats(1302000));
-        assertNull(library.getEquipStats(4001126));
-        assertNull(library.getEquipStats(1));
+    public void stats() throws CloneNotSupportedException {
+        EquipStaticProperties swordStaticProps = library.getEquipStaticProperties(1302000);
+        EquipStaticProperties bardicheStaticProps = library.getEquipStaticProperties(1312038);
+        assertNotNull(swordStaticProps);
+        assertNotNull(bardicheStaticProps);
+        assertNull(library.getEquipStaticProperties(4001126));
+        assertNull(library.getEquipStaticProperties(1));
         assertEquals(library.getName(1), "NO-NAME");
+
+        Equip sword = library.getEquip(1302000);
+        Equip bardiche = library.getEquip(1312038);
+
+        DozerBeanMapper mapper = new DozerBeanMapper();
+        mapper.map(bardiche, sword);
+
+        int pad = sword.properties.get("PAD");
+        assertEquals(pad, 108);
+
+        // Did it really change in the mapper
+        sword = library.getEquip(1302000);
+        pad = sword.properties.get("PAD");
+        assertEquals(pad, 108);
+
+        sword.properties.put("PAD", (short) 1);
+        pad = bardiche.properties.get("PAD");
+        assertEquals(pad, 108);
+
+        // Map of properties was successfully copied
+        pad = sword.properties.get("PAD");
+        assertEquals(pad, 1);
+
+        assertFalse(bardicheStaticProps.cash);
+        assertFalse(swordStaticProps.cash);
     }
 
     @Test
@@ -62,6 +96,16 @@ public class ItemLoadCase {
         assertEquals(library.getSlotMax(1), 1);
         assertEquals(library.getSlotMax(4001126), 1000);
         assertEquals(library.getSlotMax(2070006), 800);
+    }
+
+    @Test
+    public void canLevel() {
+        assertFalse(library.equipCanLevel(1302000));
+        assertTrue(library.equipCanLevel(1312038));
+
+        // Fake item
+        assertFalse(library.equipCanLevel(1000000));
+
     }
 
 }

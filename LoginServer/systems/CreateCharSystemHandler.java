@@ -1,10 +1,10 @@
 package systems;
 
 import com.artemis.ComponentMapper;
-import components.*;
-import components.character.CharacterJob;
-import components.character.CharacterLook;
-import components.character.CharacterStat;
+import ecs.components.*;
+import ecs.components.character.CharacterJob;
+import ecs.components.character.CharacterLook;
+import ecs.components.character.CharacterStat;
 import database.DatabaseConnection;
 import io.netty.channel.Channel;
 import net.Key;

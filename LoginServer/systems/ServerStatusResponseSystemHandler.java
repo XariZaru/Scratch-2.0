@@ -1,7 +1,7 @@
 package systems;
 
 import com.artemis.ComponentMapper;
-import components.Pipeline;
+import ecs.components.Pipeline;
 import io.netty.channel.Channel;
 import net.PacketHandler;
 import net.packets.InboundPacket;
