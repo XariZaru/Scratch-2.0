@@ -10,7 +10,7 @@ public class CharacterInventory extends Component {
 	   inventory component with merchants, shops, stores, etc.
 	 */
 	public int[] inventories = new int[Type.values().length - 1]; // Size 5 atm if ignoring UNKNOWN
-	
+
 	public enum Type {
 		EQUIPPED(0), EQUIP(1), USE(2), SETUP(3), ETC(4), CASH(5), UNKNOWN(6);
 		final byte type;

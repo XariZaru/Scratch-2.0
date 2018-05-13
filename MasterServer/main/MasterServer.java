@@ -1,20 +1,22 @@
 package main;
 
+import constants.ScratchConstants;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
-import net.coders.PacketDecoder;
-import net.coders.PacketEncoder;
-import constants.ScratchConstants;
 import net.MasterServerHandler;
 import net.Server;
+import net.coders.PacketDecoder;
+import net.coders.PacketEncoder;
+import systems.*;
+
 
 public class MasterServer extends Server {
 
     public static final MasterServer instance = new MasterServer(ScratchConstants.MASTER_SERVER_PORT, new MasterServerHandler());
     public static final WorldManager manager = new WorldManager(
-            EntityCreationSystem.class, systems.HandshakeSystem.class, systems.GameServerAssignmentSystem.class,
-            systems.ServerInfoRequestSystemHandler.class, systems.ServerStatusRequestSystemHandler.class,
-            systems.ClientConnectToServerSystem.class);
+            EntityCreationSystem.class, HandshakeSystem.class, GameServerAssignmentSystem.class,
+            ServerInfoRequestSystemHandler.class, ServerStatusRequestSystemHandler.class,
+            ClientConnectToServerSystem.class);
     private MasterServerHandler handler;
 
     public MasterServer(int port, MasterServerHandler handler) {

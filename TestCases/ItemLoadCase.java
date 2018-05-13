@@ -66,17 +66,20 @@ public class ItemLoadCase {
         Equip sword = library.getEquip(1302000);
         Equip bardiche = library.getEquip(1312038);
 
+        // Test Cloning
         DozerBeanMapper mapper = new DozerBeanMapper();
         mapper.map(bardiche, sword);
 
+        // Confirm if sword now has 108 weapon attack
         int pad = sword.properties.get("PAD");
         assertEquals(pad, 108);
 
-        // Did it really change in the mapper
+        // Did it really change in the mapper and not just temporarily
         sword = library.getEquip(1302000);
         pad = sword.properties.get("PAD");
         assertEquals(pad, 108);
 
+        // Change property of sword attack to 1 and see if Bardiche stays at 108
         sword.properties.put("PAD", (short) 1);
         pad = bardiche.properties.get("PAD");
         assertEquals(pad, 108);

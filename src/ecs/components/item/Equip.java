@@ -3,6 +3,7 @@ package ecs.components.item;
 import com.artemis.Component;
 import net.packets.OutboundPacket;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -17,29 +18,52 @@ public class Equip extends Component {
 	public byte position;
 
 	public void encode(OutboundPacket mplew, ItemOwner itemOwner, ItemLevel itemLevel, ItemFlag flag) {
-		mplew.write(upgradeSlots); // upgrade slots
-		mplew.write(successfulUpgrades); // scroll successes
-		mplew.writeShort(getProperty("STR")); // str
-		mplew.writeShort(getProperty("DEX")); // dex
-		mplew.writeShort(getProperty("INT")); // int
-		mplew.writeShort(getProperty("LUK")); // luk
-		mplew.writeShort(hp); // hp
-		mplew.writeShort(mp); // mp
-		mplew.writeShort(getProperty("PAD")); // watk
-		mplew.writeShort(getProperty("MAD")); // matk
-		mplew.writeShort(getProperty("PDD")); // wdef
-		mplew.writeShort(getProperty("MDD")); // mdef
-		mplew.writeShort(acc); // accuracy
-		mplew.writeShort(avoid); // avoid
-		mplew.writeShort(hands); // hands
-		mplew.writeShort(speed); // speed
-		mplew.writeShort(jump); // jump
-		mplew.writeMapleAsciiString(itemOwner.owner); // itemOwner name
-		mplew.writeShort(flag.flag); //Item Flags
-		mplew.writeBool(false); //nLevelUpType TODO: hasSkill ????
-		mplew.write(itemLevel.level); //Item Level
-		mplew.writeInt(itemLevel.exp  * 100000); // TODO: why is this multiplied by an int??
-		mplew.writeInt(vicious);
+        mplew.write(1); // upgrade slots
+        mplew.write(1); // scroll successes
+        mplew.writeShort(1); // str
+        mplew.writeShort(1); // dex
+        mplew.writeShort(1); // int
+        mplew.writeShort(1); // luk
+        mplew.writeShort(1); // hp
+        mplew.writeShort(1); // mp
+        mplew.writeShort(1); // watk
+        mplew.writeShort(0); // matk
+        mplew.writeShort(0); // wdef
+        mplew.writeShort(0); // mdef
+        mplew.writeShort(0); // accuracy
+        mplew.writeShort(0); // avoid
+        mplew.writeShort(0); // hands
+        mplew.writeShort(0); // speed
+        mplew.writeShort(0); // jump
+        mplew.writeMapleAsciiString(""); // itemOwner name
+        mplew.writeShort(0); //Item Flags
+        mplew.writeBool(false); //nLevelUpType TODO: hasSkill ????
+        mplew.write(1); //Item Level
+        mplew.writeInt(0); // Item Exp TODO: why is this multiplied by an int??
+        mplew.writeInt(vicious);
+//		mplew.write(upgradeSlots); // upgrade slots
+//		mplew.write(successfulUpgrades); // scroll successes
+//		mplew.writeShort(getProperty("STR")); // str
+//		mplew.writeShort(getProperty("DEX")); // dex
+//		mplew.writeShort(getProperty("INT")); // int
+//		mplew.writeShort(getProperty("LUK")); // luk
+//		mplew.writeShort(hp); // hp
+//		mplew.writeShort(mp); // mp
+//		mplew.writeShort(getProperty("PAD")); // watk
+//		mplew.writeShort(getProperty("MAD")); // matk
+//		mplew.writeShort(getProperty("PDD")); // wdef
+//		mplew.writeShort(getProperty("MDD")); // mdef
+//		mplew.writeShort(acc); // accuracy
+//		mplew.writeShort(avoid); // avoid
+//		mplew.writeShort(hands); // hands
+//		mplew.writeShort(speed); // speed
+//		mplew.writeShort(jump); // jump
+//		mplew.writeMapleAsciiString(itemOwner != null ? itemOwner.owner : ""); // itemOwner name
+//		mplew.writeShort(flag.flag); //Item Flags
+//		mplew.writeBool(false); //nLevelUpType TODO: hasSkill ????
+//		mplew.write(itemLevel != null ? itemLevel.level : 0); //Item Level
+//		mplew.writeInt(itemLevel != null ? itemLevel.exp  * 100000 : 0); // TODO: why is this multiplied by an int??
+//		mplew.writeInt(vicious);
 	}
 
 	public static void generate(ResultSet rs, Equip equip) throws SQLException {
@@ -57,11 +81,15 @@ public class Equip extends Component {
         equip.mp = rs.getShort("mp");
         equip.setProperty("STR", rs.getShort("str"));
         equip.setProperty("DEX", rs.getShort("dex"));
-        equip.setProperty("INT", rs.getShort("int"));
+        equip.setProperty("INT", rs.getShort("intel"));
         equip.setProperty("LUK", rs.getShort("luk"));
         equip.successfulUpgrades = rs.getByte("successfulUpgrades");
         equip.upgradeSlots = rs.getByte("slots");
         equip.position = rs.getByte("equipPos");
+    }
+
+    public void save(PreparedStatement ps) throws SQLException {
+
     }
 
     public short getProperty(String property) {

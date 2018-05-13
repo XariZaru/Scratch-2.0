@@ -126,21 +126,21 @@ public class ItemLibrarySystem extends BaseSystem {
     }
 
 	public ItemLibrarySystem() {
-//		loadCardIdData();
-        try {
-            itemData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Item.wz"));
-            equipData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Character.wz"));
-            stringData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/String.wz"));
-            etcData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Etc.wz"));
-            cashStringData = stringData.getData("Cash.img");
-            consumeStringData = stringData.getData("Consume.img");
-            eqpStringData = stringData.getData("Eqp.img");
-            etcStringData = stringData.getData("Etc.img");
-            insStringData = stringData.getData("Ins.img");
-            petStringData = stringData.getData("Pet.img");
-        } catch (NullPointerException e) {
-            System.out.println("ItemLibrarySystem: Failed to load WZ.");
-        }
+////		loadCardIdData();
+//        try {
+//            itemData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Item.wz"));
+//            equipData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Character.wz"));
+//            stringData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/String.wz"));
+//            etcData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Etc.wz"));
+//            cashStringData = stringData.getData("Cash.img");
+//            consumeStringData = stringData.getData("Consume.img");
+//            eqpStringData = stringData.getData("Eqp.img");
+//            etcStringData = stringData.getData("Etc.img");
+//            insStringData = stringData.getData("Ins.img");
+//            petStringData = stringData.getData("Pet.img");
+//        } catch (NullPointerException e) {
+//            System.out.println("ItemLibrarySystem: Failed to load WZ.");
+//        }
     }
 
     @Override
@@ -373,6 +373,18 @@ public class ItemLibrarySystem extends BaseSystem {
 
 	    if (items.size() > 0) return;
 
+        itemData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Item.wz"));
+        equipData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Character.wz"));
+        stringData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/String.wz"));
+        etcData = provider.MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Etc.wz"));
+        cashStringData = stringData.getData("Cash.img");
+        consumeStringData = stringData.getData("Consume.img");
+        eqpStringData = stringData.getData("Eqp.img");
+        etcStringData = stringData.getData("Etc.img");
+        insStringData = stringData.getData("Ins.img");
+        petStringData = stringData.getData("Pet.img");
+
+
         MapleData[] itemsData = {
             stringData.getData("Cash.img"),
             stringData.getData("Consume.img"),
@@ -458,8 +470,8 @@ public class ItemLibrarySystem extends BaseSystem {
 
     public void populateEquip(int itemId, int itemEntityId, World gameWorldManager) {
         if (equipCheck(itemId) == -1) return;
-        Equip equip = getEquip(itemId);
-        Equip libraryEquip = gameWorldManager.getMapper(Equip.class).get(itemEntityId);
+        Equip libraryEquip = getEquip(itemId);
+        Equip equip = gameWorldManager.getMapper(Equip.class).get(itemEntityId);
 
         EquipStaticProperties equipStaticProperties = getEquipStaticProperties(itemId);
         mapper.map(libraryEquip, equip);

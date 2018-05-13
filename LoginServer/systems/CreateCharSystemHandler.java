@@ -1,11 +1,14 @@
 package systems;
 
 import com.artemis.ComponentMapper;
+import database.DatabaseConnection;
+import ecs.EntityCreationSystem;
 import ecs.components.*;
 import ecs.components.character.CharacterJob;
 import ecs.components.character.CharacterLook;
 import ecs.components.character.CharacterStat;
-import database.DatabaseConnection;
+import ecs.components.item.Equip;
+import ecs.system.ItemCreationSystem;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
@@ -15,14 +18,14 @@ import net.packets.OutboundPacket;
 import requests.CreateCharRequest;
 import tools.Pair;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.*;
 
 public class CreateCharSystemHandler extends PacketHandler {
 
+    EntityCreationSystem ecs;
+    ItemCreationSystem itemCreationSystem;
+    private ComponentMapper<Equip> equips;
     private ComponentMapper<CreateCharRequest> requests;
 
     // TODO: Look at consequences of setting auto commit true always. Might have issues when only char is inserted but not equipStats
@@ -109,11 +112,12 @@ public class CreateCharSystemHandler extends PacketHandler {
         }
     }
 
-    private void insertItems(Pair<Integer, Integer>[] items, DatabaseId dbId, Client client) {
+    public void insertItems(Pair<Integer, Integer>[] items, DatabaseId dbId, Client client) {
         try (Connection con = DatabaseConnection.getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO items (chrid, accountid, type, pos, itemid) VALUES (?,?,?,?,?)")) {
-            con.setAutoCommit(true);
+             PreparedStatement ps = con.prepareStatement("INSERT INTO items (chrid, accountid, type, pos, itemid) VALUES (?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS)) {
+            ArrayList<Pair<Integer, Equip>> equips = new ArrayList<>();
             for (Pair<Integer, Integer> item : items) {
+                equips.add(new Pair(item.left, itemCreationSystem.createEquip(item.right).right));
                 ps.setInt(1, dbId.dbId);
                 ps.setInt(2, client.accountId);
                 ps.setInt(3, 0);
@@ -122,6 +126,32 @@ public class CreateCharSystemHandler extends PacketHandler {
                 ps.addBatch();
             }
             ps.executeBatch();
+            try (ResultSet rs = ps.getGeneratedKeys()) {
+                try (PreparedStatement ps2 = con.prepareStatement(
+                        "INSERT INTO equips (itemKey, slots, successfulUpgrades, str, dex, intel, luk, hp, mp, " +
+                                "wAtk, mAtk, wDef, mDef, equipPos) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)")) {
+                    while (rs.next()) {
+                        Pair<Integer, Equip> pair = equips.remove(0);
+                        Equip equip = pair.right;
+                            ps2.setLong(1, rs.getLong(1));
+                            ps2.setShort(2, equip.upgradeSlots);
+                            ps2.setShort(3, equip.successfulUpgrades);
+                            ps2.setShort(4, equip.getProperty("STR"));
+                            ps2.setShort(5, equip.getProperty("DEX"));
+                            ps2.setShort(6, equip.getProperty("INT"));
+                            ps2.setShort(7, equip.getProperty("INT"));
+                            ps2.setShort(8, equip.getProperty("HP"));
+                            ps2.setShort(9, equip.getProperty("MMP"));
+                            ps2.setShort(10, equip.getProperty("PAD"));
+                            ps2.setShort(11, equip.getProperty("MAD"));
+                            ps2.setShort(12, equip.getProperty("PDD"));
+                            ps2.setShort(13, equip.getProperty("MDD"));
+                            ps2.setInt(14, pair.left);
+                            ps2.addBatch();
+                    }
+                    ps2.executeBatch();
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

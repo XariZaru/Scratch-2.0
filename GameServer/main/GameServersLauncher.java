@@ -19,7 +19,7 @@ public class GameServersLauncher {
 
         System.setProperty("wzpath", "/Users/jonnguyen/Documents/Repositories/Scratch 2.0/wz");
 
-        libraryManager = new WorldManager(EntityCreationSystem.class, ItemLibrarySystem.class);
+        libraryManager = new WorldManager(EntityCreationSystem.class, ItemCreationSystem.class, ItemLibrarySystem.class);
         Thread thread = new Thread(libraryManager);
         thread.start();
 
@@ -38,6 +38,10 @@ public class GameServersLauncher {
 
                 Thread ManagerThread = new Thread(gs.manager);
                 ManagerThread.start();
+
+                while (!gs.manager.started());
+
+                gs.manager.getSystem(ItemCreationSystem.class).libraryWorldManager = libraryManager;
 
                 Thread ServerThread = new Thread(gs);
                 ServerThread.start();

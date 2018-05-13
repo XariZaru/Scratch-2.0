@@ -31,15 +31,24 @@ public class ItemInfoEncodingSystem extends BaseSystem {
 //            equip = (Equip) item;
 //            isRing = equip.getRingId() > -1;
 //        }
+        boolean equipped = equip.position != -1;
         if (!zeroPosition) {
-            if (equip != null && equip.position != -1) {
-                mplew.writeShort(equip.position);
+            if (equip != null) {
+                mplew.writeShort(equipped ? equip.position : pos);
             } else {
                 mplew.write(pos);
             }
         }
 
-        mplew.write(pet != null ? 3 : 2);
+        byte type;
+        if (pet != null)
+            type = Item.Type.PET.getValue();
+        else if (equip != null)
+            type = Item.Type.EQUIP.getValue();
+        else
+            type = Item.Type.BUNDLE.getValue();
+
+        mplew.write(type);
         mplew.writeInt(item.itemId);
         mplew.writeBool(cashItem != null);
 
@@ -59,11 +68,11 @@ public class ItemInfoEncodingSystem extends BaseSystem {
             item.encode(mplew, itemOwner, flag);
         } else {
             equip.encode(mplew, itemOwner, itemLevel, flag);
-            if (cashItem != null) {
+            if (cashItem == null) {
                 mplew.writeLong(0);
             }
             mplew.writeLong(getTime(-2));
-            mplew.writeInt(cashItem.bonusExp); // this is nPrevBonusExpRate TODO: is bonus exp only in cash items?
+            mplew.writeInt(cashItem != null ? cashItem.bonusExp : -1); // this is nPrevBonusExpRate TODO: is bonus exp only in cash items?
         }
 
     }

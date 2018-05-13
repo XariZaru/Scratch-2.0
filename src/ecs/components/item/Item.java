@@ -13,7 +13,7 @@ public class Item extends Component implements Comparable<Item> {
 
 	public void encode(OutboundPacket mplew, ItemOwner itemOwner, ItemFlag itemFlag) {
 		mplew.writeShort(quantity);
-		mplew.writeMapleAsciiString(itemOwner.owner);
+		mplew.writeMapleAsciiString(itemOwner != null ? itemOwner.owner : "");
 		mplew.writeShort(itemFlag.flag); // flag
 
 		if (Item.isRechargable(itemId)) {
@@ -56,6 +56,20 @@ public class Item extends Component implements Comparable<Item> {
 			return 1;
 		}
 		return quantity - other.quantity;
+	}
+
+	public enum Type {
+		EQUIP(1), BUNDLE(2), PET(3);
+
+		byte type;
+		Type(int type) {
+			this.type = (byte) type;
+		}
+
+		public byte getValue() {
+			return type;
+		}
+
 	}
 
 }

@@ -2,6 +2,8 @@ package systems;
 
 import com.artemis.ComponentMapper;
 import ecs.components.Client;
+import ecs.components.item.CharacterInventory;
+import ecs.system.InventorySystem;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
@@ -35,7 +37,7 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
 
         Client client = clients.create(entityId);
         channel.attr(Key.CLIENT).set(client);
-        inventorySystem.retrieve(dbId);
+        inventorySystem.retrieve(entityId);
 
         channel.writeAndFlush(getCharInfo(entityId));
 //        final Server server = Server.getInstance();
@@ -265,6 +267,10 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
 //        }
     }
 
+    public void processCharacter(Client client, int dbId, int entityId) {
+
+    }
+
     /**
      * Gets character info for a character.
      *
@@ -303,9 +309,9 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
             mplew.writeInt(0); // TODO: meso
         }
         if ((mask & 0x80) == 0x80) {
+            // Inventory Sizes
             for (byte i = 1; i <= 5; i++) {
-                mplew.write(24);
-//                mplew.write(chr.getInventory(MapleInventoryType.getByType(i)).getSlotLimit()); // TODO: slot limit on inventories
+                mplew.write(inventorySystem.getInventory(entityId, CharacterInventory.Type.getByType(i)).itemEntityIDs.length);
             }
         }
 

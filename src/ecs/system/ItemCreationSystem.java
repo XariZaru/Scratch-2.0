@@ -3,11 +3,9 @@ package ecs.system;
 import com.artemis.Aspect;
 import com.artemis.BaseEntitySystem;
 import com.artemis.ComponentMapper;
-import ecs.components.item.Equip;
-import ecs.components.item.Expiration;
-import ecs.components.item.Item;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.components.item.*;
 import tools.Pair;
 
 import java.sql.ResultSet;
@@ -18,7 +16,8 @@ public class ItemCreationSystem extends BaseEntitySystem {
 	EntityCreationSystem entities;
 	public WorldManager libraryWorldManager = null;
 	ComponentMapper<Item> items;			ComponentMapper<Expiration> expirations;
-	ComponentMapper<Equip> equips;
+	ComponentMapper<Equip> equips;			ComponentMapper<ItemFlag> flags;
+	ComponentMapper<ItemLevel> itemLevels;
 	
 	public ItemCreationSystem() {
 		super(Aspect.all());
@@ -42,14 +41,19 @@ public class ItemCreationSystem extends BaseEntitySystem {
 		Pair<Integer, Item> itemInfo = createItem(itemId);
 		int e = itemInfo.left;
 		Equip equip = equips.create(e);
-        ItemLibrarySystem librarySystem = libraryWorldManager.getSystem(ItemLibrarySystem.class);
+        ItemLibrarySystem librarySystem = null;
+        if ((librarySystem = world.getSystem(ItemLibrarySystem.class)) == null)
+			librarySystem = libraryWorldManager.getSystem(ItemLibrarySystem.class);
         librarySystem.populateEquip(itemId, e, world);
 		return new Pair<Integer, Equip>(e, equip);
 	}
 
 	public int generate(ResultSet rs) throws SQLException {
 		int itemId = rs.getInt("itemid");
-		ItemLibrarySystem librarySystem = libraryWorldManager.getSystem(ItemLibrarySystem.class);
+		ItemLibrarySystem librarySystem;
+		if ((librarySystem = libraryWorldManager.getSystem(ItemLibrarySystem.class)) == null)
+			librarySystem = world.getSystem(ItemLibrarySystem.class);
+
 		if (librarySystem.exists(itemId)) {
 			int itemEntityId = entities.create();
 
@@ -69,6 +73,16 @@ public class ItemCreationSystem extends BaseEntitySystem {
 				Expiration expiration1 = expirations.create(itemEntityId);
 				Expiration.generate(rs, expiration1);
 			}
+
+			short flagValue = rs.getShort("flag");
+			ItemFlag flag = flags.create(itemEntityId);
+			flag.flag = flagValue;
+
+			byte level = rs.getByte("itemlevel");
+			if (level != 0) {
+				itemLevels.create(itemEntityId).level = level;
+			}
+
 			return itemEntityId;
 		}
 		return -1;

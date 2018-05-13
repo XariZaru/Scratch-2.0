@@ -2,6 +2,7 @@ package main;
 
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.system.InventorySystem;
 import ecs.system.ItemCreationSystem;
 import ecs.system.ItemInfoEncodingSystem;
 import net.GameClientHandler;
@@ -22,7 +23,7 @@ public class GameServer extends Server implements Runnable {
             ServerIdentifier.class, CooldownSystem.class, InventorySystem.class,
             CharacterInfoEncodingSystem.class, ItemCreationSystem.class, ItemInfoEncodingSystem.class,
             LoadCharacterSystem.class, MonsterBookSystem.class, PlayerLoggedInSystemHandler.class,
-            QuestSystem.class, RingSystem.class, SkillSystem.class, TeleportRockSystem.class);
+            QuestSystem.class, RingSystem.class, SkillSystem.class, TeleportRockSystem.class, PlayerCleanupSystem.class);
     public final GameClientHandler handler;
 
     public GameServer(int port, GameClientHandler handler, int index) {

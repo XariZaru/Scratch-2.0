@@ -2,6 +2,8 @@ package systems;
 
 import com.artemis.BaseSystem;
 import com.artemis.ComponentMapper;
+import database.DatabaseConnection;
+import ecs.EntityCreationSystem;
 import ecs.components.Client;
 import ecs.components.DatabaseId;
 import ecs.components.Location;
@@ -9,7 +11,8 @@ import ecs.components.Name;
 import ecs.components.character.CharacterJob;
 import ecs.components.character.CharacterLook;
 import ecs.components.character.CharacterStat;
-import database.DatabaseConnection;
+import ecs.components.item.CharacterInventory;
+import ecs.components.item.Inventory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,9 +22,9 @@ import java.sql.SQLException;
 public class LoadCharacterSystem extends BaseSystem {
 
     ComponentMapper<Client> clients;
-    ComponentMapper<CharacterLook> looks;
-    ComponentMapper<CharacterStat> stats;
-    ComponentMapper<CharacterJob> jobs;
+    ComponentMapper<CharacterLook> looks;   ComponentMapper<CharacterInventory> characterInventories;
+    ComponentMapper<CharacterStat> stats;   ComponentMapper<Inventory> inventories;
+    ComponentMapper<CharacterJob> jobs;     EntityCreationSystem ecs;
     ComponentMapper<Name> names;
     ComponentMapper<Location> locations;
     ComponentMapper<DatabaseId> dbIds;
@@ -57,13 +60,17 @@ public class LoadCharacterSystem extends BaseSystem {
         CharacterJob job = jobs.create(entityId);
         CharacterStat stat = stats.create(entityId);
 
-        String[] splitSp = rs.getString("sp").split(",");
-        for (int x = 0; x < splitSp.length; x++)
-            try {
-                job.remainingSp[x] = Short.parseShort(splitSp[x]);
-            } catch (NumberFormatException e) {
+        String sp = rs.getString("sp");
+        String[] splitSp;
+        if (sp != null) {
+            splitSp = rs.getString("sp").split(",");
+            for (int x = 0; x < splitSp.length; x++)
+                try {
+                    job.remainingSp[x] = Short.parseShort(splitSp[x]);
+                } catch (NumberFormatException e) {
 
-            }
+                }
+        }
         job.type = CharacterJob.Type.getById(rs.getInt("job"));
         stat.remainingAp = rs.getShort("ap");
         stat.dex = rs.getShort("dex");
@@ -76,8 +83,15 @@ public class LoadCharacterSystem extends BaseSystem {
         stat.maxHp = rs.getShort("maxHp");
         stat.maxMp = rs.getShort("maxMp");
 
-        stat.slotLimits = new byte[] {24, rs.getByte("equipSize"), rs.getByte("useSize"), rs.getByte("setupSize"),
+        byte[] slotLimits = new byte[] {24, rs.getByte("equipSize"), rs.getByte("useSize"), rs.getByte("setupSize"),
                                       rs.getByte("etcSize"), rs.getByte("cashSize")};
+
+        CharacterInventory characterInventory = characterInventories.create(entityId);
+        for (int x = 0; x < CharacterInventory.Type.values().length - 1; x++) {
+            characterInventory.inventories[x] = ecs.create();
+            Inventory inv = inventories.create(characterInventory.inventories[x]);
+            inv.instantiate(slotLimits[x]);
+        }
 
         DatabaseId dbId = dbIds.create(entityId);
         dbId.dbId = rs.getInt("id");

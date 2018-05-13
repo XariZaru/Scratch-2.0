@@ -107,13 +107,18 @@ public class CharListRequestSystemHandler extends PacketHandler {
             CharacterJob job = new CharacterJob();
             CharacterStat stat = new CharacterStat();
 
-            String[] splitSp = rs.getString("sp").split(",");
-            for (int x = 0; x < splitSp.length; x++)
-                try {
-                    job.remainingSp[x] = Short.parseShort(splitSp[x]);
-                } catch (NumberFormatException e) {
+            String sp = rs.getString("sp");
+            String[] splitSp;
 
-                }
+            if (sp != null) {
+                splitSp = rs.getString("sp").split(",");
+                for (int x = 0; x < splitSp.length; x++)
+                    try {
+                        job.remainingSp[x] = Short.parseShort(splitSp[x]);
+                    } catch (NumberFormatException e) {
+
+                    }
+            }
             job.type = CharacterJob.Type.getById(rs.getInt("job"));
             stat.remainingAp = rs.getShort("ap");
             stat.dex = rs.getShort("dex");

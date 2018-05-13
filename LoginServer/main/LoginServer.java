@@ -1,18 +1,18 @@
 package main;
 
+import constants.ScratchConstants;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
 import ecs.system.ItemCreationSystem;
 import ecs.system.ItemLibrarySystem;
 import net.ClientHandler;
+import net.ClientType;
 import net.LoginServerTrafficHandler;
+import net.Server;
 import net.coders.MaplePacketDecoder;
 import net.coders.MaplePacketEncoder;
-import net.systems.ClientHandshakeSystem;
-import constants.ScratchConstants;
-import net.ClientType;
-import net.Server;
 import net.connector.MasterServerConnector;
+import net.systems.ClientHandshakeSystem;
 import systems.*;
 
 public class LoginServer extends Server {
@@ -23,8 +23,7 @@ public class LoginServer extends Server {
             ServerListRequestSystemHandler.class, ServerListResponseSystemHandler.class,
             ServerStatusRequestSystemHandler.class, ServerStatusResponseSystemHandler.class,
             CharListRequestSystemHandler.class, CreateCharSystemHandler.class, CheckCharNameSystemHandler.class,
-            CharSelectSystemHandler.class, ClientConnectToServerResponseSystem.class);
-    public static final WorldManager itemLibraryManager = new WorldManager(EntityCreationSystem.class, ItemLibrarySystem.class);
+            CharSelectSystemHandler.class, ClientConnectToServerResponseSystem.class, ItemCreationSystem.class, ItemLibrarySystem.class);
     private ClientHandler handler;
 
     public LoginServer(int port, ClientHandler handler) {
@@ -40,13 +39,14 @@ public class LoginServer extends Server {
 
     public static void main(String[] args) {
 
+        System.setProperty("wzpath", "/Users/jonnguyen/Documents/Repositories/Scratch 2.0/wz");
+
         Thread WorldManagerThread = new Thread(manager);
         WorldManagerThread.start();
 
         while (!manager.started());
 
-        itemLibraryManager.getSystem(ItemLibrarySystem.class).generate();
-        manager.getSystem(ItemCreationSystem.class).libraryWorldManager = itemLibraryManager;
+        manager.getSystem(ItemLibrarySystem.class).generate();
 
         Thread LoginThread = new Thread(instance);
         LoginThread.start();

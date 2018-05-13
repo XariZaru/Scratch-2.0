@@ -2,6 +2,7 @@ import ecs.components.item.CharacterInventory;
 import ecs.components.item.Inventory;
 import ecs.EntityCreationSystem;
 import ecs.WorldManager;
+import ecs.system.InventorySystem;
 import ecs.system.ItemCreationSystem;
 import ecs.system.ItemInfoEncodingSystem;
 import net.systems.ClientHandshakeSystem;

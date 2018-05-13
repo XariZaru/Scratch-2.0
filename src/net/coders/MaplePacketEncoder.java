@@ -37,7 +37,7 @@ public class MaplePacketEncoder extends MessageToByteEncoder<OutboundPacket> {
 
 	@Override
 	protected void encode(ChannelHandlerContext ctx, OutboundPacket message, ByteBuf out) throws Exception {
-		System.out.println("Encoding to maple client.");
+//		System.out.println("Encoding to maple client.");
 		Channel ch = ctx.channel();
 		final Integer entity = ch.attr(Key.ENTITY).get();
 		final AESOFB a = ch.attr(Key.AESOFB).get();

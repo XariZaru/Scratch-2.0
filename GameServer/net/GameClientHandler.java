@@ -1,5 +1,6 @@
 package net;
 
+import com.artemis.Aspect;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -8,6 +9,7 @@ import main.GameServer;
 import main.GameServersLauncher;
 import net.packets.InboundPacket;
 import net.systems.ClientHandshakeSystem;
+import systems.PlayerCleanupSystem;
 import systems.PlayerLoggedInSystemHandler;
 
 @ChannelHandler.Sharable
@@ -68,6 +70,20 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 	public void channelInactive(ChannelHandlerContext ctx) {
 		Channel channel = ctx.channel();
 		System.out.println("Client disconnecting on " + channel.remoteAddress());
+		Integer entity = channel.attr(Key.ENTITY).get();
+
+		System.out.println("Size of entities before deletion " + server.manager.world.getAspectSubscriptionManager()
+				.get(Aspect.all())
+				.getActiveEntityIds()
+				.cardinality());
+
+		if (entity != null) {
+			server.manager.getSystem(PlayerCleanupSystem.class).create(entity);
+			System.out.println("Size of entities now " + server.manager.world.getAspectSubscriptionManager()
+					.get(Aspect.all())
+					.getActiveEntityIds()
+					.cardinality());
+		}
 		// Should never be null because all clients are assigned an entity id upon connection
 //		int entityId = channel.attr(Key.ENTITY).get();
 //		LoginServer.manager.delete(entityId);

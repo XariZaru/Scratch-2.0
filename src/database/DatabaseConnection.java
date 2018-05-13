@@ -17,7 +17,7 @@ public class DatabaseConnection {
         source.setJdbcUrl(ScratchConstants.DB_URL);
         source.addDataSourceProperty("user", ScratchConstants.DB_USER);
         source.addDataSourceProperty("password", ScratchConstants.DB_PASS);
-        source.setAutoCommit(false);
+        source.setAutoCommit(true);
         
 //    	source.setUrl(net.constants.ScratchConstants.DB_URL);
 //    	source.setUser(net.constants.ScratchConstants.DB_USER);
