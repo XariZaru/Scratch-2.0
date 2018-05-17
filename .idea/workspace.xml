@@ -2,84 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c104d0-a0b1-4b64-9355-b3ee562cff51" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jonnguyen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/systems/PlayerSaveSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCases/LifeLoadCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCases/MapLoadCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/AddRespawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/AngerGauge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/AnimationTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Banish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Boss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/CP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/ChargeCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/ChatBalloon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/ConstantMonsterStat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/CoolDamage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/DefensiveStat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/ElementalEffectiveness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Exp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/ExplosiveReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/FFALoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/FirstAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/LoseItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/MonsterSkill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/MonsterStat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/OffensiveStat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/PublicReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/RemoveAfter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/RemoveOnMiss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Respawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Revive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/SelfDestruction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/TagColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/life/Undead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/CharacterPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/DropPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/EmployeePool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/FootholdTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/Life.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/MonsterInterval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/MonsterPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/MonsterRate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/NpcPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/ReactorPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/SummonPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/map/VR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/movement/Movement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/requests/LogOpcodeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/components/requests/PlayerSaveRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/system/LifeLibrarySystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/system/MapLibrarySystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/system/MapSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/system/OpcodeLoggingSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ecs/system/SampleDelayedSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ecs/components/movement/Stance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ecs/system/MoveSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/main/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/main/GameServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/net/GameClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/net/GameClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/systems/PlayerCleanupSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/PlayerCleanupSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginServer/systems/LoginSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginServer/systems/LoginSystemHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/ItemLoadCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/ItemLoadCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/main/GameServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/main/GameServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/net/GameClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/net/GameClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerCleanupSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerCleanupSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerLoggedInSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/GameServer/systems/PlayerLoggedInSystemHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler$Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler$Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/LoginServer/systems/LoginSystemHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/TestCases/ItemLoadCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/TestCases/ItemLoadCase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/components/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/components/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/system/InventorySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/system/InventorySystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ecs/components/map/CharacterPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/components/map/CharacterPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ecs/components/movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/components/movement/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ecs/system/MapSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ecs/system/MapSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/packets/OutboundPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/packets/OutboundPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/packets/MaplePacketCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/packets/MaplePacketCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/packets/OutboundPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/packets/OutboundPacket.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,44 +24,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LifeLoadCase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestCases/LifeLoadCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OffensiveStat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ecs/components/life/OffensiveStat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapLoadCase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestCases/MapLoadCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapSystem.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapSystem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ecs/system/MapSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="226">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3993#4011#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaplePacketCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="186" column="40" selection-start-line="186" selection-start-column="40" selection-end-line="186" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterPool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ecs/components/map/CharacterPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerMoveSystemHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemLibrarySystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="372" column="16" selection-start-line="372" selection-start-column="8" selection-end-line="372" selection-end-column="16" />
+              <folding>
+                <element signature="docComment;class#ItemLibrarySystem#0" />
+                <element signature="e#2764#2831#0" />
+                <element signature="e#17087#17088#0" expanded="true" />
+                <element signature="e#17135#17136#0" expanded="true" />
+                <element signature="e#23013#23014#0" expanded="true" />
+                <element signature="e#23068#23069#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ecs/system/MoveSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,20 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerMoveSystemHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java">
+      <file leaf-file-name="Stance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ecs/components/movement/Stance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="84" column="73" selection-start-line="84" selection-start-column="73" selection-end-line="84" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Movement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ecs/components/movement/Movement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="90">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -195,19 +145,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MonsterPool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ecs/components/map/MonsterPool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -219,9 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>awt</find>
-      <find>footHold</find>
-      <find>area</find>
       <find>FootholdTree</find>
       <find>getEquip</find>
       <find>public`</find>
@@ -249,6 +183,9 @@
       <find>name.name</find>
       <find>string</find>
       <find>mapName</find>
+      <find>Equip</find>
+      <find>Chair</find>
+      <find>Function</find>
     </findStrings>
     <replaceStrings>
       <replace>inBound</replace>
@@ -284,10 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TestCases/ItemLoadCase.java" />
-        <option value="$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java" />
-        <option value="$PROJECT_DIR$/src/ecs/components/map/Area.java" />
-        <option value="$PROJECT_DIR$/src/ecs/components/map/FootholdTree.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/map/Life.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/Location.java" />
         <option value="$PROJECT_DIR$/src/ecs/system/LifeSystem.java" />
@@ -299,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/ecs/components/life/CP.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/life/RemoveOnMiss.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/life/Level.java" />
-        <option value="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/character/CharacterStat.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/life/RemoveAfter.java" />
         <option value="$PROJECT_DIR$/src/ecs/components/life/PublicReward.java" />
@@ -333,8 +265,13 @@
         <option value="$PROJECT_DIR$/src/ecs/system/LifeLibrarySystem.java" />
         <option value="$PROJECT_DIR$/src/ecs/system/MapLibrarySystem.java" />
         <option value="$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java" />
-        <option value="$PROJECT_DIR$/src/ecs/system/MapSystem.java" />
+        <option value="$PROJECT_DIR$/src/ecs/components/movement/Stance.java" />
+        <option value="$PROJECT_DIR$/src/ecs/components/movement/Movement.java" />
+        <option value="$PROJECT_DIR$/src/ecs/system/MoveSystem.java" />
         <option value="$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java" />
+        <option value="$PROJECT_DIR$/src/ecs/components/map/CharacterPool.java" />
+        <option value="$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java" />
+        <option value="$PROJECT_DIR$/src/ecs/system/MapSystem.java" />
       </list>
     </option>
   </component>
@@ -405,7 +342,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ecs" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="life" type="462c0819:PsiDirectoryNode" />
+              <item name="movement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scratch" type="b2602c69:ProjectViewProjectNode" />
@@ -436,7 +373,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="PlayerLog&#9;PSI&#9;JAVA://systems.PlayerLoggedInSystemHandler&#10;MoveSystem&#9;PSI&#9;JAVA://systems.PlayerMoveSystemHandler&#10;LifeLi&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/LifeLibrarySystem.java&#10;MapLi&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;MapLib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;LifeLibra&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/LifeLibrarySystem.java&#10;MapLibrary&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;MapLibra&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Location&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/Location.java&#10;maplibrar&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Map&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;map&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/map/Map.java&#10;Libr&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Offe&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/OffensiveStat.java&#10;const&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/ConstantMonsterStat.java&#10;Monster&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/MonsterStat.java&#10;constant&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/ConstantMonsterStat.java&#10;MonsterStat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/MonsterStat.java&#10;lifelib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/LifeLibrarySystem.java&#10;Exp&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/Exp.java&#10;itemlibra&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;itemlibrary&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;mapli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Consta&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/ConstantMonsterStat.java&#10;oseitem&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/LoseItem.java&#10;Character&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/character/CharacterStat.java&#10;Characterstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/character/CharacterStat.java&#10;CharacterStat&#9;PSI&#9;JAVA://ecs.components.character.CharacterStat&#10;Name&#9;PSI&#9;JAVA://ecs.components.Name&#10;CharacterName&#9;PSI&#9;JAVA://java.lang.CharacterName&#10;Foo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/map/FootholdTree.java&#10;Item&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/item/Item.java&#10;itemlibr&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;gameserversla&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServersLauncher.java&#10;playerlogg&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/PlayerLoggedInSystemHandler.java&#10;outbou&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/packets/OutboundPacket.java&#10;Movement&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/movement/Movement.java&#10;gameclie&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java&#10;game&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServer.java&#10;gameserverha&#9;PSI&#9;JAVA://net.GameServerHandler&#10;moveplayer&#9;PSI&#9;JAVA://net.opcodes.RecvOpcode#MOVE_PLAYER&#10;Inventory&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/InventorySystem.java&#10;playersavere&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/requests/PlayerSaveRequest.java&#10;gamecli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java&#10;recvo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/opcodes/RecvOpcode.java&#10;recvop&#9;PSI&#9;JAVA://net.opcodes.RecvOpcode&#10;gameclient&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java&#10;gameserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServer.java&#10;Logop&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/requests/LogOpcodeRequest.java&#10;client&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java" />
+    <property name="SearchEverywhereHistoryKey" value="maplepacketc&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/packets/MaplePacketCreator.java&#10;ItemLib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;PlayerLog&#9;PSI&#9;JAVA://systems.PlayerLoggedInSystemHandler&#10;MoveSystem&#9;PSI&#9;JAVA://systems.PlayerMoveSystemHandler&#10;LifeLi&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/LifeLibrarySystem.java&#10;MapLi&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;MapLib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;LifeLibra&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/LifeLibrarySystem.java&#10;MapLibrary&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;MapLibra&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Location&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/Location.java&#10;maplibrar&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Map&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;map&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/map/Map.java&#10;Libr&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Offe&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/OffensiveStat.java&#10;const&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/ConstantMonsterStat.java&#10;Monster&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/MonsterStat.java&#10;constant&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/ConstantMonsterStat.java&#10;MonsterStat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/MonsterStat.java&#10;lifelib&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/LifeLibrarySystem.java&#10;Exp&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/Exp.java&#10;itemlibra&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;itemlibrary&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;mapli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/MapLibrarySystem.java&#10;Consta&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/ConstantMonsterStat.java&#10;oseitem&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/life/LoseItem.java&#10;Character&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/character/CharacterStat.java&#10;Characterstat&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/character/CharacterStat.java&#10;CharacterStat&#9;PSI&#9;JAVA://ecs.components.character.CharacterStat&#10;Name&#9;PSI&#9;JAVA://ecs.components.Name&#10;CharacterName&#9;PSI&#9;JAVA://java.lang.CharacterName&#10;Foo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/map/FootholdTree.java&#10;Item&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/item/Item.java&#10;itemlibr&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/ItemLibrarySystem.java&#10;gameserversla&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServersLauncher.java&#10;playerlogg&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/systems/PlayerLoggedInSystemHandler.java&#10;outbou&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/packets/OutboundPacket.java&#10;Movement&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/movement/Movement.java&#10;gameclie&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java&#10;game&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServer.java&#10;gameserverha&#9;PSI&#9;JAVA://net.GameServerHandler&#10;moveplayer&#9;PSI&#9;JAVA://net.opcodes.RecvOpcode#MOVE_PLAYER&#10;Inventory&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/system/InventorySystem.java&#10;playersavere&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/ecs/components/requests/PlayerSaveRequest.java&#10;gamecli&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java&#10;recvo&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/src/net/opcodes/RecvOpcode.java&#10;recvop&#9;PSI&#9;JAVA://net.opcodes.RecvOpcode&#10;gameclient&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/net/GameClientHandler.java&#10;gameserver&#9;FILE&#9;file:///Users/jonnguyen/Documents/Repositories/Scratch 2.0/GameServer/main/GameServer.java" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/LoginServer/src/systems" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -748,12 +685,12 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50214595" side_tool="true" weight="0.32848486" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49642345" visible="true" weight="0.38181818" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49642345" visible="true" weight="0.38181818" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.2278788" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49928468" weight="0.32969698" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19027181" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19027181" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49444443" weight="0.33818182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -805,34 +742,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ecs/components/Name.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/components/life/ExplosiveReward.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/components/life/FFALoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/components/life/Undead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ecs/components/life/CP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -851,13 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="165" column="48" lean-forward="true" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1063,21 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="494" column="17" selection-start-line="494" selection-start-column="17" selection-end-line="494" selection-end-column="17" />
-          <folding>
-            <element signature="docComment;class#ItemLibrarySystem#0" />
-            <element signature="e#2764#2831#0" />
-            <element signature="e#17087#17088#0" expanded="true" />
-            <element signature="e#17135#17136#0" expanded="true" />
-            <element signature="e#23013#23014#0" expanded="true" />
-            <element signature="e#23068#23069#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ecs/components/life/MonsterStat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1208,6 +1095,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/PacketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/movement/Movement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="method#read#0;class#Movement#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/movement/Stance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/system/MoveSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/systems/PlayerLoggedInSystemHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1215,27 +1136,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/system/MapSystem.java">
+    <entry file="file://$PROJECT_DIR$/src/ecs/components/map/CharacterPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ecs/components/movement/Movement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/systems/PlayerMoveSystemHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="84" column="73" selection-start-line="84" selection-start-column="73" selection-end-line="84" selection-end-column="73" />
+        <state relative-caret-position="546">
+          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/system/ItemLibrarySystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="372" column="16" selection-start-line="372" selection-start-column="8" selection-end-line="372" selection-end-column="16" />
+          <folding>
+            <element signature="docComment;class#ItemLibrarySystem#0" />
+            <element signature="e#2764#2831#0" />
+            <element signature="e#17087#17088#0" expanded="true" />
+            <element signature="e#17135#17136#0" expanded="true" />
+            <element signature="e#23013#23014#0" expanded="true" />
+            <element signature="e#23068#23069#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/packets/MaplePacketCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="186" column="40" selection-start-line="186" selection-start-column="40" selection-end-line="186" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ecs/system/MapSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3993#4011#0" />
+          </folding>
         </state>
       </provider>
     </entry>

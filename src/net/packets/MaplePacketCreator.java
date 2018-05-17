@@ -1,13 +1,14 @@
 package net.packets;
 
+import constants.ScratchConstants;
 import ecs.components.Client;
 import ecs.components.DatabaseId;
 import ecs.components.Location;
 import ecs.components.character.CharacterJob;
 import ecs.components.character.CharacterLook;
 import ecs.components.character.CharacterStat;
-import constants.ScratchConstants;
 import net.opcodes.SendOpcode;
+import tools.Randomizer;
 import tools.StringUtil;
 
 import java.net.InetAddress;
@@ -181,6 +182,50 @@ public class MaplePacketCreator {
         stat.encode(mplew, job);
         location.encode(mplew);
         mplew.writeInt(0);// playtime in seconds?
+    }
+
+    public static void writeForeignBuffs(final OutboundPacket mplew, int playerEntityId) {
+        for (int i = 3; i >= 0; i--) {
+            mplew.writeInt(0);
+        }
+
+        int randomTcur = Randomizer.nextInt();
+        // Energy Charge
+        mplew.skip(9);
+        mplew.writeInt(randomTcur);
+        mplew.writeShort(0);
+
+        // Dash Speed
+        mplew.skip(9);
+        mplew.writeInt(randomTcur);
+        mplew.writeShort(0);
+
+        // Dash Jump
+        mplew.skip(9);
+        mplew.writeInt(randomTcur);
+        mplew.writeShort(0);
+
+        mplew.writeLong(0); // Monster Riding
+
+        mplew.write(1);
+        mplew.writeInt(randomTcur);//tCur
+
+        // Speed Infusion (party booster)
+        mplew.skip(9);
+        mplew.writeInt(randomTcur);
+        mplew.write(0);
+        mplew.writeInt(randomTcur);
+        mplew.writeShort(0);
+        // Homing Beacon (Guided bullet)
+        mplew.skip(9);
+        mplew.writeInt(randomTcur);
+        mplew.writeInt(0);
+        // Zombify  (undead)
+        mplew.skip(9);
+        mplew.writeInt(randomTcur);
+        mplew.writeShort(0);
+
+        mplew.writeShort(0);
     }
 
 }

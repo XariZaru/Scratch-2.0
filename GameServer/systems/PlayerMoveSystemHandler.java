@@ -3,6 +3,7 @@ package systems;
 import com.artemis.ComponentMapper;
 import ecs.EntityCreationSystem;
 import ecs.components.movement.Movement;
+import ecs.system.MoveSystem;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
@@ -15,11 +16,14 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
+import static ecs.components.movement.Movement.Codec;
+
 public class PlayerMoveSystemHandler extends PacketHandler {
 
     Map<Byte, Integer> occurences = new HashMap<>();
     ComponentMapper<Movement> movements;
     EntityCreationSystem ecs;
+    MoveSystem moveSystem;
 
     private void log(byte command) {
         switch (command) {
@@ -90,7 +94,6 @@ public class PlayerMoveSystemHandler extends PacketHandler {
         movement.ch = channel;
         movement.newPosition = newPos;
         movement.read(numCommands, inBound);
-
     }
 
     @Override
@@ -98,6 +101,7 @@ public class PlayerMoveSystemHandler extends PacketHandler {
         try {
             Movement movement = movements.get(e);
             Channel ch = movement.ch;
+            moveSystem.updatePosition(movement.movements, ch.attr(Key.ENTITY).get(), 0);
             OutboundPacket outboundPacket = PlayerMoveSystemHandler.movePlayer(ch.attr(Key.ENTITY).get(), movement.newPosition, movement.movements);
             // TODO: Broadcast to all other players in the map
         } finally {
@@ -105,7 +109,7 @@ public class PlayerMoveSystemHandler extends PacketHandler {
         }
     }
 
-    public static OutboundPacket movePlayer(int playerEntityId, Point newPosition, LinkedList<Movement.MovementCodec> movements) {
+    public static OutboundPacket movePlayer(int playerEntityId, Point newPosition, LinkedList<Codec> movements) {
         final OutboundPacket send = new OutboundPacket();
         send.writeShort(SendOpcode.MOVE_PLAYER.getValue());
         send.writeInt(playerEntityId);

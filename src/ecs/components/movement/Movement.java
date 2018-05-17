@@ -1,6 +1,8 @@
 package ecs.components.movement;
 
 import com.artemis.Component;
+import com.artemis.World;
+import ecs.components.Location;
 import io.netty.channel.Channel;
 import net.packets.InboundPacket;
 import net.packets.OutboundPacket;
@@ -10,13 +12,13 @@ import java.util.LinkedList;
 
 public class Movement extends Component {
 
-    public LinkedList<MovementCodec> movements = new LinkedList<>();
+    public LinkedList<Codec> movements = new LinkedList<>();
     public Channel ch;
     public Point newPosition;
 
     public void read(byte numCommands, InboundPacket inBound) {
 
-        MovementCodec movement = null;
+        Codec movement = null;
 
         for (byte i = 0; i < numCommands; i++) {
             byte command = inBound.readByte();
@@ -83,16 +85,24 @@ public class Movement extends Component {
         }
     }
 
-    public static abstract class MovementCodec {
-
-        byte command, newState;
-        short duration;
-
+    public static abstract class Codec {
         public abstract void encode(OutboundPacket packet);
         public abstract void decode(InboundPacket packet);
     }
 
-    public static class EquipChange extends MovementCodec {
+    public static abstract class MovementCodec extends Codec {
+
+        byte command, newState;
+        short duration;
+
+        public void update(World world, int entityId, int yOffset) {
+            Stance stance = world.getMapper(Stance.class).get(entityId);
+            stance.stance = newState;
+        }
+
+    }
+
+    public static class EquipChange extends Codec {
 
         byte wui;
 
@@ -138,9 +148,7 @@ public class Movement extends Component {
         }
     }
     
-    public static class TeleportMovement extends MovementCodec {
-
-        short xPos, yPos, fhId;
+    public static class TeleportMovement extends AbsoluteMovement {
         
         @Override
         public void encode(OutboundPacket packet) {
@@ -186,8 +194,7 @@ public class Movement extends Component {
 
     public static class AbsoluteMovement extends MovementCodec {
 
-        short xPos;
-        short yPos;
+        short xPos, yPos;
         short velocityX;
         short velocityY;
         short fhId;
@@ -213,6 +220,14 @@ public class Movement extends Component {
             fhId = packet.readShort();
             newState = packet.readByte();
             duration = packet.readShort();
+        }
+
+        @Override
+        public void update(World world, int entityId, int yOffset) {
+            super.update(world, entityId, yOffset);
+            Location location = world.getMapper(Location.class).get(entityId);
+            location.pos = new Point(xPos, yPos + yOffset);
+            location.fh = fhId;
         }
     }
 
