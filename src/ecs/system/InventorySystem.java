@@ -27,9 +27,10 @@ public class InventorySystem extends BaseSystem {
     ItemInfoEncodingSystem itemInfoEncodingSystem;
     ItemCreationSystem itemCreationSystem;
 
-    public void save(int playerEntityId) {
+    public void save(PreparedStatement ps, int playerEntityId) throws SQLException {
         CharacterInventory characterInventory = charInventories.get(playerEntityId);
         for (int inventoryEntityId : characterInventory.inventories) {
+
         }
     }
 
@@ -43,10 +44,10 @@ public class InventorySystem extends BaseSystem {
 
     public void destroy(int playerEntityId) {
         CharacterInventory characterInventory = charInventories.get(playerEntityId);
-        for (int inventoryEntityid : characterInventory.inventories) {
-            Inventory inventory = inventories.get(inventoryEntityid);
+        for (int inventoryEntityId : characterInventory.inventories) {
+            Inventory inventory = inventories.get(inventoryEntityId);
             inventory.destroy(world);
-            world.delete(inventoryEntityid);
+            world.delete(inventoryEntityId);
         }
     }
 

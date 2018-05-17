@@ -32,13 +32,23 @@ public class PlayerLoggedInSystemHandler extends PacketHandler {
         final int dbId = inBound.readInt();
         final int entityId = channel.attr(Key.ENTITY).get();
 
+        /*
+         * TODO: load character into map
+         */
+
+        // Load Character from database
         if (!loadCharacterSystem.retrieve(dbId, entityId))
             return;
 
         Client client = clients.create(entityId);
         channel.attr(Key.CLIENT).set(client);
+
+
+
+        // Load Inventory
         inventorySystem.retrieve(entityId);
 
+        // Send Character information to client
         channel.writeAndFlush(getCharInfo(entityId));
 //        final Server server = Server.getInstance();
 //        MapleCharacter player = c.getWorldServer().getPlayerStorage().getCharacterById(cid);

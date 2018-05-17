@@ -1,7 +1,10 @@
 package net.packets;
 
 import ecs.components.Client;
+import ecs.components.DatabaseId;
 import ecs.components.Location;
+import ecs.components.character.CharacterJob;
+import ecs.components.character.CharacterLook;
 import ecs.components.character.CharacterStat;
 import constants.ScratchConstants;
 import net.opcodes.SendOpcode;
@@ -150,7 +153,7 @@ public class MaplePacketCreator {
         return mplew;
     }
 
-    public static void addCharLook(final OutboundPacket mplew, ecs.components.character.CharacterLook look, boolean mega) {
+    public static void addCharLook(final OutboundPacket mplew, CharacterLook look, boolean mega) {
         mplew.write(look.gender);
         mplew.write(look.skin.getId()); // skin color
         mplew.writeInt(look.face); // face
@@ -159,8 +162,8 @@ public class MaplePacketCreator {
     }
 
     public static void addCharStats(final OutboundPacket mplew
-            , ecs.components.Name name, ecs.components.character.CharacterLook look, CharacterStat stat, ecs.components.character.CharacterJob job
-            , Location location, ecs.components.DatabaseId dbId) {
+            , ecs.components.Name name, CharacterLook look, CharacterStat stat, CharacterJob job
+            , Location location, DatabaseId dbId) {
         mplew.writeInt(dbId.dbId); // character id
         mplew.writeAsciiString(StringUtil.getRightPaddedStr(name.name, '\0', 13));
         mplew.write(look.gender); // gender (0 = male, 1 = female)

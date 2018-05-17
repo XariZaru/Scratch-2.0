@@ -1,16 +1,22 @@
 package net;
 
 import com.artemis.Aspect;
+import ecs.system.OpcodeLoggingSystem;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import main.GameServer;
 import main.GameServersLauncher;
+import net.opcodes.RecvOpcode;
 import net.packets.InboundPacket;
 import net.systems.ClientHandshakeSystem;
 import systems.PlayerCleanupSystem;
 import systems.PlayerLoggedInSystemHandler;
+import systems.PlayerMoveSystemHandler;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @ChannelHandler.Sharable
 public class GameClientHandler extends ChannelInboundHandlerAdapter {
@@ -31,6 +37,11 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
 		server.manager.getSystem(ClientHandshakeSystem.class).create(ch, true);
 
+        System.out.println("Current entity size " + server.manager.world.getAspectSubscriptionManager()
+                .get(Aspect.all())
+                .getActiveEntityIds()
+                .cardinality());
+
 //		ch.attr(Key.ENTITY).set(LoginServer.manager.create());
 		System.out.println(String.format("Client connected from {%s}", ch.remoteAddress()));
 
@@ -46,24 +57,32 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
 	}
 
+	private static Set<Short> ignoredOpcodes = new HashSet<>();
+	static {
+		ignoredOpcodes.add((short) 207);
+	}
+
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object packet) {
 		System.out.println("Receiving packet.");
-
 		InboundPacket buffer = (InboundPacket) packet;
 		short packetId = buffer.readShort();
-		System.out.println("Handling opcode for " + net.opcodes.RecvOpcode.getOpcode(packetId));
-		PacketHandler handler = getHandler(packetId);
 
-		if (handler != null) {
-			try {
-				handler.receive(ctx.channel(), buffer, null);
-			} catch (Exception e) {
-				e.printStackTrace();
+		server.manager.getSystem(OpcodeLoggingSystem.class).create(RecvOpcode.getOpcode(packetId));
+
+		if (!ignoredOpcodes.contains(packetId)) {
+			System.out.println("Handling opcode for " + net.opcodes.RecvOpcode.getOpcode(packetId));
+			PacketHandler handler = getHandler(packetId);
+
+			if (handler != null) {
+				try {
+					handler.receive(ctx.channel(), buffer, null);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
+			System.out.println("Processing packet id " + net.opcodes.RecvOpcode.getOpcode(packetId) + " with ID " + packetId + " with handler " + handler);
 		}
-
-		System.out.println("Processing packet id " + net.opcodes.RecvOpcode.getOpcode(packetId) + " with ID " + packetId + " with handler " + handler);
 	}
 
 	@Override
@@ -72,40 +91,9 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 		System.out.println("Client disconnecting on " + channel.remoteAddress());
 		Integer entity = channel.attr(Key.ENTITY).get();
 
-		System.out.println("Size of entities before deletion " + server.manager.world.getAspectSubscriptionManager()
-				.get(Aspect.all())
-				.getActiveEntityIds()
-				.cardinality());
-
 		if (entity != null) {
-			server.manager.getSystem(PlayerCleanupSystem.class).create(entity);
-			System.out.println("Size of entities now " + server.manager.world.getAspectSubscriptionManager()
-					.get(Aspect.all())
-					.getActiveEntityIds()
-					.cardinality());
-		}
-		// Should never be null because all clients are assigned an entity id upon connection
-//		int entityId = channel.attr(Key.ENTITY).get();
-//		LoginServer.manager.delete(entityId);
-
-//		Integer e = channel.attr(Key.ENTITY).get();
-//		ClientType type = channel.attr(Key.TYPE).get();
-//
-//		if (type == ClientType.PLAYER) {
-//			Client client = LoginServerLauncher.manager.world.getMapper(Client.class).get(e);
-//			Integer playerEntityId = client.playerEntityId;
-//			if (playerEntityId != null)
-//				LoginServerLauncher.manager.world.getSystem(RemoveCharacterSystem.class).create(playerEntityId);
-//		}
-//
-//		if (e != null)
-//			LoginServerLauncher.manager.world.delete(e);
-//
-//		//TODO: make sure to delete associated player to the client...
-////		if (type == ClientType.PLAYER)
-////			channel.attr(Key.ENTITY)
-//
-//		System.out.println(String.format("Client disconnected from {%s}!", channel.remoteAddress()));
+            server.manager.getSystem(PlayerCleanupSystem.class).create(entity);
+        }
 	}
 
 	public PacketHandler getHandler(short opcode) {
@@ -125,6 +113,7 @@ public class GameClientHandler extends ChannelInboundHandlerAdapter {
 
 	    this.server = GameServersLauncher.gameServers.get(index);
 	    handlers[net.opcodes.RecvOpcode.PLAYER_LOGGEDIN.getValue()] = server.manager.getSystem(PlayerLoggedInSystemHandler.class);
+	    handlers[RecvOpcode.MOVE_PLAYER.getValue()] = server.manager.getSystem(PlayerMoveSystemHandler.class);
 
     }
 	

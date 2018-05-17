@@ -35,6 +35,11 @@ public class ItemLoadCase {
     }
 
     @Test
+    public void isEquip() {
+        Equip equip = library.getEquip(4001126);
+    }
+
+    @Test
     public void names() {
         assertEquals(library.getName(1302000), "Sword");
         assertEquals(library.getName(1312038), "Reverse Bardiche");

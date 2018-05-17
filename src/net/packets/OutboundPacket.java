@@ -3,6 +3,7 @@ package net.packets;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 
+import java.awt.*;
 import java.nio.charset.Charset;
 
 public class OutboundPacket {
@@ -66,6 +67,11 @@ public class OutboundPacket {
     public void writeString(String text){
         writeShort(text.length());
         writeBytes(text.getBytes(ASCII));
+    }
+
+    public void writePos(Point s) {
+        writeShort(s.x);
+        writeShort(s.y);
     }
 
     public void writeBytes(byte[] values) {

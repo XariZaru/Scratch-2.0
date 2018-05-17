@@ -17,7 +17,6 @@ public class PlayerCleanupSystem extends IteratingSystem {
 
     @Override
     protected void process(int entityId) {
-        System.out.println("Deleting " + entityId);
         inventorySystem.destroy(entityId);
         world.delete(entityId);
     }

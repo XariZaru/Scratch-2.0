@@ -2,7 +2,6 @@ package systems;
 
 import com.artemis.ComponentMapper;
 import ecs.components.Client;
-import ecs.EntityCreationSystem;
 import io.netty.channel.Channel;
 import net.Key;
 import net.PacketHandler;
@@ -21,7 +20,6 @@ public class LoginSystemHandler extends PacketHandler {
 
     ComponentMapper<Client> clients;
     ComponentMapper<LoginRequest> requests;
-    EntityCreationSystem ecs;
 
     public LoginSystemHandler() {
         super(LoginRequest.class);
@@ -108,7 +106,7 @@ public class LoginSystemHandler extends PacketHandler {
 
 
         private int value;
-        private Result(int value) {
+        Result(int value) {
             this.value = value;
         }
 
